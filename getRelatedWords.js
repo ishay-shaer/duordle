@@ -1,3 +1,5 @@
+"use strict";
+
 const dataFilePath = "/data_5_letters.json";
 
 export default async function getRandomRelatedWords() {

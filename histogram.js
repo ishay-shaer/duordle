@@ -1,6 +1,5 @@
 "use strict";
 
-// const data = {"2":34,"3":17,"4":24,"5":64,"6":128,"7":21,"Lost":12};
 const gapWidthRatio = .1;
 const percentDigits = 0;
 const defaultBarColor = "#00f";
@@ -14,7 +13,7 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     const maxValue = Math.max(...values);
     const sumValues = values.reduce((total, value) => total + value, 0);
     
-    let stringData = {}
+    const stringData = {};
     keys.forEach(key => {
         const numericValue = dataObject[key];
         const percentValue = (numericValue / sumValues * 100).toFixed(percentDigits);
@@ -24,9 +23,7 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     let chartContent = "";
     
     for (const key of keys) {
-        const height = (dataObject[key] / maxValue * .75 * divEl.offsetHeight) + "px";
-        console.log(divEl.offsetHeight);
-        
+        const height = (dataObject[key] / maxValue * .75 * divEl.style.height.replace("px", "")) + "px";
         const barColor = key == highlightedBar ? highlightedColor : defaultBarColor;
         chartContent += `<span>
                              <div class="datum">${stringData[key]}</div>
@@ -46,7 +43,3 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     divEl.appendChild(chartContainer);
     divEl.innerHTML += `<div id='x-label'>${xLabel}</div>`;
 }
-
-// const chartEl = document.querySelector("#chart-box");
-
-// createHistogram(chartEl, data, "Number of guesses", "4");

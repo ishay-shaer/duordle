@@ -261,11 +261,22 @@ class Game{
     // Should only be called after the game has ended.
     // 0 is used for a Lost game.
     storeGameResult() {
-        let storedResults = JSON.parse(localStorage.getItem("gameResults")) || {};
-        const guessesToWin = this.state.hasLost ? "Lost" : this.guesses.length;
-        storedResults = {...storedResults, [guessesToWin]: (storedResults[guessesToWin] || 0) + 1};
+        let storedResultsObj = {};
+        let storedResultsString = localStorage.getItem("gameResults");
 
-        localStorage.setItem("gameResults", JSON.stringify(storedResults));
+        if (!storedResultsString) {
+            for (let i = 2; i <= MAXGUESSES; i++) {
+                storedResultsObj[i] = 0;
+            }
+            storedResultsObj["Lost"] = 0;
+        } else {
+        storedResultsObj = JSON.parse(storedResultsString);
+        }
+
+        const gameResult = this.state.hasLost ? "Lost" : this.guesses.length;
+        storedResultsObj = {...storedResultsObj, [gameResult]: (storedResultsObj[gameResult] || 0) + 1};
+
+        localStorage.setItem("gameResults", JSON.stringify(storedResultsObj));
     }
     
     unifyKeyboard(boardSideToEliminate) {
@@ -329,15 +340,18 @@ class Game{
                 The words were ${gameMagicWords[0]} and ${gameMagicWords[1]}<br>`;
         }
         
-        message += "<h2>Your statistics:</h2>" + this.getGameStats();
+        // message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
+
+        message += "<h2>Your statistics:</h2>";
 
         messageTextEl.innerHTML = message;
         const chartBoxEl = document.createElement("div");
-        chartBoxEl.id = "chart-box";        
+        chartBoxEl.id = "chart-box";
+        chartBoxEl.style.height = "250px";
         messageTextEl.appendChild(chartBoxEl);
         const gameData = JSON.parse(localStorage.getItem("gameResults"));
-        createHistogram(chartBoxEl, gameData, "Number of guesses");
-        
+        const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
+        createHistogram(chartBoxEl, gameData, "Number of guesses", barToHighlight);
 
         setTimeout(() => {
             messageDivEl.style.display = "block";
@@ -346,7 +360,7 @@ class Game{
         }, 2500);
     }
 
-    getGameStats() {
+    getGameStatsHtml() {
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
         const gamesWon = Object.entries(gameStats).reduce((total, [guesses, num]) => 
