@@ -12,8 +12,9 @@
 // TODO (DONE) Show results from localStorage as statistics in the message box.
 // TODO (DONE) Make the use of "" or '' consistent
 // TODO (DONE BUT UNUSED) Download Plotly and use the file directly in the HTML head.
+// TODO (DONE) Plot it
 
-// TODO Understand why scrollTo in displayEndGameMessage is not working
+// TODO Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 // TODO Plot it
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add an icon to the title
