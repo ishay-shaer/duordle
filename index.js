@@ -13,6 +13,7 @@
 // TODO (DONE) Make the use of "" or '' consistent
 // TODO (DONE BUT UNUSED) Download Plotly and use the file directly in the HTML head.
 
+// TODO Understand why scrollTo in displayEndGameMessage is not working
 // TODO Plot it
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add an icon to the title
@@ -340,18 +341,18 @@ class Game{
                 The words were ${gameMagicWords[0]} and ${gameMagicWords[1]}<br>`;
         }
         
-        // message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
+        message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
 
-        message += "<h2>Your statistics:</h2>";
+        // message += "<h2>Your statistics:</h2>";
 
         messageTextEl.innerHTML = message;
         const chartBoxEl = document.createElement("div");
         chartBoxEl.id = "chart-box";
         chartBoxEl.style.height = "250px";
         messageTextEl.appendChild(chartBoxEl);
-        const gameData = JSON.parse(localStorage.getItem("gameResults"));
+        const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
-        createHistogram(chartBoxEl, gameData, "Number of guesses", barToHighlight);
+        createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight);
 
         setTimeout(() => {
             messageDivEl.style.display = "block";
@@ -365,13 +366,17 @@ class Game{
         const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
         const gamesWon = Object.entries(gameStats).reduce((total, [guesses, num]) => 
             guesses === "Lost" ? total : total + num, 0);
-        let statsMessage = "";
-
-        Object.entries(gameStats).forEach(([k, v]) => {
-            const word = k === "Lost" ? "games" : "guesses";
-            const percent = (v / totalGames * 100).toFixed(2);
-            statsMessage += `${k} ${word}: ${v} (${percent}%)<br>`;
-        })
+        const averageScore = Object.entries(gameStats).reduce((total, [guesses, num]) => 
+            guesses === "Lost" ? total + ((MAXGUESSES + 1) * num) : total + (guesses * num), 0) / totalGames;
+        let statsMessage = `Total games: ${totalGames}<br>
+                            Average: ${averageScore.toFixed(2)}`;
+        
+        // Old plain text option:
+        // Object.entries(gameStats).forEach(([k, v]) => {
+        //     const word = k === "Lost" ? "games" : "guesses";
+        //     const percent = (v / totalGames * 100).toFixed(2);
+        //     statsMessage += `${k} ${word}: ${v} (${percent}%)<br>`;
+        // })        
 
         statsMessage += `<br><p id="success-line">Success rate: ${gamesWon} out of ${totalGames} 
                          (${(gamesWon / totalGames * 100).toFixed(2)}%)<p>`;
