@@ -25,6 +25,7 @@
 
 "use strict";
 
+import createHistogram from "./histogram.js";
 import getRandomRelatedWords from "/getRelatedWords.js";
 
 
@@ -331,6 +332,13 @@ class Game{
         message += "<h2>Your statistics:</h2>" + this.getGameStats();
 
         messageTextEl.innerHTML = message;
+        const chartBoxEl = document.createElement("div");
+        chartBoxEl.id = "chart-box";        
+        messageTextEl.appendChild(chartBoxEl);
+        const gameData = JSON.parse(localStorage.getItem("gameResults"));
+        createHistogram(chartBoxEl, gameData, "Number of guesses");
+        
+
         setTimeout(() => {
             messageDivEl.style.display = "block";
             messageDivEl.scrollTo(0, 0); // Why is it not working?
