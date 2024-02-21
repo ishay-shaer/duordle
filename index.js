@@ -56,8 +56,9 @@ class Game{
         this.isCurrentGuessValid = false;
         this.guesses = [];
         this.lastGuess = "";
-        window.addEventListener("keydown", (e) => {this.keyboardHandler(e)});
 
+        // These two lines don't belong here. Move to main()?
+        window.addEventListener("keydown", (e) => {this.keyboardHandler(e)});
         this.createScreenKeyboard();
     }
 
@@ -196,15 +197,18 @@ class Game{
     }
 
     displayStyleByValidity(isValid) {
-        const charPosRow = [document.querySelector(`#board-row-0-${this.charPosRow}`),
-                            document.querySelector(`#board-row-1-${this.charPosRow}`)];    
-        charPosRow.forEach(row => {
-            if (isValid){
-                row.classList.remove("invalid-word");
-            } else {
-                row.classList.add("invalid-word");
-            }
-        })
+        const currentRows = [document.querySelector(`#board-row-0-${this.charPosRow}`),
+                            document.querySelector(`#board-row-1-${this.charPosRow}`)];
+        
+        if(isValid) currentRows.forEach(row => row.classList.remove("invalid-word"));
+        else currentRows.forEach(row => row.classList.add("invalid-word"));
+        // currentRows.forEach(row => {
+        //     if (isValid){
+        //         row.classList.remove("invalid-word");
+        //     } else {
+        //         row.classList.add("invalid-word");
+        //     }
+        // })
     }
 
     displayErrorMessage() {
