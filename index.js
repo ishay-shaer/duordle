@@ -13,11 +13,10 @@
 // TODO (DONE) Make the use of "" or '' consistent
 // TODO (DONE BUT UNUSED) Download Plotly and use the file directly in the HTML head.
 // TODO (DONE) Plot it
+// TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 
-// TODO Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
-// TODO Plot it
 // TODO Arrange all or most addEventListener's in one function
-// TODO Add an icon to the title
+// TODO Add a favicon to the title
 // TODO Create welcome message and display it in the message box.
 // TODO Add magic word if not exist into the guesses file instead of each game into the array.
 // TODO Every time a game is played, add magic words to an array in localStorage of max size 50? to avoid them in following games.
@@ -356,8 +355,8 @@ class Game{
 
         setTimeout(() => {
             messageDivEl.style.display = "block";
-            messageDivEl.scrollTo(0, 0); // Why is it not working?
             reloadBtnEl.focus();
+            messageDivEl.scrollTo(0, 0);
         }, 2500);
     }
 
