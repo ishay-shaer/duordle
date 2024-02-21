@@ -17,7 +17,7 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     keys.forEach(key => {
         const numericValue = dataObject[key];
         const percentValue = (numericValue / sumValues * 100).toFixed(percentDigits);
-        stringData[key] = `${numericValue}<br>(${percentValue}%)`;
+        stringData[key] = numericValue ? `${numericValue}<br>(${percentValue}%)` : "";
     });
 
     let chartContent = "";

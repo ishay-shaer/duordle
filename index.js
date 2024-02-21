@@ -373,8 +373,7 @@ class Game{
         //     statsMessage += `${k} ${word}: ${v} (${percent}%)<br>`;
         // })        
 
-        statsMessage += `<br><p id="success-line">Success rate: ${gamesWon} out of ${totalGames} 
-                         (${(gamesWon / totalGames * 100).toFixed(2)}%)<p>`;
+        statsMessage += `<br><p id="success-line">Success rate: ${(gamesWon / totalGames * 100).toFixed(2)}%<p>`;
 
         return `<div id="stats">${statsMessage}</div>`;
     }
