@@ -256,7 +256,6 @@ class Game{
     }
 
     // Should only be called after the game has ended.
-    // 0 is used for a Lost game.
     storeGameResult() {
         let storedResultsObj = {};
         let storedResultsString = localStorage.getItem("gameResults");
