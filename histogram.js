@@ -1,7 +1,7 @@
 "use strict";
 
-const gapWidthRatio = .1;
-const percentDigits = 0;
+const GAP_WIDTH_RATIO = .1;
+const PERCENT_DIGITS = 0;
 
 export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar) {
     const keys = Object.keys(dataObject).sort((a, b) => a - b);
@@ -14,7 +14,7 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     const stringData = {};
     keys.forEach(key => {
         const numericValue = dataObject[key];
-        const percentValue = (numericValue / sumValues * 100).toFixed(percentDigits);
+        const percentValue = (numericValue / sumValues * 100).toFixed(PERCENT_DIGITS);
         stringData[key] = numericValue ? `${numericValue}<br>(${percentValue}%)` : "";
     });
 
@@ -36,7 +36,7 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
         document.querySelector(`#key-${highlightedBar}-bar`).classList.add("highlighted-bar");
     
     chartContainer.style.gridTemplateColumns = `repeat(${keys.length}, auto)`;
-    const gapWidth = ((100 / (keys.length - 1)) * gapWidthRatio) + "%";
+    const gapWidth = ((100 / (keys.length - 1)) * GAP_WIDTH_RATIO) + "%";
     chartContainer.style.columnGap = gapWidth;
     
     divEl.innerHTML += `<div id='x-label'>${xLabel}</div>`;
