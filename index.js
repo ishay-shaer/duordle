@@ -338,8 +338,6 @@ class Game{
         
         message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
 
-        // message += "<h2>Your statistics:</h2>";
-
         messageTextEl.innerHTML = message;
         const chartBoxEl = document.createElement("div");
         chartBoxEl.id = "chart-box";
