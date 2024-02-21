@@ -3,7 +3,7 @@
 const GAP_WIDTH_RATIO = .1;
 const PERCENT_DIGITS = 0;
 
-export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar) {
+export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar=null) {
     const keys = Object.keys(dataObject).sort((a, b) => a - b);
     const values = Object.values(dataObject);
     const chartContainer = document.createElement("div");
@@ -32,7 +32,7 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     
     chartContainer.innerHTML = chartContent;
     divEl.appendChild(chartContainer);
-    if (highlightedBar != undefined) 
+    if (highlightedBar != null)
         document.querySelector(`#key-${highlightedBar}-bar`).classList.add("highlighted-bar");
     
     chartContainer.style.gridTemplateColumns = `repeat(${keys.length}, auto)`;
