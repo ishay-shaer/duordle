@@ -9,16 +9,12 @@
     <link rel="stylesheet" href="chart.css">
 </head>
 <body>
-
     <select name="color-scheme" id="color-select">
         <option id="default-option" value="default">default colors</option>
         <option id="high-contrast-option" value="high-contrast">high contrast</option>
     </select>
-
     <main>
-
-        <h1>Duordle</h1>            
-
+        <h1>Duordle</h1>
         <div id="grid-container">
             <span class="board" id="board-0"></span>
             <span class="board" id="board-1"></span>
@@ -28,29 +24,20 @@
                 <div class="keyboard-row" id="keyboard-row-2"></div>
             </div>
         </div>
-
     </main>
-
     <div id="error-box"></div>
-
     <div id="message-box">
         <button id="close-btn" aria-label="Close message box" type="button">
             <span aria-hidden="true">&#9587;</span>
         </button>
-
         <div id="dynamic-message">
             <div id="message-text"></div>
             <button id="reload-btn" type="button">Play another game</button>
         </div>
         <footer>
             Copyright &copy; 2024 Ishay Shaer
-        </footer>
-        
+        </footer>        
     </div>
-
-
-
-    <script src="index.js" type="module"></script>
-    
+    <script src="index.js" type="module"></script>    
 </body>
 </html>
