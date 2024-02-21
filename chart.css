@@ -1,14 +1,23 @@
 #chart-box {
-    padding: 20px 0;
+    padding: 20px 0 50px 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 
 #chart-container {
+    display: grid;
     padding-bottom: 10px;
+    align-items: end;
 }
 
 .bar {
     margin-bottom: 5px;
+    background: #00f;
+    box-sizing: border-box;
+}
+
+.highlighted-bar {
+    background: #93a;
+    border: 2px solid #000;
 }

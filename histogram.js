@@ -2,8 +2,6 @@
 
 const gapWidthRatio = .1;
 const percentDigits = 0;
-const defaultBarColor = "#00f";
-const highlightedColor = "#b3e";
 
 export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar) {
     const keys = Object.keys(dataObject).sort((a, b) => a - b);
@@ -24,22 +22,22 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     
     for (const key of keys) {
         const height = (dataObject[key] / maxValue * .75 * divEl.style.height.replace("px", "")) + "px";
-        const barColor = key == highlightedBar ? highlightedColor : defaultBarColor;
         chartContent += `<span>
                              <div class="datum">${stringData[key]}</div>
-                             <div class="bar" id="${key}-bar" style="height: ${height};
-                                                                     background: ${barColor};">
+                             <div class="bar" id="key-${key}-bar" style="height: ${height};">
                              </div>
                              <div class="num-guesses">${key}</div>
                          </span>`;
     }
     
     chartContainer.innerHTML = chartContent;
-    chartContainer.style.display = "grid";
+    divEl.appendChild(chartContainer);
+    if (highlightedBar != undefined) 
+        document.querySelector(`#key-${highlightedBar}-bar`).classList.add("highlighted-bar");
+    
     chartContainer.style.gridTemplateColumns = `repeat(${keys.length}, auto)`;
     const gapWidth = ((100 / (keys.length - 1)) * gapWidthRatio) + "%";
     chartContainer.style.columnGap = gapWidth;
-    chartContainer.style.alignItems = "end";
-    divEl.appendChild(chartContainer);
+    
     divEl.innerHTML += `<div id='x-label'>${xLabel}</div>`;
 }
