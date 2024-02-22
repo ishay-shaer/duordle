@@ -357,19 +357,11 @@ class Game{
     getGameStatsHtml() {
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
-        const gamesWon = Object.entries(gameStats).reduce((total, [guesses, num]) => 
-            guesses === "Lost" ? total : total + num, 0);
+        const gamesWon = totalGames - gameStats["Lost"];
         const averageScore = Object.entries(gameStats).reduce((total, [guesses, num]) => 
             guesses === "Lost" ? total + ((MAXGUESSES + 1) * num) : total + (guesses * num), 0) / totalGames;
         let statsMessage = `Total games: ${totalGames}<br>
-                            Average: ${averageScore.toFixed(2)}`;
-        
-        // Old plain text option:
-        // Object.entries(gameStats).forEach(([k, v]) => {
-        //     const word = k === "Lost" ? "games" : "guesses";
-        //     const percent = (v / totalGames * 100).toFixed(2);
-        //     statsMessage += `${k} ${word}: ${v} (${percent}%)<br>`;
-        // })        
+                            Average: ${averageScore.toFixed(2)}`; 
 
         statsMessage += `<br><p id="success-line">Success rate: ${(gamesWon / totalGames * 100).toFixed(2)}%<p>`;
 
