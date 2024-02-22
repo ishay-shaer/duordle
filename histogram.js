@@ -31,10 +31,8 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     
     chartContainer.innerHTML = chartContent;
     divEl.appendChild(chartContainer);
-    if (highlightedBar != null) {
+    if (highlightedBar != null)
         document.querySelector(`#data-column-${highlightedBar}`).classList.add("highlighted-column");
-        
-    }
 
     chartContainer.style.gridTemplateColumns = `repeat(${keys.length}, auto)`;
     const gapWidth = ((100 / (keys.length - 1)) * GAP_WIDTH_RATIO) + "%";
