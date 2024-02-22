@@ -257,22 +257,22 @@ class Game{
 
     // Should only be called after the game has ended.
     storeGameResult() {
-        let storedResultsObj = {};
-        let storedResultsString = localStorage.getItem("gameResults");
-
-        if (!storedResultsString) {
-            for (let i = 2; i <= MAXGUESSES; i++) {
-                storedResultsObj[i] = 0;
-            }
-            storedResultsObj["Lost"] = 0;
-        } else {
-        storedResultsObj = JSON.parse(storedResultsString);
-        }
+        const storedResultsString = localStorage.getItem("gameResults") || "{}";
+        const storedResultsObj = JSON.parse(storedResultsString);
+        
+        // if (!storedResultsString) {
+        //     for (let i = 2; i <= MAXGUESSES; i++) {
+        //         storedResultsObj[i] = 0;
+        //     }
+        //     storedResultsObj["Lost"] = 0;
+        // } else {
+        //     storedResultsObj = JSON.parse(storedResultsString);
+        // }
 
         const gameResult = this.state.hasLost ? "Lost" : this.guesses.length;
-        storedResultsObj = {...storedResultsObj, [gameResult]: (storedResultsObj[gameResult] || 0) + 1};
+        const newResults = {...storedResultsObj, [gameResult]: (storedResultsObj[gameResult] || 0) + 1};
 
-        localStorage.setItem("gameResults", JSON.stringify(storedResultsObj));
+        localStorage.setItem("gameResults", JSON.stringify(newResults));
     }
     
     unifyKeyboard(boardSideToEliminate) {
@@ -345,7 +345,8 @@ class Game{
         messageTextEl.appendChild(chartBoxEl);
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
-        createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight);
+        const xRange = [...Array.from(Array(MAXGUESSES - 1).keys()).map(num => num + 2), "Lost"];
+        createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight, xRange);
 
         setTimeout(() => {
             messageDivEl.style.display = "block";
@@ -357,7 +358,7 @@ class Game{
     getGameStatsHtml() {
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
-        const gamesWon = totalGames - gameStats["Lost"];
+        const gamesWon = totalGames - (gameStats["Lost"] || 0);
         const averageScore = Object.entries(gameStats).reduce((total, [guesses, num]) => 
             guesses === "Lost" ? total + ((MAXGUESSES + 1) * num) : total + (guesses * num), 0) / totalGames;
         let statsMessage = `Total games: ${totalGames}<br>

@@ -3,8 +3,8 @@
 const GAP_WIDTH_RATIO = .1;
 const PERCENT_DIGITS = 0;
 
-export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar=null) {
-    const keys = Object.keys(dataObject).sort((a, b) => a - b);
+export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar=null, keys=null) {
+    if (!keys) keys = Object.keys(dataObject).sort((a, b) => a - b);
     const values = Object.values(dataObject);
     const chartContainer = document.createElement("div");
     chartContainer.id = "chart-container";
