@@ -6,7 +6,7 @@
 }
 
 #chart-container {
-    display: grid;
+    display: flex;
     padding-bottom: 10px;
     align-items: end;
 }
@@ -17,7 +17,15 @@
     box-sizing: border-box;
 }
 
-.highlighted-bar {
+.data-column {
+    width: 100%
+}
+
+.highlighted-column > .bar {
     background: #93a;
     border: 2px solid #000;
+}
+
+.highlighted-column > .datum {
+    font-weight: bold;
 }

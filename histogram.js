@@ -19,22 +19,23 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     });
 
     let chartContent = "";
-    
+
     for (const key of keys) {
         const height = (dataObject[key] / maxValue * .75 * divEl.style.height.replace("px", "")) + "px";
-        chartContent += `<span>
+        chartContent += `<span class="data-column" id="data-column-${key}">
                              <div class="datum">${stringData[key]}</div>
-                             <div class="bar" id="key-${key}-bar" style="height: ${height};">
-                             </div>
+                             <div class="bar" id="key-${key}-bar" style="height: ${height};"></div>
                              <div class="num-guesses">${key}</div>
                          </span>`;
     }
     
     chartContainer.innerHTML = chartContent;
     divEl.appendChild(chartContainer);
-    if (highlightedBar != null)
-        document.querySelector(`#key-${highlightedBar}-bar`).classList.add("highlighted-bar");
-    
+    if (highlightedBar != null) {
+        document.querySelector(`#data-column-${highlightedBar}`).classList.add("highlighted-column");
+        
+    }
+
     chartContainer.style.gridTemplateColumns = `repeat(${keys.length}, auto)`;
     const gapWidth = ((100 / (keys.length - 1)) * GAP_WIDTH_RATIO) + "%";
     chartContainer.style.columnGap = gapWidth;
