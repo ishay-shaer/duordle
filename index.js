@@ -58,8 +58,6 @@ class Game {
         this.lastGuess = "";
 
         // These two lines don't belong here. Move to main()?
-        window.addEventListener("keydown", (e) => {this.keyboardHandler(e)});
-        this.createScreenKeyboard();
     }
 
 
@@ -556,22 +554,20 @@ async function main() {
     if (!possibleGuesses.length) {
         possibleGuesses = await getWordsFromTextFile(longFilePath);
     }
-
-    // if (!possibleMagicWords.length) {
-    //     possibleMagicWords = await getWordsFromTextFile(shortFilePath);
-    // }
-    
+    let game;
     try {
-        const game = await Game.createGame();
+        game = await Game.createGame();
         if (!game) main();
 
         console.log(game.boards[0].magicWord);
         console.log(game.boards[1].magicWord);
     } catch (error) {
-        console.log(error);
+        throw new Error(error);
     }
-    document.querySelector("#color-select").addEventListener("change", setColorScheme)
+    document.querySelector("#color-select").addEventListener("change", setColorScheme);
     renderColorScheme();
+    window.addEventListener("keydown", (e) => {game.keyboardHandler(e)});
+    game.createScreenKeyboard();
     createBoxes(0);
     createBoxes(1);
 }
