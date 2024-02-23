@@ -136,9 +136,8 @@ class Game {
             this.charPosCol++;
 
             if (this.charPosCol == wordLength) {
-                this.isCurrentGuessValid = this.isWordValid(this.currentGuess);
-    
-                // If word is invalid (i.e. not in word list), display word in red.
+                this.isCurrentGuessValid = this.isWordValid(this.currentGuess);    
+                // If word has enough letters and is invalid (i.e. not in word list), display word in red.
                 this.displayStyleByValidity(this.isCurrentGuessValid);
             } else if (this.charPosCol < wordLength) {
                 // If the guess is too short, it is not valid anyway, but no need to display it as invalid.
