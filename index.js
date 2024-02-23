@@ -41,7 +41,7 @@ let possibleGuesses = [];
 let possibleMagicWords = [];
 
 
-class Game{
+class Game {
     constructor(word_0, word_1) {
         this.state = {
             hasWon: false,
@@ -259,16 +259,6 @@ class Game{
     storeGameResult() {
         const storedResultsString = localStorage.getItem("gameResults") || "{}";
         const storedResultsObj = JSON.parse(storedResultsString);
-        
-        // if (!storedResultsString) {
-        //     for (let i = 2; i <= MAXGUESSES; i++) {
-        //         storedResultsObj[i] = 0;
-        //     }
-        //     storedResultsObj["Lost"] = 0;
-        // } else {
-        //     storedResultsObj = JSON.parse(storedResultsString);
-        // }
-
         const gameResult = this.state.hasLost ? "Lost" : this.guesses.length;
         const newResults = {...storedResultsObj, [gameResult]: (storedResultsObj[gameResult] || 0) + 1};
 
@@ -371,7 +361,7 @@ class Game{
 
 }
 
-class Board{
+class Board {
     constructor(side, magicWord) {
         this.side = side;
         this.magicWord = magicWord;
