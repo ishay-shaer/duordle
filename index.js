@@ -114,7 +114,7 @@ class Game {
         }
     }
 
-    keyboardHandler(event) {
+    keyboardHandler(event) {        
         const pressedKey = event.key;
         if (pressedKey == "Backspace" || pressedKey == "Delete") {
             this.deleteLastLetter();
@@ -127,6 +127,7 @@ class Game {
 
     addLetter(letter) {
         if (!this.state.isActive) return;
+        document.querySelector("#error-box").style.visibility = "hidden";
 
         if (this.charPosRow < MAXGUESSES && this.charPosCol < wordLength) {
             this.boards.forEach(board => board.addLetter(letter));
@@ -147,6 +148,7 @@ class Game {
     // refactor: make Board.deleteLastLetter and seperate
     deleteLastLetter() {
         if (!this.state.isActive || this.charPosCol === 0) return;
+        document.querySelector("#error-box").style.visibility = "hidden";
         
         this.charPosCol--;
         this.boards.forEach(board => board.deleteLastLetter());
@@ -161,6 +163,7 @@ class Game {
 
     enterAndMatchWord() {
         if (!this.state.isActive) return;
+        document.querySelector("#error-box").style.visibility = "hidden";
 
         if (!this.isCurrentGuessValid) {
             this.displayErrorMessage();
@@ -551,19 +554,11 @@ function getAlphaSimilarity(word_0, word_1) {
 }
 
 async function main() {
-    if (!possibleGuesses.length) {
-        possibleGuesses = await getWordsFromTextFile(longFilePath);
-    }
-    let game;
-    try {
-        game = await Game.createGame();
-        if (!game) main();
-
-        console.log(game.boards[0].magicWord);
-        console.log(game.boards[1].magicWord);
-    } catch (error) {
-        throw new Error(error);
-    }
+    if (!possibleGuesses.length) possibleGuesses = await getWordsFromTextFile(longFilePath);
+    const game = await Game.createGame();
+    if (!game) main();
+    console.log(game.boards[0].magicWord);
+    console.log(game.boards[1].magicWord);
     document.querySelector("#color-select").addEventListener("change", setColorScheme);
     renderColorScheme();
     window.addEventListener("keydown", (e) => {game.keyboardHandler(e)});
