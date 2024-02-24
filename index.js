@@ -470,15 +470,13 @@ class Board {
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
-    console.log(filePath);
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
         const data = await response.text();
-        console.log(data);
-        return data.split("\r\n");
+        return data.split("\n");
     } catch (error) {
         throw new Error(error);
     }
@@ -558,7 +556,6 @@ function setColorScheme() {
 async function main() {
     wordLength = window.prompt("Enter word length (4-6)");
     if (!wordLength) wordLength = 5;
-    console.log(wordLength);
     // guessesFilePath = `words_${wordLength}_letters.txt`;
     // console.log(guessesFilePath);
     // possibleGuesses = await getWordsFromTextFile(guessesFilePath);
