@@ -32,15 +32,13 @@ import getRandomRelatedWords from "/getRelatedWords.js";
 
 
 const originalHtml = document.documentElement.outerHTML;
-let wordLength = 5; // default value
-let maxGuesses = wordLength + 2;
-let guessesFilePath;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 let stopErrorDisplay; // Used for timeout in the displayErrorMessage function.
 
 class Game {
     constructor([word_0, word_1], possibleGuesses) {
         this.wordLength = word_0.length;
+        this.maxGuesses = this.wordLength + 2;
         this.state = {
             hasWon: false,
             hasLost: false,
@@ -56,11 +54,6 @@ class Game {
         this.guesses = [];
         this.lastGuess = "";
     }
-
-
-    // Move possibleGuesses and possibleMagicWords to the global scope,
-    // so it doesn't need to fetch the files every time a new game begins.
-    // (Promise needs to be handled properly because it's an async process)
 
     static async createGame(wordLength) {
         const guessesFilePath = `words_${wordLength}_letters.txt`;
@@ -83,7 +76,7 @@ class Game {
                     this.deleteLastLetter();
                     document.activeElement.blur();
                 });
-                delBtn.tabIndex = "-1";            
+                delBtn.tabIndex = "-1";
                 rowEl.appendChild(delBtn);
             }
             for (let letter of QWERTY[row]) {
@@ -128,16 +121,16 @@ class Game {
         if (!this.state.isActive) return;
         document.querySelector("#error-box").style.visibility = "hidden";
 
-        if (this.charPosRow < maxGuesses && this.charPosCol < wordLength) {
+        if (this.charPosRow < this.maxGuesses && this.charPosCol < this.wordLength) {
             this.boards.forEach(board => board.addLetter(letter));
             this.currentGuess += letter;
             this.charPosCol++;
 
-            if (this.charPosCol == wordLength) {
+            if (this.charPosCol == this.wordLength) {
                 this.isCurrentGuessValid = this.isWordValid(this.currentGuess);    
                 // If word has enough letters and is invalid (i.e. not in word list), display word in red.
                 this.displayStyleByValidity(this.isCurrentGuessValid);
-            } else if (this.charPosCol < wordLength) {
+            } else if (this.charPosCol < this.wordLength) {
                 // If the guess is too short, it is not valid anyway, but no need to display it as invalid.
                 this.isCurrentGuessValid = false;
             }
@@ -205,8 +198,8 @@ class Game {
 
     displayErrorMessage() {
         const errorBoxEl = document.querySelector("#error-box");
-        if (this.currentGuess.length < wordLength) {
-            const numOfLettersMissing = wordLength - this.currentGuess.length;
+        if (this.currentGuess.length < this.wordLength) {
+            const numOfLettersMissing = this.wordLength - this.currentGuess.length;
             const plural = numOfLettersMissing > 1 ? "s" : "";
             errorBoxEl.textContent = `${numOfLettersMissing} letter${plural} missing`;
         } else {
@@ -242,7 +235,7 @@ class Game {
         if (this.boards.every(board => board.state.hasWon)) {
             this.state = {...this.state, hasWon: true, isActive: false};
             this.endGame();
-        } else if (this.guesses.length === maxGuesses && !this.state.hasWon) {
+        } else if (this.guesses.length === this.maxGuesses && !this.state.hasWon) {
             this.state = {...this.state, hasLost: true, isActive: false};
             this.endGame();
         }
@@ -318,7 +311,7 @@ class Game {
         let message;
         if (this.state.hasWon) {
             message = `<h1 id="win-header">You win!</h1>
-                You got it right at guess ${this.guesses.length} out of ${maxGuesses}<br>`;
+                You got it right at guess ${this.guesses.length} out of ${this.maxGuesses}<br>`;
         } else {
             const gameMagicWords = this.boards.map((board) => board.magicWord);
             message = `Better luck next time! <br>
@@ -334,7 +327,7 @@ class Game {
         messageTextEl.appendChild(chartBoxEl);
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
-        const xRange = [...Array.from(Array(maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
+        const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
         createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight, xRange);
 
         setTimeout(() => {
@@ -349,7 +342,7 @@ class Game {
         const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
         const gamesWon = totalGames - (gameStats["Lost"] || 0);
         const averageScore = Object.entries(gameStats).reduce((total, [guesses, num]) => 
-            guesses === "Lost" ? total + ((maxGuesses + 1) * num) : total + (guesses * num), 0) / totalGames;
+            guesses === "Lost" ? total + ((this.maxGuesses + 1) * num) : total + (guesses * num), 0) / totalGames;
         let statsMessage = `Total games: ${totalGames}<br>
                             Average: ${averageScore.toFixed(2)}`; 
 
@@ -362,6 +355,7 @@ class Game {
 
 class Board {
     constructor(side, magicWord) {
+        this.wordLength = magicWord.length;
         this.side = side;
         this.magicWord = magicWord;
         this.guesses = [];
@@ -399,7 +393,7 @@ class Board {
 
         if (this.magicWord === guess) {
             this.state.hasWon = true;
-            this.lastMatch = Array.from({length: wordLength}, () => "perfect");
+            this.lastMatch = Array.from({length: this.wordLength}, () => "perfect");
             guess.split("").forEach(letter => this.keyboardUpdater[letter] = "perfect");
             this.state = {...this.state, hasWon: true};
             this.applyWinCssTransition();
@@ -408,14 +402,14 @@ class Board {
         
         // If the guess is not identical to the magic word:
         // initialization
-        this.lastMatch = Array.from({length: wordLength}, () => "excluded");
+        this.lastMatch = Array.from({length: this.wordLength}, () => "excluded");
         const letterCounter = {};
         
         for (const letter of this.magicWord) {
             letterCounter[letter] = (letterCounter[letter] || 0) + 1;
         }
 
-        for (let i=0; i<wordLength; i++) {
+        for (let i = 0; i < this.wordLength; i++) {
             const currentLetter = guess[i];
 
             if (currentLetter === this.magicWord[i]){
@@ -428,7 +422,7 @@ class Board {
             }
         }
 
-        for (let i=0; i<wordLength; i++) {
+        for (let i = 0; i < this.wordLength; i++) {
             const currentLetter = guess[i];
 
             if ((this.magicWord.includes(guess[i])) && this.lastMatch[i] != "perfect") {
@@ -483,11 +477,11 @@ async function getWordsFromTextFile(filePath) {
     }
 }
 
-function createBoxes(boardSide){
+function createBoxes(boardSide, wordLength, maxGuesses) {
     const board = document.querySelector(`#board-${boardSide}`);
     let boardContent = "";
 
-    for (let row=0; row<maxGuesses; row++){
+    for (let row = 0; row < maxGuesses; row++){
         boardContent += `<div class="board-row board-row-${wordLength}-letters" id="board-row-${boardSide}-${row}">`;
         for (let column=0; column<wordLength; column++){
             boardContent += `<span class="box" id="box-${boardSide}-${row}-${column}"></span>`;
@@ -520,9 +514,11 @@ function renderColorScheme() {
     });
 
     if (localStorage.getItem("colorScheme") === "high-contrast") {
+        htmlClassList.remove("default");
         htmlClassList.add("high-contrast");
     } else {
         htmlClassList.remove("high-contrast");
+        htmlClassList.add("default");
     }
 }
 
@@ -555,11 +551,8 @@ function setColorScheme() {
 // }
 
 async function main() {
-    wordLength = window.prompt("Enter word length (4-6)");
+    let wordLength = window.prompt("Enter word length (4-6)");
     if (!wordLength) wordLength = 5;
-    // guessesFilePath = `words_${wordLength}_letters.txt`;
-    // console.log(guessesFilePath);
-    // possibleGuesses = await getWordsFromTextFile(guessesFilePath);
     const game = await Game.createGame(wordLength);
     if (!game) main();
     console.log(game.boards[0].magicWord);
@@ -568,8 +561,8 @@ async function main() {
     renderColorScheme();
     window.addEventListener("keydown", (e) => {game.keyboardHandler(e)});
     game.createScreenKeyboard();
-    createBoxes(0);
-    createBoxes(1);
+    createBoxes(0, game.wordLength, game.maxGuesses);
+    createBoxes(1, game.wordLength, game.maxGuesses);
 }
 
 main();
