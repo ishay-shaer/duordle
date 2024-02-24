@@ -32,24 +32,22 @@ import getRandomRelatedWords from "/getRelatedWords.js";
 
 
 const originalHtml = document.documentElement.outerHTML;
-let wordLength = 6; // default value
+let wordLength = 5; // default value
 let maxGuesses = wordLength + 2;
-let guessesFilePath = `words_${wordLength}_letters.txt`;
+let guessesFilePath;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 let stopErrorDisplay; // Used for timeout in the displayErrorMessage function.
 
-let possibleGuesses = [];
-let possibleMagicWords = [];
-
-
 class Game {
-    constructor(word_0, word_1) {
+    constructor([word_0, word_1], possibleGuesses) {
+        this.wordLength = word_0.length;
         this.state = {
             hasWon: false,
             hasLost: false,
             isActive: true,
         }
         this.gameMagicWords = [word_0, word_1];
+        this.possibleGuesses = possibleGuesses;
         this.boards = [new Board(0, word_0), new Board(1, word_1)];
         this.charPosCol = 0;
         this.charPosRow = 0;
@@ -57,8 +55,6 @@ class Game {
         this.isCurrentGuessValid = false;
         this.guesses = [];
         this.lastGuess = "";
-
-        // These two lines don't belong here. Move to main()?
     }
 
 
@@ -66,10 +62,12 @@ class Game {
     // so it doesn't need to fetch the files every time a new game begins.
     // (Promise needs to be handled properly because it's an async process)
 
-    static async createGame() {
+    static async createGame(wordLength) {
+        const guessesFilePath = `words_${wordLength}_letters.txt`;
         const gameMagicWords = await getRandomRelatedWords(wordLength);
+        let possibleGuesses = await getWordsFromTextFile(guessesFilePath);
         possibleGuesses = [...new Set([...possibleGuesses, ...gameMagicWords])];
-        return new Game(...gameMagicWords);
+        return new Game(gameMagicWords, possibleGuesses);
     }
 
     // refactor?
@@ -194,7 +192,7 @@ class Game {
     }
 
     isWordValid(word) {
-        return possibleGuesses.includes(word);
+        return this.possibleGuesses.includes(word);
     }
 
     displayStyleByValidity(isValid) {
@@ -471,16 +469,17 @@ function getRandomElFromArray(arr) {
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
+    console.log(filePath);
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
         const data = await response.text();
+        console.log(data);
         return data.split("\r\n");
     } catch (error) {
-        console.error(error);
-        return [];
+        throw new Error(error);
     }
 }
 
@@ -555,8 +554,13 @@ function getAlphaSimilarity(word_0, word_1) {
 }
 
 async function main() {
-    if (!possibleGuesses.length) possibleGuesses = await getWordsFromTextFile(guessesFilePath);
-    const game = await Game.createGame();
+    wordLength = window.prompt("Enter word length (4-6)");
+    if (!wordLength) wordLength = 5;
+    console.log(wordLength);
+    // guessesFilePath = `words_${wordLength}_letters.txt`;
+    // console.log(guessesFilePath);
+    // possibleGuesses = await getWordsFromTextFile(guessesFilePath);
+    const game = await Game.createGame(wordLength);
     if (!game) main();
     console.log(game.boards[0].magicWord);
     console.log(game.boards[1].magicWord);
