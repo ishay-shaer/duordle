@@ -462,10 +462,11 @@ class Board {
     }
 }
 
-function getRandomElFromArray(arr) {
-    const index = Math.floor(Math.random() * arr.length);
-    return arr[index];
-}
+// Not currently used
+// function getRandomElFromArray(arr) {
+//     const index = Math.floor(Math.random() * arr.length);
+//     return arr[index];
+// }
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
@@ -538,20 +539,21 @@ function setColorScheme() {
 
 // Calculates alphabetic similarity between 2 words of the same length.
 // Returns number of letters that are identical and identically positioned in the 2 words
-function getAlphaSimilarity(word_0, word_1) {
-    if (word_0.length != word_1.length) {
-        throw new Error("Cannot calculate alphabetic similarity of words of different lengths");
-    }
+// Not currently used
+// function getAlphaSimilarity(word_0, word_1) {
+//     if (word_0.length != word_1.length) {
+//         throw new Error("Cannot calculate alphabetic similarity of words of different lengths");
+//     }
     
-    const numOfLetters = word_0.length;
-    let similarityCounter = 0;
-    for (let i=0; i<numOfLetters; i++) {
-        if (word_0[i] === word_1[i]) {
-            similarityCounter++;
-        }
-    }
-    return similarityCounter;
-}
+//     const numOfLetters = word_0.length;
+//     let similarityCounter = 0;
+//     for (let i=0; i<numOfLetters; i++) {
+//         if (word_0[i] === word_1[i]) {
+//             similarityCounter++;
+//         }
+//     }
+//     return similarityCounter;
+// }
 
 async function main() {
     wordLength = window.prompt("Enter word length (4-6)");
