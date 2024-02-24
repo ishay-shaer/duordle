@@ -470,13 +470,14 @@ class Board {
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
+
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
         const data = await response.text();
-        return data.split("\n");
+        return data.split("\r\n");
     } catch (error) {
         throw new Error(error);
     }
