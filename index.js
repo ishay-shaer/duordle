@@ -31,9 +31,9 @@ import getRandomRelatedWords from "/getRelatedWords.js";
 
 
 const originalHtml = document.documentElement.outerHTML;
-const wordLength = 5;
+const wordLength = 6;
 const MAXGUESSES = wordLength + 2;
-const longFilePath = "/five_letter_guesses.txt";
+const longFilePath = "words_6_letters.txt";
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 let stopErrorDisplay; // Used for timeout in the displayErrorMessage function.
 
