@@ -1,0 +1,4684 @@
+{
+  "ABDUCT": [
+    "KIDNAP",
+    "NOBBLE",
+    "SNATCH"
+  ],
+  "ABJECT": [
+    "SCUMMY",
+    "SCURVY"
+  ],
+  "ABJURE": [
+    "RECANT",
+    "RESILE"
+  ],
+  "ABLAZE": [
+    "ALIGHT"
+  ],
+  "ABROAD": [
+    "AFIELD"
+  ],
+  "ABRUPT": [
+    "SUDDEN"
+  ],
+  "ABSEIL": [
+    "RAPPEL"
+  ],
+  "ABSENT": [
+    "REMOVE",
+    "SCATTY",
+    "TRUANT"
+  ],
+  "ABSORB": [
+    "ENGAGE",
+    "OCCUPY",
+    "INGEST",
+    "IMBIBE",
+    "ENGULF",
+    "PLUNGE"
+  ],
+  "ACCEDE": [
+    "SUBMIT",
+    "ASSENT"
+  ],
+  "ACCENT": [
+    "STRESS"
+  ],
+  "ACCEPT": [
+    "ASSUME"
+  ],
+  "ACCESS": [
+    "ENTREE"
+  ],
+  "ACCORD": [
+    "TREATY"
+  ],
+  "ACCUSE": [
+    "CHARGE"
+  ],
+  "ACQUIT": [
+    "ASSOIL",
+    "BEHAVE",
+    "DEPORT"
+  ],
+  "ACTION": [
+    "FULFIL"
+  ],
+  "ACTIVE": [
+    "NIMBLE",
+    "SPORTY"
+  ],
+  "ADDICT": [
+    "JUNKIE"
+  ],
+  "ADHERE": [
+    "CLEAVE"
+  ],
+  "ADJOIN": [
+    "BORDER"
+  ],
+  "ADRIFT": [
+    "AFLOAT"
+  ],
+  "ADROIT": [
+    "CLEVER"
+  ],
+  "ADVENT": [
+    "COMING"
+  ],
+  "ADVERT": [
+    "ALLUDE",
+    "ATTEND"
+  ],
+  "ADVISE": [
+    "NOTIFY"
+  ],
+  "AERIAL": [
+    "UNREAL"
+  ],
+  "AFFAIR": [
+    "MATTER"
+  ],
+  "AFFECT": [
+    "IMPACT",
+    "STRIKE",
+    "REGARD"
+  ],
+  "AFFIRM": [
+    "ASSERT",
+    "VERIFY"
+  ],
+  "AFFRAY": [
+    "RUFFLE",
+    "FRACAS"
+  ],
+  "AFGHAN": [
+    "PASHTO",
+    "PASHTU"
+  ],
+  "AFIELD": [
+    "ABROAD"
+  ],
+  "AFLAME": [
+    "ALIGHT"
+  ],
+  "AFLOAT": [
+    "ADRIFT"
+  ],
+  "AFRAID": [
+    "HUNTED",
+    "SCARED",
+    "AGHAST"
+  ],
+  "AGENCY": [
+    "BUREAU",
+    "OFFICE"
+  ],
+  "AGENDA": [
+    "DOCKET"
+  ],
+  "AGHAST": [
+    "AFRAID"
+  ],
+  "AILING": [
+    "PEAKED",
+    "POORLY",
+    "SICKLY",
+    "UNWELL"
+  ],
+  "AIRWAY": [
+    "SKYWAY"
+  ],
+  "ALKENE": [
+    "OLEFIN"
+  ],
+  "ALKYNE": [
+    "ETHYNE"
+  ],
+  "ALLIED": [
+    "UNITED"
+  ],
+  "ALLUDE": [
+    "ADVERT"
+  ],
+  "ALMOST": [
+    "NEARLY"
+  ],
+  "ALPINE": [
+    "UPLAND"
+  ],
+  "AMAZON": [
+    "VIRAGO"
+  ],
+  "AMBUSH": [
+    "WAYLAY"
+  ],
+  "AMOUNT": [
+    "NUMBER"
+  ],
+  "ANALOG": [
+    "LINEAR"
+  ],
+  "ANCHOR": [
+    "GROUND"
+  ],
+  "ANIMAL": [
+    "CARNAL"
+  ],
+  "ANNEAL": [
+    "TEMPER"
+  ],
+  "ANNUAL": [
+    "YEARLY"
+  ],
+  "ANOINT": [
+    "INUNCT"
+  ],
+  "ANSWER": [
+    "RESULT"
+  ],
+  "ANYHOW": [
+    "ANYWAY"
+  ],
+  "ANYWAY": [
+    "ANYHOW"
+  ],
+  "APPEAL": [
+    "PRAYER",
+    "INVOKE"
+  ],
+  "APPEND": [
+    "SUPPLY"
+  ],
+  "ARCHER": [
+    "BOWMAN"
+  ],
+  "ARCTIC": [
+    "GALOSH",
+    "GOLOSH",
+    "RUBBER",
+    "FRIGID"
+  ],
+  "ARDENT": [
+    "FERVID",
+    "TORRID",
+    "BRIGHT"
+  ],
+  "ARDOUR": [
+    "FERVOR"
+  ],
+  "ARGENT": [
+    "SILVER"
+  ],
+  "ARMPIT": [
+    "AXILLA"
+  ],
+  "AROUSE": [
+    "ELICIT",
+    "KINDLE",
+    "INVOKE",
+    "AWAKEN",
+    "EXCITE"
+  ],
+  "ARREST": [
+    "COLLAR"
+  ],
+  "ARTFUL": [
+    "CRAFTY",
+    "TRICKY"
+  ],
+  "ASCEND": [
+    "UPRISE"
+  ],
+  "ASCENT": [
+    "RISING"
+  ],
+  "ASLANT": [
+    "ASLOPE",
+    "SLOPED"
+  ],
+  "ASLEEP": [
+    "DROWSY",
+    "SLEEPY",
+    "TORPID"
+  ],
+  "ASSAIL": [
+    "ATTACK"
+  ],
+  "ASSENT": [
+    "ACCEDE"
+  ],
+  "ASSERT": [
+    "AFFIRM",
+    "VERIFY",
+    "INSIST"
+  ],
+  "ASSIGN": [
+    "DEPUTE",
+    "IMPUTE"
+  ],
+  "ASSIST": [
+    "ATTEND"
+  ],
+  "ASSUME": [
+    "ACCEPT",
+    "STRIKE"
+  ],
+  "ASSURE": [
+    "SECURE"
+  ],
+  "ASTUTE": [
+    "SHREWD"
+  ],
+  "ASYLUM": [
+    "REFUGE"
+  ],
+  "ATOMIC": [
+    "LITTLE"
+  ],
+  "ATTACK": [
+    "ASSAIL",
+    "ONRUSH"
+  ],
+  "ATTAIN": [
+    "STRIKE"
+  ],
+  "ATTEND": [
+    "ASSIST",
+    "ADVERT"
+  ],
+  "AUGEAN": [
+    "SOILED"
+  ],
+  "AUGUST": [
+    "LORDLY"
+  ],
+  "AUTHOR": [
+    "SOURCE",
+    "WRITER"
+  ],
+  "AVIARY": [
+    "VOLARY"
+  ],
+  "AWAKEN": [
+    "AROUSE"
+  ],
+  "BABBLE": [
+    "GUGGLE",
+    "GURGLE",
+    "RIPPLE",
+    "TATTLE"
+  ],
+  "BACKUP": [
+    "RELIEF"
+  ],
+  "BADGER": [
+    "PESTER"
+  ],
+  "BAFFLE": [
+    "GRAVEL",
+    "PUZZLE",
+    "SCOTCH",
+    "THWART"
+  ],
+  "BALLOT": [
+    "VOTING"
+  ],
+  "BANGLE": [
+    "FALLAL",
+    "GEWGAW"
+  ],
+  "BANTAM": [
+    "MIDGET",
+    "PETITE",
+    "LITTLE"
+  ],
+  "BARBEL": [
+    "FEELER"
+  ],
+  "BARELY": [
+    "SCARCE"
+  ],
+  "BARKER": [
+    "DOGGIE"
+  ],
+  "BARREN": [
+    "DEVOID"
+  ],
+  "BATTLE": [
+    "COMBAT"
+  ],
+  "BAUBLE": [
+    "FALLAL",
+    "GEWGAW"
+  ],
+  "BEWAIL": [
+    "BEMOAN",
+    "LAMENT"
+  ],
+  "BICKER": [
+    "NIGGLE"
+  ],
+  "BIONIC": [
+    "UNREAL"
+  ],
+  "BITTER": [
+    "BITING"
+  ],
+  "BLIGHT": [
+    "PLAGUE"
+  ],
+  "BLOTCH": [
+    "MOTTLE",
+    "STREAK"
+  ],
+  "BLOTTO": [
+    "LOADED",
+    "PISSED",
+    "SOAKED",
+    "SOUSED",
+    "RIPPED"
+  ],
+  "BLOWZY": [
+    "UNTIDY"
+  ],
+  "BOATER": [
+    "PANAMA",
+    "SAILOR"
+  ],
+  "BOBBLE": [
+    "BOLLIX",
+    "BUNGLE",
+    "FUMBLE"
+  ],
+  "BOILER": [
+    "KETTLE"
+  ],
+  "BOMBER": [
+    "HOAGIE"
+  ],
+  "BOODLE": [
+    "DINERO",
+    "MOOLAH",
+    "WAMPUM"
+  ],
+  "BOOZER": [
+    "SOAKER"
+  ],
+  "BORDER": [
+    "ADJOIN",
+    "MARGIN"
+  ],
+  "BOTHER": [
+    "HASSLE",
+    "GRAVEL",
+    "NETTLE"
+  ],
+  "BOTTOM": [
+    "BEHIND",
+    "FATHOM",
+    "NETHER"
+  ],
+  "BOUNCE": [
+    "SPRING",
+    "RECOIL",
+    "RESILE"
+  ],
+  "BOWMAN": [
+    "ARCHER"
+  ],
+  "BRANCH": [
+    "RAMIFY",
+    "OFFSET"
+  ],
+  "BRASSY": [
+    "FLASHY",
+    "GARISH",
+    "TAWDRY",
+    "BRAZEN"
+  ],
+  "BRAZEN": [
+    "BRASSY"
+  ],
+  "BREACH": [
+    "OFFEND"
+  ],
+  "BREAST": [
+    "SUMMIT"
+  ],
+  "BREEZY": [
+    "STORMY",
+    "LIVELY"
+  ],
+  "BRIGHT": [
+    "FULGID",
+    "GLOSSY",
+    "AGLEAM",
+    "ARDENT",
+    "SILVER",
+    "LUCENT",
+    "SATINY",
+    "SHEENY",
+    "SILKEN"
+  ],
+  "BROKEN": [
+    "BUSTED",
+    "RUGGED",
+    "HUMBLE",
+    "UNKEPT",
+    "DOTTED",
+    "DASHED",
+    "FITFUL"
+  ],
+  "BROKER": [
+    "FACTOR"
+  ],
+  "BROODY": [
+    "MUSING",
+    "SITTER"
+  ],
+  "BRUISE": [
+    "INJURE",
+    "OFFEND"
+  ],
+  "BRUTAL": [
+    "SAVAGE",
+    "DIRECT"
+  ],
+  "BUBBLE": [
+    "GUGGLE",
+    "GURGLE",
+    "RIPPLE"
+  ],
+  "BUBBLY": [
+    "FROTHY",
+    "LIVELY"
+  ],
+  "BULLET": [
+    "HEATER",
+    "HUMMER"
+  ],
+  "BUMBLE": [
+    "BOLLIX",
+    "FALTER"
+  ],
+  "BUNDLE": [
+    "PACKET",
+    "PARCEL"
+  ],
+  "BUNGLE": [
+    "BOBBLE",
+    "BOLLIX",
+    "FUMBLE",
+    "FUCKUP"
+  ],
+  "BUNKER": [
+    "DUGOUT"
+  ],
+  "BURBLE": [
+    "GUGGLE",
+    "RIPPLE"
+  ],
+  "BURDEN": [
+    "WEIGHT",
+    "EFFECT",
+    "CHARGE",
+    "SADDLE"
+  ],
+  "BUREAU": [
+    "AGENCY",
+    "OFFICE"
+  ],
+  "BURROW": [
+    "TUNNEL"
+  ],
+  "BUSHEL": [
+    "DOCTOR",
+    "REPAIR"
+  ],
+  "BUSTER": [
+    "FELLOW"
+  ],
+  "BYGONE": [
+    "BYPAST"
+  ],
+  "BYROAD": [
+    "BYPATH"
+  ],
+  "CALICO": [
+    "MOTLEY"
+  ],
+  "CALIPH": [
+    "KHALIF"
+  ],
+  "CALLER": [
+    "PHONER"
+  ],
+  "CANARY": [
+    "SNITCH"
+  ],
+  "CANCEL": [
+    "OFFSET",
+    "DELETE"
+  ],
+  "CANDID": [
+    "DIRECT"
+  ],
+  "CANINE": [
+    "CUSPID"
+  ],
+  "CANTON": [
+    "BILLET"
+  ],
+  "CAREEN": [
+    "WOBBLE"
+  ],
+  "CARESS": [
+    "FONDLE"
+  ],
+  "CARIES": [
+    "CAVITY"
+  ],
+  "CARNAL": [
+    "ANIMAL"
+  ],
+  "CARVER": [
+    "CUTTER"
+  ],
+  "CASKET": [
+    "COFFIN"
+  ],
+  "CASTLE": [
+    "PALACE"
+  ],
+  "CASTOR": [
+    "BEAVER"
+  ],
+  "CASUAL": [
+    "CHANCE"
+  ],
+  "CATCHY": [
+    "TRICKY"
+  ],
+  "CATNAP": [
+    "SNOOZE"
+  ],
+  "CAVITY": [
+    "CARIES"
+  ],
+  "CAVORT": [
+    "FROLIC",
+    "GAMBOL"
+  ],
+  "CELTIC": [
+    "GAELIC"
+  ],
+  "CENTER": [
+    "MIDDLE",
+    "MIDWAY",
+    "KERNEL",
+    "MARROW"
+  ],
+  "CENTRE": [
+    "MIDDLE",
+    "KERNEL",
+    "MARROW"
+  ],
+  "CERISE": [
+    "CHERRY"
+  ],
+  "CHAISE": [
+    "DAYBED"
+  ],
+  "CHANCE": [
+    "HAPPEN",
+    "CASUAL",
+    "GAMBLE",
+    "HAZARD"
+  ],
+  "CHANCY": [
+    "FLUKEY",
+    "UNSAFE"
+  ],
+  "CHANGE": [
+    "SWITCH",
+    "MODIFY",
+    "DEEPEN"
+  ],
+  "CHARGE": [
+    "EXCITE",
+    "ACCUSE",
+    "COMMIT",
+    "THRILL",
+    "BURDEN",
+    "SADDLE"
+  ],
+  "CHASTE": [
+    "VESTAL",
+    "VIRGIN"
+  ],
+  "CHERRY": [
+    "CERISE"
+  ],
+  "CHESTY": [
+    "ROBUST"
+  ],
+  "CHIVVY": [
+    "HARASS",
+    "HASSLE",
+    "MOLEST",
+    "PLAGUE"
+  ],
+  "CHOICE": [
+    "OPTION",
+    "SELECT"
+  ],
+  "CHOKER": [
+    "COLLAR",
+    "RUFFLE"
+  ],
+  "CHOOSE": [
+    "SELECT",
+    "PREFER"
+  ],
+  "CHOPPY": [
+    "SUDDEN",
+    "STORMY"
+  ],
+  "CHRIST": [
+    "SAVIOR"
+  ],
+  "CHUNKY": [
+    "STUMPY",
+    "LITTLE"
+  ],
+  "CINQUE": [
+    "PENTAD",
+    "PHOEBE"
+  ],
+  "CIPHER": [
+    "NOUGHT",
+    "NAUGHT",
+    "NOBODY",
+    "FIGURE",
+    "RECKON"
+  ],
+  "CIRCLE": [
+    "ROTARY"
+  ],
+  "CLERIC": [
+    "DIVINE"
+  ],
+  "CLEVER": [
+    "ADROIT"
+  ],
+  "CLIMAX": [
+    "COMING",
+    "ORGASM"
+  ],
+  "CLOTHE": [
+    "INVEST"
+  ],
+  "CLOUDY": [
+    "TURBID",
+    "OPAQUE",
+    "LEADEN",
+    "SMOGGY",
+    "SULLEN"
+  ],
+  "COARSE": [
+    "GRITTY",
+    "PLUSHY",
+    "GRAINY",
+    "COMMON",
+    "VULGAR"
+  ],
+  "COCKER": [
+    "CODDLE",
+    "COSSET",
+    "PAMPER"
+  ],
+  "COCKLE": [
+    "RIFFLE",
+    "RIPPLE",
+    "RUFFLE",
+    "PUCKER",
+    "RUMPLE"
+  ],
+  "CODDLE": [
+    "COCKER",
+    "COSSET",
+    "PAMPER"
+  ],
+  "COFFIN": [
+    "CASKET"
+  ],
+  "COHERE": [
+    "CLEAVE"
+  ],
+  "COLLAR": [
+    "ARREST",
+    "CHOKER"
+  ],
+  "COLUMN": [
+    "PILLAR"
+  ],
+  "COMBAT": [
+    "BATTLE"
+  ],
+  "COMELY": [
+    "SEEMLY",
+    "PROPER",
+    "BONNIE"
+  ],
+  "COMING": [
+    "ADVENT",
+    "CLIMAX",
+    "ORGASM",
+    "FUTURE"
+  ],
+  "COMMIT": [
+    "DEVOTE",
+    "CHARGE",
+    "INVEST"
+  ],
+  "COMMON": [
+    "MUTUAL",
+    "SHARED",
+    "VULGAR",
+    "COARSE",
+    "PUBLIC"
+  ],
+  "COMPEL": [
+    "OBLIGE"
+  ],
+  "COMPLY": [
+    "FOLLOW"
+  ],
+  "CONDOM": [
+    "RUBBER",
+    "SAFETY"
+  ],
+  "CONFAB": [
+    "CLAVER",
+    "GOSSIP",
+    "NATTER"
+  ],
+  "CONFER": [
+    "BESTOW"
+  ],
+  "CONVEX": [
+    "HOGGED"
+  ],
+  "CONVEY": [
+    "IMPART"
+  ],
+  "COPING": [
+    "HEADER"
+  ],
+  "CORNER": [
+    "RECESS"
+  ],
+  "CORSET": [
+    "GIRDLE"
+  ],
+  "COSSET": [
+    "COCKER",
+    "CODDLE",
+    "PAMPER"
+  ],
+  "COSTLY": [
+    "PRICEY"
+  ],
+  "COVERT": [
+    "SCREEN",
+    "MASKED",
+    "SECRET"
+  ],
+  "COWBOY": [
+    "COWMAN"
+  ],
+  "CRABBY": [
+    "GRUMPY"
+  ],
+  "CRADLE": [
+    "ROCKER"
+  ],
+  "CRAFTY": [
+    "TRICKY",
+    "ARTFUL"
+  ],
+  "CRANKY": [
+    "TETCHY",
+    "TENDER"
+  ],
+  "CREAKY": [
+    "RHEUMY"
+  ],
+  "CREASE": [
+    "FURROW",
+    "RUMPLE",
+    "RUCKLE"
+  ],
+  "CRETIN": [
+    "RETARD"
+  ],
+  "CRINGE": [
+    "GROVEL",
+    "FLINCH",
+    "RECOIL",
+    "SHRINK"
+  ],
+  "CRISPY": [
+    "TENDER"
+  ],
+  "CROUCH": [
+    "HUNKER"
+  ],
+  "CRUMMY": [
+    "CHEESY",
+    "SLEAZY"
+  ],
+  "CUDDLE": [
+    "NESTLE",
+    "NUZZLE"
+  ],
+  "CURATE": [
+    "PARSON",
+    "PASTOR",
+    "RECTOR"
+  ],
+  "CURLER": [
+    "ROLLER"
+  ],
+  "CURSED": [
+    "BLAMED",
+    "DAMNED",
+    "DARNED",
+    "DEUCED",
+    "GODDAM",
+    "DOOMED"
+  ],
+  "CUSTOM": [
+    "USANCE",
+    "IMPOST"
+  ],
+  "CUTTER": [
+    "TENDER",
+    "CARVER"
+  ],
+  "CYCLIC": [
+    "ROTARY"
+  ],
+  "CYPHER": [
+    "NOUGHT",
+    "NAUGHT",
+    "NOBODY",
+    "FIGURE",
+    "RECKON"
+  ],
+  "DABBLE": [
+    "PADDLE"
+  ],
+  "DAINTY": [
+    "PRISSY"
+  ],
+  "DAMAGE": [
+    "SCATHE"
+  ],
+  "DAMNED": [
+    "CURSED",
+    "DOOMED",
+    "BLAMED",
+    "DEUCED",
+    "GODDAM"
+  ],
+  "DAMPEN": [
+    "SOFTEN",
+    "WEAKEN",
+    "STIFLE",
+    "MUFFLE",
+    "DEADEN"
+  ],
+  "DAPPER": [
+    "JAUNTY",
+    "RAKISH",
+    "SNAPPY",
+    "SPIFFY",
+    "SPRUCE"
+  ],
+  "DAPPLE": [
+    "MOTTLE"
+  ],
+  "DARNED": [
+    "BLAMED",
+    "DEUCED",
+    "GODDAM",
+    "CURSED"
+  ],
+  "DAWDLE": [
+    "LINGER"
+  ],
+  "DEADEN": [
+    "GIRDLE",
+    "DAMPEN"
+  ],
+  "DEADLY": [
+    "MORTAL",
+    "LETHAL"
+  ],
+  "DEALER": [
+    "MONGER",
+    "TRADER"
+  ],
+  "DEARTH": [
+    "FAMINE"
+  ],
+  "DEBASE": [
+    "DILUTE"
+  ],
+  "DEBRIS": [
+    "RUBBLE"
+  ],
+  "DEBUNK": [
+    "EXPOSE"
+  ],
+  "DECADE": [
+    "TENNER"
+  ],
+  "DECENT": [
+    "PROPER",
+    "MODEST"
+  ],
+  "DECIDE": [
+    "SETTLE"
+  ],
+  "DEDUCE": [
+    "DERIVE"
+  ],
+  "DEDUCT": [
+    "DERIVE",
+    "RECOUP"
+  ],
+  "DEEPEN": [
+    "CHANGE"
+  ],
+  "DEFAME": [
+    "SMIRCH"
+  ],
+  "DEFEND": [
+    "OPPOSE"
+  ],
+  "DEFORM": [
+    "STRAIN"
+  ],
+  "DEJECT": [
+    "DISMAY"
+  ],
+  "DELETE": [
+    "CANCEL"
+  ],
+  "DELUGE": [
+    "PELTER",
+    "SOAKER"
+  ],
+  "DEMURE": [
+    "MODEST"
+  ],
+  "DEPEND": [
+    "RECKON"
+  ],
+  "DEPICT": [
+    "RENDER"
+  ],
+  "DEPORT": [
+    "ACQUIT",
+    "BEHAVE"
+  ],
+  "DEPUTE": [
+    "ASSIGN"
+  ],
+  "DERIVE": [
+    "DEDUCE",
+    "DEDUCT"
+  ],
+  "DERMIS": [
+    "CORIUM"
+  ],
+  "DESIGN": [
+    "FIGURE",
+    "INTENT"
+  ],
+  "DESPOT": [
+    "TYRANT"
+  ],
+  "DETECT": [
+    "NOTICE"
+  ],
+  "DEVISE": [
+    "INVENT"
+  ],
+  "DEVOID": [
+    "BARREN"
+  ],
+  "DEVOTE": [
+    "COMMIT"
+  ],
+  "DEVOUR": [
+    "GUTTLE"
+  ],
+  "DIAPER": [
+    "NAPKIN"
+  ],
+  "DIDDLE": [
+    "NOBBLE"
+  ],
+  "DIGEST": [
+    "ENDURE",
+    "SUFFER"
+  ],
+  "DIGGER": [
+    "SHOVEL"
+  ],
+  "DILATE": [
+    "EXPAND"
+  ],
+  "DILUTE": [
+    "DEBASE",
+    "REDUCE",
+    "WATERY"
+  ],
+  "DIPPER": [
+    "PLOUGH"
+  ],
+  "DIRECT": [
+    "LINEAL",
+    "TARGET",
+    "BRUTAL",
+    "CANDID",
+    "SQUARE"
+  ],
+  "DISCUS": [
+    "SAUCER"
+  ],
+  "DISMAL": [
+    "DREARY",
+    "GLOOMY"
+  ],
+  "DISMAY": [
+    "DEJECT",
+    "APPALL"
+  ],
+  "DIVINE": [
+    "CLERIC",
+    "SACRED"
+  ],
+  "DOMAIN": [
+    "SPHERE"
+  ],
+  "DOUBLE": [
+    "REPEAT",
+    "TREBLE",
+    "FORKED"
+  ],
+  "DRAGON": [
+    "TARTAR"
+  ],
+  "DREARY": [
+    "DISMAL",
+    "GLOOMY"
+  ],
+  "DRENCH": [
+    "IMBRUE"
+  ],
+  "DRIPPY": [
+    "SLUSHY"
+  ],
+  "DRIVEL": [
+    "SLAVER"
+  ],
+  "DRIVEN": [
+    "GOADED"
+  ],
+  "DROPSY": [
+    "OEDEMA"
+  ],
+  "DROVER": [
+    "HERDER"
+  ],
+  "DROWSE": [
+    "SNOOZE"
+  ],
+  "DROWSY": [
+    "ASLEEP"
+  ],
+  "DRUDGE": [
+    "LABOUR",
+    "HACKER"
+  ],
+  "DUGOUT": [
+    "BUNKER"
+  ],
+  "EARTHY": [
+    "VULGAR"
+  ],
+  "EDIBLE": [
+    "PAREVE"
+  ],
+  "EFFECT": [
+    "RESULT",
+    "UPSHOT",
+    "BURDEN"
+  ],
+  "EGRESS": [
+    "EMERGE"
+  ],
+  "ELICIT": [
+    "AROUSE",
+    "KINDLE"
+  ],
+  "EMERGE": [
+    "EGRESS"
+  ],
+  "EMPLOY": [
+    "ENGAGE"
+  ],
+  "ENAMOR": [
+    "TRANCE"
+  ],
+  "ENDING": [
+    "FINISH"
+  ],
+  "ENDURE": [
+    "DIGEST",
+    "SUFFER"
+  ],
+  "ENERGY": [
+    "VIGOUR"
+  ],
+  "ENFOLD": [
+    "ENWRAP"
+  ],
+  "ENGAGE": [
+    "ABSORB",
+    "OCCUPY",
+    "PURSUE",
+    "EMPLOY",
+    "PLIGHT",
+    "ENLIST"
+  ],
+  "ENGULF": [
+    "ABSORB",
+    "PLUNGE"
+  ],
+  "ENIGMA": [
+    "RIDDLE",
+    "SECRET"
+  ],
+  "ENLIST": [
+    "ENGAGE"
+  ],
+  "ENOUGH": [
+    "PLENTY"
+  ],
+  "ENSURE": [
+    "SECURE"
+  ],
+  "ENTIRE": [
+    "INTACT",
+    "SMOOTH"
+  ],
+  "ENTOMB": [
+    "INHUME"
+  ],
+  "ENWRAP": [
+    "ENFOLD"
+  ],
+  "ERSATZ": [
+    "UNREAL"
+  ],
+  "ESCAPE": [
+    "FLIGHT"
+  ],
+  "ESTEEM": [
+    "REGARD",
+    "REPUTE"
+  ],
+  "ETHICS": [
+    "MORALS"
+  ],
+  "ETHNIC": [
+    "SOCIAL"
+  ],
+  "EXCITE": [
+    "CHARGE",
+    "AROUSE"
+  ],
+  "EXCUSE": [
+    "PARDON",
+    "EXEMPT"
+  ],
+  "EXEMPT": [
+    "EXCUSE",
+    "IMMUNE"
+  ],
+  "EXHALE": [
+    "EXPIRE"
+  ],
+  "EXODUS": [
+    "HEGIRA",
+    "HEJIRA"
+  ],
+  "EXPAND": [
+    "DILATE",
+    "THRIVE"
+  ],
+  "EXPIRE": [
+    "PERISH",
+    "EXHALE"
+  ],
+  "EXPOSE": [
+    "REVEAL",
+    "UNWRAP",
+    "DEBUNK"
+  ],
+  "EXTANT": [
+    "LIVING"
+  ],
+  "EXTEND": [
+    "UNFOLD",
+    "EXSERT",
+    "GALLOP",
+    "STRAIN"
+  ],
+  "FABLED": [
+    "UNREAL"
+  ],
+  "FACILE": [
+    "FLUENT",
+    "SILVER"
+  ],
+  "FACING": [
+    "VENEER",
+    "LINING"
+  ],
+  "FACTOR": [
+    "BROKER"
+  ],
+  "FAECES": [
+    "ORDURE"
+  ],
+  "FAIRLY": [
+    "PRETTY"
+  ],
+  "FALTER": [
+    "BUMBLE"
+  ],
+  "FAMILY": [
+    "MENAGE"
+  ],
+  "FAMINE": [
+    "DEARTH"
+  ],
+  "FAMISH": [
+    "STARVE",
+    "HUNGER"
+  ],
+  "FASTEN": [
+    "SECURE"
+  ],
+  "FATHOM": [
+    "BOTTOM"
+  ],
+  "FAUCET": [
+    "SPIGOT"
+  ],
+  "FAVOUR": [
+    "PREFER"
+  ],
+  "FEEBLE": [
+    "DEBILE",
+    "INFIRM",
+    "WEAKLY"
+  ],
+  "FEELER": [
+    "BARBEL"
+  ],
+  "FELLER": [
+    "LOGGER"
+  ],
+  "FELLOW": [
+    "BUSTER"
+  ],
+  "FENDER": [
+    "BUFFER"
+  ],
+  "FERVID": [
+    "ARDENT",
+    "TORRID"
+  ],
+  "FERVOR": [
+    "ARDOUR"
+  ],
+  "FESTAL": [
+    "JOYOUS"
+  ],
+  "FETISH": [
+    "HOODOO",
+    "VOODOO"
+  ],
+  "FETTER": [
+    "HOBBLE"
+  ],
+  "FIBRIL": [
+    "STRAND"
+  ],
+  "FIDDLE": [
+    "VIOLIN",
+    "MONKEY",
+    "TAMPER",
+    "TINKER"
+  ],
+  "FIERCE": [
+    "STORMY",
+    "SAVAGE"
+  ],
+  "FIGURE": [
+    "RECKON",
+    "DESIGN",
+    "NUMBER",
+    "CIPHER",
+    "CYPHER"
+  ],
+  "FILLET": [
+    "TAENIA"
+  ],
+  "FILTER": [
+    "STRAIN"
+  ],
+  "FILTHY": [
+    "SOILED",
+    "CRUDDY",
+    "SMUTTY"
+  ],
+  "FINALE": [
+    "FINISH"
+  ],
+  "FINISH": [
+    "ENDING",
+    "FINALE",
+    "POLISH"
+  ],
+  "FINITE": [
+    "TENSED"
+  ],
+  "FITFUL": [
+    "BROKEN"
+  ],
+  "FLASHY": [
+    "SPORTY",
+    "BRASSY",
+    "GARISH",
+    "TAWDRY"
+  ],
+  "FLAVOR": [
+    "SPIRIT",
+    "RELISH",
+    "SAVOUR",
+    "SEASON"
+  ],
+  "FLAXEN": [
+    "BLONDE"
+  ],
+  "FLEDGE": [
+    "FLIGHT"
+  ],
+  "FLEECE": [
+    "GAZUMP"
+  ],
+  "FLIMSY": [
+    "SLIGHT"
+  ],
+  "FLINCH": [
+    "CRINGE",
+    "RECOIL",
+    "SHRINK"
+  ],
+  "FLORIN": [
+    "GULDEN"
+  ],
+  "FLOWER": [
+    "HEYDAY"
+  ],
+  "FLUENT": [
+    "FACILE",
+    "SILVER",
+    "LIQUID",
+    "SMOOTH"
+  ],
+  "FLURRY": [
+    "BUSTLE",
+    "HUSTLE"
+  ],
+  "FLYING": [
+    "MOVING",
+    "FLIGHT"
+  ],
+  "FOETID": [
+    "SMELLY",
+    "STINKY"
+  ],
+  "FOLLOW": [
+    "PURSUE",
+    "COMPLY",
+    "SURVEY"
+  ],
+  "FONDLE": [
+    "CARESS"
+  ],
+  "FOOTLE": [
+    "LINGER",
+    "LOITER",
+    "LOUNGE"
+  ],
+  "FORAGE": [
+    "EATAGE"
+  ],
+  "FOREST": [
+    "TIMBER"
+  ],
+  "FRACAS": [
+    "AFFRAY"
+  ],
+  "FRENCH": [
+    "GALLIC"
+  ],
+  "FRIEND": [
+    "QUAKER"
+  ],
+  "FRIGID": [
+    "FROSTY",
+    "FROZEN",
+    "WINTRY",
+    "ARCTIC"
+  ],
+  "FROLIC": [
+    "GAMBOL",
+    "CAVORT"
+  ],
+  "FROSTY": [
+    "SNAPPY",
+    "FRIGID",
+    "FROZEN",
+    "WINTRY"
+  ],
+  "FROWZY": [
+    "UNTIDY"
+  ],
+  "FROZEN": [
+    "FRIGID",
+    "FROSTY",
+    "WINTRY",
+    "ROOTED",
+    "SLEETY"
+  ],
+  "FRUGAL": [
+    "SCOTCH"
+  ],
+  "FRUITY": [
+    "KOOKIE",
+    "WHACKY",
+    "INSANE"
+  ],
+  "FUDDLE": [
+    "JUMBLE",
+    "WELTER"
+  ],
+  "FULFIL": [
+    "ACTION"
+  ],
+  "FUMBLE": [
+    "BOBBLE",
+    "BOLLIX",
+    "BUNGLE"
+  ],
+  "FURROW": [
+    "CREASE",
+    "GROOVE"
+  ],
+  "FUSION": [
+    "MERGER"
+  ],
+  "FUTILE": [
+    "OTIOSE"
+  ],
+  "FUTURE": [
+    "RISING",
+    "COMING"
+  ],
+  "GABBLE": [
+    "GIBBER",
+    "PIFFLE",
+    "TATTLE",
+    "JABBER"
+  ],
+  "GAELIC": [
+    "CELTIC"
+  ],
+  "GAFFER": [
+    "HONCHO"
+  ],
+  "GALLIC": [
+    "FRENCH"
+  ],
+  "GALLOP": [
+    "EXTEND"
+  ],
+  "GALOSH": [
+    "ARCTIC",
+    "RUBBER"
+  ],
+  "GAMBLE": [
+    "CHANCE",
+    "HAZARD"
+  ],
+  "GAMBOL": [
+    "FROLIC",
+    "CAVORT"
+  ],
+  "GAOLER": [
+    "JAILOR"
+  ],
+  "GARISH": [
+    "BRASSY",
+    "FLASHY",
+    "TAWDRY",
+    "TRASHY"
+  ],
+  "GASIFY": [
+    "AERIFY"
+  ],
+  "GATHER": [
+    "PUCKER"
+  ],
+  "GAZUMP": [
+    "FLEECE"
+  ],
+  "GENIUS": [
+    "WIZARD"
+  ],
+  "GENTLE": [
+    "LENIFY",
+    "PACIFY",
+    "DOCILE"
+  ],
+  "GIBBER": [
+    "GABBLE",
+    "PIFFLE",
+    "TATTLE"
+  ],
+  "GIGGLE": [
+    "TITTER"
+  ],
+  "GIMLET": [
+    "WIMBLE"
+  ],
+  "GLASSY": [
+    "GLAZED",
+    "SMOOTH"
+  ],
+  "GLOOMY": [
+    "DISMAL",
+    "DREARY"
+  ],
+  "GLOSSY": [
+    "SHEENY",
+    "BRIGHT",
+    "GILDED",
+    "GLAZED"
+  ],
+  "GOITER": [
+    "STRUMA"
+  ],
+  "GOITRE": [
+    "STRUMA"
+  ],
+  "GOLOSH": [
+    "ARCTIC",
+    "RUBBER"
+  ],
+  "GOSSIP": [
+    "CLAVER",
+    "CONFAB",
+    "NATTER"
+  ],
+  "GRATIS": [
+    "UNPAID"
+  ],
+  "GRAVEL": [
+    "BAFFLE",
+    "PUZZLE",
+    "BOTHER",
+    "NETTLE"
+  ],
+  "GRAVEN": [
+    "CARVED",
+    "CARVEN",
+    "ETCHED"
+  ],
+  "GREASE": [
+    "GRUNGE"
+  ],
+  "GREASY": [
+    "SOILED"
+  ],
+  "GREEDY": [
+    "GRABBY"
+  ],
+  "GRIEVE": [
+    "SORROW"
+  ],
+  "GRILLE": [
+    "WICKET"
+  ],
+  "GROOVE": [
+    "FURROW"
+  ],
+  "GROOVY": [
+    "PEACHY"
+  ],
+  "GROVEL": [
+    "CRINGE"
+  ],
+  "GROWER": [
+    "RAISER"
+  ],
+  "GRUBBY": [
+    "SOILED"
+  ],
+  "GRUMPY": [
+    "CRABBY"
+  ],
+  "GUILTY": [
+    "SHAMED"
+  ],
+  "GUNMAN": [
+    "HITMAN"
+  ],
+  "GURGLE": [
+    "BABBLE",
+    "BUBBLE",
+    "RIPPLE"
+  ],
+  "GUSSET": [
+    "VOIDER"
+  ],
+  "GUTTER": [
+    "TOILET",
+    "TROUGH"
+  ],
+  "GYRATE": [
+    "SPIRAL"
+  ],
+  "HACKER": [
+    "DRUDGE"
+  ],
+  "HAMMER": [
+    "MALLET"
+  ],
+  "HANDLE": [
+    "MANAGE"
+  ],
+  "HAPPEN": [
+    "CHANCE",
+    "BEFALL"
+  ],
+  "HARASS": [
+    "CHEVVY",
+    "CHIVVY",
+    "HASSLE",
+    "MOLEST",
+    "PLAGUE"
+  ],
+  "HARBOR": [
+    "SHIELD"
+  ],
+  "HARDEN": [
+    "TEMPER",
+    "SEASON"
+  ],
+  "HARDLY": [
+    "SCARCE"
+  ],
+  "HASSLE": [
+    "CHEVVY",
+    "CHIVVY",
+    "HARASS",
+    "MOLEST",
+    "PLAGUE",
+    "BOTHER"
+  ],
+  "HASTEN": [
+    "INDUCE"
+  ],
+  "HAWKER": [
+    "PEDLAR"
+  ],
+  "HAZARD": [
+    "CHANCE",
+    "GAMBLE"
+  ],
+  "HEADER": [
+    "COPING",
+    "LINTEL"
+  ],
+  "HEARTY": [
+    "SQUARE"
+  ],
+  "HEATER": [
+    "WARMER",
+    "BULLET",
+    "HUMMER"
+  ],
+  "HEGIRA": [
+    "EXODUS"
+  ],
+  "HEIGHT": [
+    "SUMMIT",
+    "TIPTOP"
+  ],
+  "HEJIRA": [
+    "EXODUS"
+  ],
+  "HEYDAY": [
+    "FLOWER"
+  ],
+  "HIDDEN": [
+    "SECRET"
+  ],
+  "HIJACK": [
+    "PIRATE"
+  ],
+  "HOBBLE": [
+    "FETTER"
+  ],
+  "HOLLER": [
+    "SCREAM",
+    "SQUALL",
+    "GROUSE",
+    "SQUAWK",
+    "BELLOW"
+  ],
+  "HOLLOW": [
+    "UNREAL",
+    "SUNKEN"
+  ],
+  "HONEST": [
+    "TRUSTY"
+  ],
+  "HONOUR": [
+    "REWARD",
+    "PURITY"
+  ],
+  "HOODOO": [
+    "FETICH",
+    "FETISH"
+  ],
+  "HOOKAH": [
+    "CALEAN",
+    "CHICHA",
+    "KALIAN",
+    "SHISHA"
+  ],
+  "HOOKED": [
+    "CURVED"
+  ],
+  "HOOKER": [
+    "FLOOZY"
+  ],
+  "HOORAY": [
+    "HURRAH"
+  ],
+  "HOOTER": [
+    "NOZZLE",
+    "SCHNOZ"
+  ],
+  "HOOVER": [
+    "VACUUM"
+  ],
+  "HOWLER": [
+    "SCREAM"
+  ],
+  "HOYDEN": [
+    "TOMBOY"
+  ],
+  "HUBBUB": [
+    "UPROAR"
+  ],
+  "HUDDLE": [
+    "POWWOW"
+  ],
+  "HUMBLE": [
+    "MODEST",
+    "MENIAL",
+    "BROKEN"
+  ],
+  "HUMBUG": [
+    "DUPERY"
+  ],
+  "HUMOUR": [
+    "TEMPER"
+  ],
+  "HUNGER": [
+    "STARVE",
+    "THIRST",
+    "FAMISH"
+  ],
+  "HURRAH": [
+    "HOORAY"
+  ],
+  "HURTLE": [
+    "THRUST"
+  ],
+  "HUSTLE": [
+    "FLURRY"
+  ],
+  "IMBIBE": [
+    "ABSORB"
+  ],
+  "IMMUNE": [
+    "EXEMPT"
+  ],
+  "IMMURE": [
+    "REMAND"
+  ],
+  "IMPACT": [
+    "AFFECT",
+    "WALLOP"
+  ],
+  "IMPART": [
+    "CONVEY",
+    "BESTOW"
+  ],
+  "IMPEDE": [
+    "HINDER"
+  ],
+  "IMPISH": [
+    "WICKED"
+  ],
+  "IMPORT": [
+    "MOMENT"
+  ],
+  "IMPUTE": [
+    "ASSIGN"
+  ],
+  "INBORN": [
+    "INBRED",
+    "NATIVE",
+    "INNATE"
+  ],
+  "INBRED": [
+    "INBORN",
+    "NATIVE"
+  ],
+  "INCITE": [
+    "PROMPT",
+    "PROPEL"
+  ],
+  "INDUCE": [
+    "HASTEN"
+  ],
+  "INDUCT": [
+    "INVEST"
+  ],
+  "INFEST": [
+    "INVADE"
+  ],
+  "INFIRM": [
+    "DEBILE",
+    "FEEBLE",
+    "WEAKLY"
+  ],
+  "INGEST": [
+    "ABSORB"
+  ],
+  "INJURE": [
+    "BRUISE",
+    "OFFEND"
+  ],
+  "INJURY": [
+    "TRAUMA"
+  ],
+  "INMOST": [
+    "INWARD"
+  ],
+  "INNATE": [
+    "INBORN"
+  ],
+  "INRUSH": [
+    "INPOUR"
+  ],
+  "INSANE": [
+    "CRAZED",
+    "FRUITY",
+    "KOOKIE",
+    "MANIAC",
+    "SCREWY",
+    "WHACKY"
+  ],
+  "INSIDE": [
+    "WITHIN"
+  ],
+  "INSIST": [
+    "ASSERT"
+  ],
+  "INSURE": [
+    "SECURE"
+  ],
+  "INTACT": [
+    "ENTIRE"
+  ],
+  "INTENT": [
+    "DESIGN",
+    "SPIRIT"
+  ],
+  "INVADE": [
+    "OCCUPY",
+    "INFEST"
+  ],
+  "INVENT": [
+    "DEVISE"
+  ],
+  "INVEST": [
+    "INDUCT",
+    "COMMIT",
+    "CLOTHE"
+  ],
+  "INVOKE": [
+    "AROUSE",
+    "APPEAL"
+  ],
+  "INWARD": [
+    "SECRET",
+    "INMOST"
+  ],
+  "JABBER": [
+    "GABBLE"
+  ],
+  "JAGGED": [
+    "UNEVEN"
+  ],
+  "JAMJAR": [
+    "JAMPOT"
+  ],
+  "JARGON": [
+    "PATOIS"
+  ],
+  "JAUNTY": [
+    "DAPPER",
+    "RAKISH",
+    "SNAPPY",
+    "SPIFFY",
+    "SPRUCE"
+  ],
+  "JEWISH": [
+    "JUDAIC"
+  ],
+  "JIGGER": [
+    "REDBUG"
+  ],
+  "JINNEE": [
+    "DJINNI",
+    "DJINNY"
+  ],
+  "JOCKEY": [
+    "CHOUSE"
+  ],
+  "JOCOSE": [
+    "JOKING"
+  ],
+  "JOCUND": [
+    "JOVIAL",
+    "JOYOUS"
+  ],
+  "JOVIAL": [
+    "JOCUND",
+    "JOYOUS"
+  ],
+  "JUDAIC": [
+    "JEWISH"
+  ],
+  "JUMBLE": [
+    "MINGLE",
+    "FUDDLE",
+    "MUDDLE",
+    "WELTER"
+  ],
+  "JUNKET": [
+    "OUTING",
+    "SASHAY"
+  ],
+  "JUNKIE": [
+    "ADDICT"
+  ],
+  "KAFFIR": [
+    "CAFFRE"
+  ],
+  "KERNEL": [
+    "CENTER",
+    "CENTRE",
+    "MARROW"
+  ],
+  "KETTLE": [
+    "BOILER"
+  ],
+  "KIDNAP": [
+    "ABDUCT",
+    "NOBBLE",
+    "SNATCH"
+  ],
+  "KILLER": [
+    "SLAYER"
+  ],
+  "KINDLE": [
+    "AROUSE",
+    "ELICIT"
+  ],
+  "KISSER": [
+    "SMILER",
+    "VISAGE"
+  ],
+  "KNOTTY": [
+    "SNARLY",
+    "GNARLY"
+  ],
+  "KOSHER": [
+    "PROPER"
+  ],
+  "KOWTOW": [
+    "SCRAPE"
+  ],
+  "LABOUR": [
+    "DRUDGE"
+  ],
+  "LACKEY": [
+    "FLUNKY"
+  ],
+  "LAGOON": [
+    "LAGUNA",
+    "LAGUNE"
+  ],
+  "LAMENT": [
+    "BEMOAN",
+    "BEWAIL",
+    "PLAINT"
+  ],
+  "LAPPET": [
+    "WATTLE"
+  ],
+  "LARDER": [
+    "PANTRY"
+  ],
+  "LATEEN": [
+    "RIGGED"
+  ],
+  "LAVISH": [
+    "SHOWER",
+    "PLUSHY"
+  ],
+  "LEADEN": [
+    "CLOUDY"
+  ],
+  "LEEWAY": [
+    "MARGIN"
+  ],
+  "LEGATO": [
+    "SMOOTH"
+  ],
+  "LESSEN": [
+    "MINIFY"
+  ],
+  "LESSER": [
+    "LITTLE"
+  ],
+  "LETHAL": [
+    "DEADLY"
+  ],
+  "LIABLE": [
+    "LIKELY"
+  ],
+  "LICHEE": [
+    "LITCHI"
+  ],
+  "LIKELY": [
+    "BELIKE",
+    "LIABLE"
+  ],
+  "LINEAL": [
+    "DIRECT"
+  ],
+  "LINEAR": [
+    "SIMPLE",
+    "ANALOG"
+  ],
+  "LINGER": [
+    "DAWDLE",
+    "FOOTLE",
+    "LOITER",
+    "LOUNGE"
+  ],
+  "LINING": [
+    "FACING"
+  ],
+  "LINTEL": [
+    "HEADER"
+  ],
+  "LIQUID": [
+    "MELTED",
+    "THAWED",
+    "MOLTEN",
+    "FLUENT",
+    "SMOOTH",
+    "WATERY"
+  ],
+  "LISSOM": [
+    "SUPPLE"
+  ],
+  "LITCHI": [
+    "LICHEE",
+    "LYCHEE"
+  ],
+  "LITTLE": [
+    "STOCKY",
+    "STUMPY",
+    "CHUNKY",
+    "SLIGHT",
+    "ATOMIC",
+    "BANTAM",
+    "MIDGET",
+    "MINUTE",
+    "PETITE",
+    "TEENSY",
+    "WEENSY",
+    "LESSER"
+  ],
+  "LIVELY": [
+    "BOUNCY",
+    "SNAPPY",
+    "BREEZY",
+    "BUBBLY",
+    "BURBLY",
+    "FROTHY"
+  ],
+  "LIVING": [
+    "EXTANT"
+  ],
+  "LOADED": [
+    "BLOTTO",
+    "PISSED",
+    "SOUSED",
+    "RIPPED"
+  ],
+  "LOADER": [
+    "DOCKER",
+    "LUMPER"
+  ],
+  "LOCATE": [
+    "SETTLE"
+  ],
+  "LODGER": [
+    "ROOMER"
+  ],
+  "LOGGER": [
+    "FALLER",
+    "FELLER"
+  ],
+  "LOITER": [
+    "FOOTLE",
+    "LINGER",
+    "LOUNGE"
+  ],
+  "LOOKER": [
+    "BEAUTY",
+    "VIEWER"
+  ],
+  "LORDLY": [
+    "SNIFFY",
+    "AUGUST"
+  ],
+  "LOUNGE": [
+    "FOOTLE",
+    "LINGER",
+    "LOITER"
+  ],
+  "LOVING": [
+    "TENDER"
+  ],
+  "LUBBER": [
+    "LUMMOX"
+  ],
+  "LYCHEE": [
+    "LITCHI"
+  ],
+  "MADMAN": [
+    "MANIAC"
+  ],
+  "MAGPIE": [
+    "PRATER"
+  ],
+  "MALLET": [
+    "BEETLE",
+    "HAMMER"
+  ],
+  "MANAGE": [
+    "WANGLE",
+    "HANDLE"
+  ],
+  "MANFUL": [
+    "VIRILE"
+  ],
+  "MANGER": [
+    "TROUGH"
+  ],
+  "MANIAC": [
+    "MADMAN",
+    "INSANE"
+  ],
+  "MARGIN": [
+    "LEEWAY",
+    "BORDER"
+  ],
+  "MARROW": [
+    "CENTER",
+    "CENTRE",
+    "KERNEL"
+  ],
+  "MARVEL": [
+    "WONDER"
+  ],
+  "MASTER": [
+    "VICTOR",
+    "SUBDUE"
+  ],
+  "MATTER": [
+    "AFFAIR"
+  ],
+  "MATURE": [
+    "MELLOW",
+    "ABLOOM",
+    "HEADED",
+    "NUBILE"
+  ],
+  "MEAGER": [
+    "STINGY",
+    "PALTRY",
+    "SCANTY",
+    "MEASLY"
+  ],
+  "MEAGRE": [
+    "STINGY",
+    "PALTRY",
+    "SCANTY",
+    "MEASLY"
+  ],
+  "MEASLY": [
+    "PALTRY",
+    "MEAGER",
+    "MEAGRE",
+    "STINGY"
+  ],
+  "MEDDLE": [
+    "TAMPER"
+  ],
+  "MEDIAN": [
+    "NORMAL"
+  ],
+  "MEDIUM": [
+    "METIER",
+    "COOKED"
+  ],
+  "MELLOW": [
+    "RIPPED",
+    "MATURE"
+  ],
+  "MELODY": [
+    "STRAIN"
+  ],
+  "MENACE": [
+    "THREAT"
+  ],
+  "MENIAL": [
+    "HUMBLE"
+  ],
+  "MENSES": [
+    "PERIOD"
+  ],
+  "MENTAL": [
+    "NOETIC"
+  ],
+  "MERGER": [
+    "FUSION"
+  ],
+  "MESCAL": [
+    "PEYOTE"
+  ],
+  "MICKLE": [
+    "HATFUL",
+    "PASSEL",
+    "PLENTY"
+  ],
+  "MIDDLE": [
+    "CENTER",
+    "MIDWAY",
+    "CENTRE"
+  ],
+  "MIDGET": [
+    "BANTAM",
+    "PETITE",
+    "LITTLE"
+  ],
+  "MIDWAY": [
+    "CENTER",
+    "MIDDLE"
+  ],
+  "MILDLY": [
+    "GENTLY"
+  ],
+  "MINGLE": [
+    "JUMBLE",
+    "COMMIX"
+  ],
+  "MOBILE": [
+    "ROVING",
+    "MOVING"
+  ],
+  "MOCKER": [
+    "JEERER"
+  ],
+  "MODERN": [
+    "BODONI"
+  ],
+  "MODEST": [
+    "HUMBLE",
+    "DECENT",
+    "DEMURE"
+  ],
+  "MODIFY": [
+    "CHANGE"
+  ],
+  "MODISH": [
+    "LATEST"
+  ],
+  "MOLEST": [
+    "CHEVVY",
+    "CHIVVY",
+    "HARASS",
+    "HASSLE",
+    "PLAGUE"
+  ],
+  "MOLTEN": [
+    "LIQUID"
+  ],
+  "MOMENT": [
+    "IMPORT",
+    "MINUTE",
+    "SECOND"
+  ],
+  "MONGER": [
+    "DEALER",
+    "TRADER",
+    "PEDDLE"
+  ],
+  "MONKEY": [
+    "RASCAL",
+    "POTTER",
+    "PUTTER",
+    "TINKER",
+    "FIDDLE",
+    "TAMPER"
+  ],
+  "MOROSE": [
+    "SULLEN"
+  ],
+  "MORTAL": [
+    "DEADLY",
+    "PERSON"
+  ],
+  "MOTLEY": [
+    "CALICO",
+    "SUNDRY"
+  ],
+  "MOTTLE": [
+    "BLOTCH",
+    "STREAK",
+    "DAPPLE"
+  ],
+  "MOVING": [
+    "MOBILE",
+    "WIGGLY",
+    "AFLARE",
+    "AHORSE",
+    "AWHEEL",
+    "FLYING"
+  ],
+  "MUCKLE": [
+    "HATFUL",
+    "PASSEL",
+    "PLENTY"
+  ],
+  "MUDDLE": [
+    "PICKLE",
+    "JUMBLE",
+    "WELTER"
+  ],
+  "MUFFLE": [
+    "STIFLE",
+    "DAMPEN"
+  ],
+  "MUMBLE": [
+    "MUTTER"
+  ],
+  "MURDER": [
+    "REMOVE",
+    "MANGLE"
+  ],
+  "MURMUR": [
+    "MUTTER"
+  ],
+  "MUSTER": [
+    "SUMMON"
+  ],
+  "MUTTER": [
+    "MUMBLE",
+    "MURMUR"
+  ],
+  "MUTUAL": [
+    "COMMON",
+    "SHARED"
+  ],
+  "MYSTIC": [
+    "OCCULT",
+    "ORPHIC",
+    "SECRET"
+  ],
+  "NAPKIN": [
+    "DIAPER"
+  ],
+  "NARROW": [
+    "MINUTE",
+    "STRAIT"
+  ],
+  "NATIVE": [
+    "INBORN",
+    "INBRED"
+  ],
+  "NATTER": [
+    "CLAVER",
+    "CONFAB",
+    "GOSSIP"
+  ],
+  "NAUGHT": [
+    "CIPHER",
+    "CYPHER"
+  ],
+  "NEARLY": [
+    "ALMOST"
+  ],
+  "NESTLE": [
+    "CUDDLE",
+    "NUZZLE"
+  ],
+  "NETHER": [
+    "BOTTOM"
+  ],
+  "NETTLE": [
+    "BOTHER",
+    "GRAVEL"
+  ],
+  "NICETY": [
+    "NUANCE"
+  ],
+  "NICKER": [
+    "WHINNY"
+  ],
+  "NIGGLE": [
+    "BICKER"
+  ],
+  "NIMBLE": [
+    "ACTIVE"
+  ],
+  "NIPPER": [
+    "SHAVER",
+    "PINCER"
+  ],
+  "NITRIC": [
+    "AZOTIC"
+  ],
+  "NITWIT": [
+    "DOOFUS"
+  ],
+  "NOBBLE": [
+    "PILFER",
+    "ABDUCT",
+    "KIDNAP",
+    "SNATCH",
+    "DIDDLE"
+  ],
+  "NOBODY": [
+    "CIPHER",
+    "CYPHER"
+  ],
+  "NOGGIN": [
+    "NOODLE"
+  ],
+  "NORDIC": [
+    "BLONDE"
+  ],
+  "NORMAL": [
+    "MEDIAN"
+  ],
+  "NOTICE": [
+    "REMARK",
+    "DETECT",
+    "POSTER"
+  ],
+  "NOTIFY": [
+    "ADVISE"
+  ],
+  "NOTION": [
+    "BELIEF",
+    "WHIMSY"
+  ],
+  "NOUGHT": [
+    "CIPHER",
+    "CYPHER"
+  ],
+  "NOZZLE": [
+    "HONKER",
+    "HOOTER",
+    "SCHNOZ"
+  ],
+  "NUANCE": [
+    "NICETY"
+  ],
+  "NUBILE": [
+    "MATURE"
+  ],
+  "NUMBER": [
+    "FIGURE",
+    "AMOUNT"
+  ],
+  "NUTTER": [
+    "WHACKO"
+  ],
+  "NUZZLE": [
+    "CUDDLE",
+    "NESTLE"
+  ],
+  "OBJECT": [
+    "TARGET"
+  ],
+  "OBLIGE": [
+    "COMPEL"
+  ],
+  "OBLONG": [
+    "SIMPLE"
+  ],
+  "OBTUSE": [
+    "STUPID",
+    "SIMPLE"
+  ],
+  "OCCULT": [
+    "MYSTIC",
+    "ORPHIC",
+    "SECRET"
+  ],
+  "OCCUPY": [
+    "ABSORB",
+    "ENGAGE",
+    "INVADE",
+    "RESIDE"
+  ],
+  "OCULAR": [
+    "VISUAL"
+  ],
+  "ODDITY": [
+    "RARITY"
+  ],
+  "OEDEMA": [
+    "DROPSY"
+  ],
+  "OFFEND": [
+    "BRUISE",
+    "INJURE",
+    "BREACH",
+    "APPALL"
+  ],
+  "OFFICE": [
+    "BILLET",
+    "AGENCY",
+    "BUREAU"
+  ],
+  "OFFSET": [
+    "CANCEL",
+    "BRANCH",
+    "SETOFF",
+    "RUNNER",
+    "STOLON"
+  ],
+  "ONRUSH": [
+    "ATTACK"
+  ],
+  "OODLES": [
+    "DOZENS",
+    "SCORES",
+    "STACKS"
+  ],
+  "OPAQUE": [
+    "TURBID",
+    "CLOUDY",
+    "FOGGED"
+  ],
+  "OPENER": [
+    "UNDOER",
+    "UNTIER"
+  ],
+  "OPPOSE": [
+    "DEFEND"
+  ],
+  "OPTION": [
+    "CHOICE"
+  ],
+  "ORDURE": [
+    "FAECES"
+  ],
+  "ORGASM": [
+    "CLIMAX",
+    "COMING"
+  ],
+  "ORIENT": [
+    "TAILOR"
+  ],
+  "ORIGIN": [
+    "STEMMA",
+    "SOURCE"
+  ],
+  "OTIOSE": [
+    "WASTED",
+    "FUTILE"
+  ],
+  "OUTFOX": [
+    "OUTWIT"
+  ],
+  "OUTING": [
+    "PICNIC",
+    "JUNKET",
+    "SASHAY"
+  ],
+  "OUTWIT": [
+    "OUTFOX"
+  ],
+  "OYSTER": [
+    "HUITRE"
+  ],
+  "PACIFY": [
+    "GENTLE",
+    "LENIFY"
+  ],
+  "PACKER": [
+    "BAGGER"
+  ],
+  "PACKET": [
+    "BUNDLE",
+    "PARCEL"
+  ],
+  "PALACE": [
+    "CASTLE"
+  ],
+  "PALTRY": [
+    "MEASLY",
+    "MEAGER",
+    "MEAGRE",
+    "STINGY"
+  ],
+  "PAMPER": [
+    "COCKER",
+    "CODDLE",
+    "COSSET"
+  ],
+  "PANAMA": [
+    "BOATER",
+    "SAILOR"
+  ],
+  "PANTRY": [
+    "LARDER"
+  ],
+  "PAPAYA": [
+    "PAWPAW"
+  ],
+  "PAPIST": [
+    "ROMISH"
+  ],
+  "PARCEL": [
+    "BUNDLE",
+    "PACKET"
+  ],
+  "PARDON": [
+    "EXCUSE"
+  ],
+  "PARING": [
+    "SLIVER"
+  ],
+  "PARODY": [
+    "SENDUP"
+  ],
+  "PARSEC": [
+    "SECPAR"
+  ],
+  "PARSON": [
+    "CURATE",
+    "PASTOR",
+    "RECTOR"
+  ],
+  "PASHTO": [
+    "AFGHAN"
+  ],
+  "PASTOR": [
+    "CURATE",
+    "PARSON",
+    "RECTOR"
+  ],
+  "PATCHY": [
+    "UNEVEN"
+  ],
+  "PATOIS": [
+    "JARGON"
+  ],
+  "PATROL": [
+    "POLICE"
+  ],
+  "PAWPAW": [
+    "PAPAIA",
+    "PAPAYA"
+  ],
+  "PEANUT": [
+    "GOOBER"
+  ],
+  "PEDDLE": [
+    "MONGER"
+  ],
+  "PEDLAR": [
+    "HAWKER"
+  ],
+  "PEOPLE": [
+    "MASSES"
+  ],
+  "PERIOD": [
+    "MENSES"
+  ],
+  "PERISH": [
+    "EXPIRE"
+  ],
+  "PERSON": [
+    "MORTAL"
+  ],
+  "PESTER": [
+    "BADGER"
+  ],
+  "PESTLE": [
+    "MULLER"
+  ],
+  "PETITE": [
+    "BANTAM",
+    "MIDGET",
+    "LITTLE"
+  ],
+  "PEYOTE": [
+    "MESCAL",
+    "MEZCAL"
+  ],
+  "PHLEGM": [
+    "SPUTUM"
+  ],
+  "PICKET": [
+    "SENTRY"
+  ],
+  "PICKLE": [
+    "MUDDLE"
+  ],
+  "PICNIC": [
+    "OUTING",
+    "BREEZE"
+  ],
+  "PIDDLE": [
+    "TRIFLE",
+    "WANTON",
+    "WEEWEE"
+  ],
+  "PIERCE": [
+    "THRUST"
+  ],
+  "PIFFLE": [
+    "GABBLE",
+    "GIBBER",
+    "TATTLE"
+  ],
+  "PIGSTY": [
+    "PIGPEN"
+  ],
+  "PILFER": [
+    "NOBBLE"
+  ],
+  "PILLAR": [
+    "COLUMN"
+  ],
+  "PIMPLE": [
+    "HICKEY"
+  ],
+  "PIPING": [
+    "PIPAGE"
+  ],
+  "PIRATE": [
+    "HIJACK"
+  ],
+  "PLACID": [
+    "SMOOTH"
+  ],
+  "PLAGUE": [
+    "BLIGHT",
+    "CHEVVY",
+    "CHIVVY",
+    "HARASS",
+    "HASSLE",
+    "MOLEST",
+    "PESTIS"
+  ],
+  "PLAINT": [
+    "LAMENT"
+  ],
+  "PLEDGE": [
+    "SALUTE",
+    "PLIGHT"
+  ],
+  "PLENTY": [
+    "ENOUGH",
+    "HATFUL",
+    "MICKLE",
+    "MUCKLE",
+    "PASSEL"
+  ],
+  "PLIANT": [
+    "FORMED"
+  ],
+  "PLOUGH": [
+    "DIPPER"
+  ],
+  "PLUCKY": [
+    "FEISTY",
+    "SPUNKY"
+  ],
+  "PLUNGE": [
+    "LAUNCH",
+    "ABSORB",
+    "ENGULF"
+  ],
+  "PLUSHY": [
+    "COARSE",
+    "LAVISH"
+  ],
+  "PODIUM": [
+    "PULPIT"
+  ],
+  "POLICE": [
+    "PATROL"
+  ],
+  "POLISH": [
+    "SMOOTH",
+    "FINISH",
+    "REFINE"
+  ],
+  "POORLY": [
+    "AILING",
+    "PEAKED",
+    "SICKLY",
+    "UNWELL"
+  ],
+  "POPERY": [
+    "PAPISM"
+  ],
+  "POSTER": [
+    "NOTICE"
+  ],
+  "POTATO": [
+    "MURPHY"
+  ],
+  "POTENT": [
+    "STRONG",
+    "VIRILE"
+  ],
+  "POWWOW": [
+    "HUDDLE"
+  ],
+  "PRANCE": [
+    "RUFFLE",
+    "SASHAY",
+    "TITTUP"
+  ],
+  "PREFER": [
+    "CHOOSE",
+    "FAVOUR"
+  ],
+  "PRETTY": [
+    "FAIRLY"
+  ],
+  "PRICEY": [
+    "COSTLY"
+  ],
+  "PRISSY": [
+    "PROPER",
+    "DAINTY"
+  ],
+  "PROLIX": [
+    "VERBAL"
+  ],
+  "PROMPT": [
+    "INCITE",
+    "PROPEL",
+    "REMIND"
+  ],
+  "PROPEL": [
+    "INCITE",
+    "PROMPT"
+  ],
+  "PROPER": [
+    "PRISSY",
+    "SEEMLY",
+    "COMELY",
+    "DECENT",
+    "KOSHER"
+  ],
+  "PUBLIC": [
+    "COMMON"
+  ],
+  "PUCKER": [
+    "COCKLE",
+    "RUMPLE",
+    "GATHER"
+  ],
+  "PULPIT": [
+    "PODIUM"
+  ],
+  "PUNDIT": [
+    "SAVANT"
+  ],
+  "PUNTER": [
+    "BETTER",
+    "BETTOR"
+  ],
+  "PURITY": [
+    "HONOUR"
+  ],
+  "PURPLE": [
+    "VIOLET"
+  ],
+  "PURSUE": [
+    "ENGAGE",
+    "FOLLOW"
+  ],
+  "PUSHER": [
+    "SHOVER"
+  ],
+  "PUZZLE": [
+    "BAFFLE",
+    "GRAVEL",
+    "TEASER"
+  ],
+  "QUAKER": [
+    "FRIEND"
+  ],
+  "QUAVER": [
+    "WARBLE"
+  ],
+  "RABBET": [
+    "REBATE"
+  ],
+  "RABBLE": [
+    "RAGTAG"
+  ],
+  "RADISH": [
+    "DAIKON"
+  ],
+  "RAGGED": [
+    "UNEVEN"
+  ],
+  "RAGTAG": [
+    "RABBLE"
+  ],
+  "RAKISH": [
+    "DAPPER",
+    "JAUNTY",
+    "SNAPPY",
+    "SPIFFY",
+    "SPRUCE"
+  ],
+  "RAMBLE": [
+    "WANDER"
+  ],
+  "RAMIFY": [
+    "BRANCH"
+  ],
+  "RANCID": [
+    "STINKY"
+  ],
+  "RANSOM": [
+    "REDEEM"
+  ],
+  "RARELY": [
+    "SELDOM"
+  ],
+  "RARITY": [
+    "ODDITY"
+  ],
+  "RASCAL": [
+    "MONKEY",
+    "VARLET"
+  ],
+  "RATHER": [
+    "SOONER"
+  ],
+  "READER": [
+    "LECTOR"
+  ],
+  "REASON": [
+    "GROUND"
+  ],
+  "REBUFF": [
+    "SLIGHT"
+  ],
+  "REBUKE": [
+    "BERATE"
+  ],
+  "RECALL": [
+    "RETURN"
+  ],
+  "RECANT": [
+    "ABJURE",
+    "RESILE"
+  ],
+  "RECAST": [
+    "REMOLD"
+  ],
+  "RECEDE": [
+    "RETIRE"
+  ],
+  "RECESS": [
+    "CORNER"
+  ],
+  "RECITE": [
+    "RETELL"
+  ],
+  "RECKON": [
+    "DEPEND",
+    "FIGURE",
+    "REGARD",
+    "CIPHER",
+    "CYPHER"
+  ],
+  "RECOIL": [
+    "BOUNCE",
+    "RESILE",
+    "SPRING",
+    "CRINGE",
+    "FLINCH",
+    "SHRINK"
+  ],
+  "RECOUP": [
+    "DEDUCT"
+  ],
+  "RECTOR": [
+    "CURATE",
+    "PARSON",
+    "PASTOR"
+  ],
+  "REDEEM": [
+    "RANSOM"
+  ],
+  "REDUCE": [
+    "DECOCT",
+    "DILUTE",
+    "SUBDUE",
+    "SHRINK"
+  ],
+  "REEFER": [
+    "SPLIFF"
+  ],
+  "REFINE": [
+    "RARIFY",
+    "POLISH"
+  ],
+  "REFUGE": [
+    "SAFETY",
+    "ASYLUM",
+    "RESORT"
+  ],
+  "REFUND": [
+    "RETURN"
+  ],
+  "REGARD": [
+    "ESTEEM",
+    "AFFECT",
+    "RECKON"
+  ],
+  "REGRET": [
+    "SORROW",
+    "REPENT"
+  ],
+  "REJECT": [
+    "REFUSE",
+    "RESIST"
+  ],
+  "RELENT": [
+    "SOFTEN"
+  ],
+  "RELIEF": [
+    "EASING",
+    "SUCCOR",
+    "BACKUP"
+  ],
+  "RELISH": [
+    "SAVOUR",
+    "FLAVOR"
+  ],
+  "REMAND": [
+    "IMMURE"
+  ],
+  "REMARK": [
+    "NOTICE"
+  ],
+  "REMEDY": [
+    "REPAIR"
+  ],
+  "REMIND": [
+    "PROMPT"
+  ],
+  "REMOLD": [
+    "RECAST"
+  ],
+  "REMOVE": [
+    "MURDER",
+    "ABSENT"
+  ],
+  "RENDER": [
+    "SUPPLY",
+    "RETURN",
+    "DEPICT",
+    "SUBMIT"
+  ],
+  "RENEGE": [
+    "REVOKE"
+  ],
+  "REPEAL": [
+    "REVOKE",
+    "VACATE"
+  ],
+  "REPEAT": [
+    "RETELL",
+    "DOUBLE"
+  ],
+  "REPENT": [
+    "REGRET"
+  ],
+  "REPUTE": [
+    "ESTEEM"
+  ],
+  "RESCUE": [
+    "SAVING"
+  ],
+  "RESIDE": [
+    "REPOSE",
+    "OCCUPY"
+  ],
+  "RESIGN": [
+    "VACATE",
+    "SUBMIT"
+  ],
+  "RESIST": [
+    "REFUSE",
+    "REJECT"
+  ],
+  "RESORT": [
+    "REFUGE",
+    "REPAIR"
+  ],
+  "RESULT": [
+    "EFFECT",
+    "UPSHOT",
+    "ANSWER"
+  ],
+  "RESUME": [
+    "SKETCH",
+    "SURVEY"
+  ],
+  "RETARD": [
+    "CRETIN"
+  ],
+  "RETELL": [
+    "RECITE",
+    "REPEAT"
+  ],
+  "RETIRE": [
+    "RECEDE"
+  ],
+  "RETURN": [
+    "PAYOFF",
+    "REVERT",
+    "RENDER",
+    "REFUND",
+    "RECALL",
+    "REJOIN"
+  ],
+  "REVEAL": [
+    "UNVEIL",
+    "EXPOSE",
+    "UNWRAP"
+  ],
+  "REVERT": [
+    "RETURN"
+  ],
+  "REVIEW": [
+    "SURVEY"
+  ],
+  "REVILE": [
+    "VILIFY"
+  ],
+  "REVISE": [
+    "RETOOL"
+  ],
+  "REVIVE": [
+    "REPAIR",
+    "VIVIFY"
+  ],
+  "REVOKE": [
+    "REPEAL",
+    "VACATE",
+    "RENEGE"
+  ],
+  "REVOLT": [
+    "RISING",
+    "SICKEN"
+  ],
+  "REWARD": [
+    "HONOUR",
+    "PAYOFF"
+  ],
+  "RIBBON": [
+    "THREAD"
+  ],
+  "RICHES": [
+    "WEALTH"
+  ],
+  "RIFFLE": [
+    "COCKLE"
+  ],
+  "RINGER": [
+    "TOLLER"
+  ],
+  "RIPPLE": [
+    "BABBLE",
+    "BUBBLE",
+    "BURBLE",
+    "GUGGLE",
+    "GURGLE",
+    "COCKLE",
+    "RUFFLE"
+  ],
+  "RISING": [
+    "REVOLT",
+    "ASCENT",
+    "UPHILL",
+    "FUTURE"
+  ],
+  "ROBUST": [
+    "STRONG",
+    "CHESTY",
+    "STURDY"
+  ],
+  "ROCKER": [
+    "CRADLE"
+  ],
+  "RODENT": [
+    "GNAWER"
+  ],
+  "ROLLER": [
+    "CURLER"
+  ],
+  "ROTARY": [
+    "CIRCLE",
+    "CYCLIC"
+  ],
+  "ROTTEN": [
+    "CRAPPY",
+    "SHITTY",
+    "STINKY"
+  ],
+  "RUBBLE": [
+    "DEBRIS"
+  ],
+  "RUCKUS": [
+    "TUMULT"
+  ],
+  "RUFFLE": [
+    "AFFRAY",
+    "COCKLE",
+    "RIPPLE",
+    "PRANCE",
+    "SASHAY",
+    "TITTUP",
+    "CHOKER"
+  ],
+  "RUGGED": [
+    "BROKEN",
+    "STURDY"
+  ],
+  "RUMPLE": [
+    "CREASE",
+    "COCKLE",
+    "PUCKER"
+  ],
+  "RUMPUS": [
+    "TUMULT"
+  ],
+  "RUNNER": [
+    "OFFSET",
+    "STOLON"
+  ],
+  "SACRED": [
+    "DIVINE",
+    "WORTHY"
+  ],
+  "SADDLE": [
+    "BURDEN",
+    "CHARGE"
+  ],
+  "SAFETY": [
+    "REFUGE",
+    "CONDOM",
+    "RUBBER"
+  ],
+  "SAILOR": [
+    "BOATER",
+    "PANAMA"
+  ],
+  "SALUTE": [
+    "PLEDGE"
+  ],
+  "SASHAY": [
+    "CHASSE",
+    "JUNKET",
+    "OUTING",
+    "PRANCE",
+    "RUFFLE",
+    "TITTUP"
+  ],
+  "SAUCER": [
+    "DISCUS"
+  ],
+  "SAVAGE": [
+    "FIERCE",
+    "BRUTAL",
+    "FERINE"
+  ],
+  "SAVANT": [
+    "PUNDIT"
+  ],
+  "SAVING": [
+    "RESCUE"
+  ],
+  "SAVIOR": [
+    "CHRIST"
+  ],
+  "SAVOUR": [
+    "RELISH",
+    "FLAVOR"
+  ],
+  "SCANTY": [
+    "PANTIE",
+    "SKIMPY",
+    "STINGY",
+    "MEAGER",
+    "MEAGRE"
+  ],
+  "SCARCE": [
+    "BARELY",
+    "HARDLY"
+  ],
+  "SCATTY": [
+    "ABSENT"
+  ],
+  "SCHEME": [
+    "SYSTEM"
+  ],
+  "SCOTCH": [
+    "BAFFLE",
+    "THWART",
+    "FRUGAL"
+  ],
+  "SCRAPE": [
+    "KOWTOW"
+  ],
+  "SCREAM": [
+    "HOWLER",
+    "HOLLER",
+    "SQUALL",
+    "SHRIEK"
+  ],
+  "SCREEN": [
+    "SHIELD",
+    "COVERT",
+    "RIDDLE"
+  ],
+  "SCREWY": [
+    "INSANE"
+  ],
+  "SCRIBE": [
+    "PENMAN"
+  ],
+  "SCURVY": [
+    "ABJECT"
+  ],
+  "SEARCH": [
+    "LOOKUP"
+  ],
+  "SEASON": [
+    "TEMPER",
+    "FLAVOR",
+    "HARDEN"
+  ],
+  "SECRET": [
+    "COVERT",
+    "INWARD",
+    "MYSTIC",
+    "OCCULT",
+    "ORPHIC",
+    "ENIGMA",
+    "HIDDEN"
+  ],
+  "SECTOR": [
+    "SPHERE"
+  ],
+  "SECURE": [
+    "STRONG",
+    "ASSURE",
+    "ENSURE",
+    "INSURE",
+    "BATTEN",
+    "FASTEN",
+    "STEADY"
+  ],
+  "SEDATE": [
+    "SOLEMN"
+  ],
+  "SEEMLY": [
+    "COMELY",
+    "PROPER"
+  ],
+  "SELDOM": [
+    "RARELY"
+  ],
+  "SELECT": [
+    "CHOOSE",
+    "CHOICE"
+  ],
+  "SELLER": [
+    "VENDER",
+    "VENDOR"
+  ],
+  "SENTRY": [
+    "PICKET"
+  ],
+  "SEPTET": [
+    "HEPTAD"
+  ],
+  "SERVER": [
+    "WAITER"
+  ],
+  "SEVERE": [
+    "STRICT",
+    "WICKED",
+    "STRONG"
+  ],
+  "SHAVER": [
+    "NIPPER"
+  ],
+  "SHIELD": [
+    "SCREEN",
+    "HARBOR"
+  ],
+  "SHITTY": [
+    "CRAPPY",
+    "ROTTEN",
+    "STINKY"
+  ],
+  "SHODDY": [
+    "SORDID",
+    "TAWDRY"
+  ],
+  "SHORTS": [
+    "TRUNKS",
+    "BOXERS"
+  ],
+  "SHOVEL": [
+    "DIGGER"
+  ],
+  "SHOWER": [
+    "LAVISH"
+  ],
+  "SHREWD": [
+    "ASTUTE"
+  ],
+  "SHRIEK": [
+    "SCREAM"
+  ],
+  "SHRIMP": [
+    "PEEWEE"
+  ],
+  "SHRINK": [
+    "CRINGE",
+    "FLINCH",
+    "RECOIL",
+    "WITHER",
+    "REDUCE"
+  ],
+  "SICKEN": [
+    "REVOLT"
+  ],
+  "SICKLY": [
+    "AILING",
+    "PEAKED",
+    "POORLY",
+    "UNWELL",
+    "SALLOW"
+  ],
+  "SILKEN": [
+    "SATINY",
+    "BRIGHT"
+  ],
+  "SILVAN": [
+    "WOODED"
+  ],
+  "SILVER": [
+    "FACILE",
+    "FLUENT",
+    "ARGENT",
+    "BRIGHT"
+  ],
+  "SIMOOM": [
+    "SAMIEL"
+  ],
+  "SIMPLE": [
+    "OBTUSE",
+    "LINEAR",
+    "LYRATE",
+    "OBLONG"
+  ],
+  "SIMPLY": [
+    "MERELY"
+  ],
+  "SINFUL": [
+    "WICKED",
+    "UNHOLY"
+  ],
+  "SINGLE": [
+    "UNIQUE",
+    "AZYGOS"
+  ],
+  "SITTER": [
+    "BROODY"
+  ],
+  "SKETCH": [
+    "RESUME",
+    "SURVEY"
+  ],
+  "SKIMPY": [
+    "SCANTY"
+  ],
+  "SKIVVY": [
+    "SLAVEY"
+  ],
+  "SLEAZY": [
+    "SORDID",
+    "CHEESY",
+    "CRUMMY"
+  ],
+  "SLEEPY": [
+    "ASLEEP"
+  ],
+  "SLIGHT": [
+    "FLIMSY",
+    "REBUFF",
+    "SVELTE",
+    "LITTLE"
+  ],
+  "SLIPPY": [
+    "SLIMED"
+  ],
+  "SLIVER": [
+    "PARING"
+  ],
+  "SLOPPY": [
+    "MARSHY",
+    "QUAGGY",
+    "SWAMPY",
+    "UNTIDY"
+  ],
+  "SMELLY": [
+    "FOETID",
+    "STINKY"
+  ],
+  "SMIRCH": [
+    "DEFAME",
+    "SMUDGE"
+  ],
+  "SMOOTH": [
+    "LEGATO",
+    "PLACID",
+    "POLISH",
+    "FLUENT",
+    "LIQUID",
+    "VELVET",
+    "GLASSY",
+    "REPAND",
+    "ENTIRE"
+  ],
+  "SMUDGE": [
+    "SMUTCH",
+    "SMIRCH"
+  ],
+  "SNAPPY": [
+    "FROSTY",
+    "DAPPER",
+    "JAUNTY",
+    "RAKISH",
+    "SPIFFY",
+    "SPRUCE",
+    "LIVELY"
+  ],
+  "SNATCH": [
+    "ABDUCT",
+    "KIDNAP",
+    "NOBBLE"
+  ],
+  "SNIFFY": [
+    "LORDLY"
+  ],
+  "SNITCH": [
+    "CANARY",
+    "THIEVE",
+    "BETRAY"
+  ],
+  "SNOOTY": [
+    "UPPISH"
+  ],
+  "SNOOZE": [
+    "DROWSE",
+    "CATNAP"
+  ],
+  "SNOTTY": [
+    "UPPISH",
+    "SOILED"
+  ],
+  "SOCIAL": [
+    "ETHNIC"
+  ],
+  "SOFTEN": [
+    "DAMPEN",
+    "WEAKEN",
+    "RELENT",
+    "BUFFER"
+  ],
+  "SOLACE": [
+    "SOOTHE"
+  ],
+  "SOLEMN": [
+    "SEDATE"
+  ],
+  "SOOTHE": [
+    "SOLACE"
+  ],
+  "SORDID": [
+    "SHODDY",
+    "SOILED",
+    "SLEAZY"
+  ],
+  "SORROW": [
+    "REGRET",
+    "GRIEVE"
+  ],
+  "SOUGHT": [
+    "WANTED"
+  ],
+  "SOURCE": [
+    "AUTHOR",
+    "ORIGIN"
+  ],
+  "SPHERE": [
+    "WELKIN",
+    "SECTOR",
+    "DOMAIN"
+  ],
+  "SPIGOT": [
+    "FAUCET"
+  ],
+  "SPIRAL": [
+    "VOLUTE",
+    "GYRATE",
+    "COILED"
+  ],
+  "SPIRIT": [
+    "FLAVOR",
+    "INTENT"
+  ],
+  "SPLASH": [
+    "SQUISH"
+  ],
+  "SPLOSH": [
+    "SQUISH"
+  ],
+  "SPOKEN": [
+    "VERBAL"
+  ],
+  "SPORTY": [
+    "FLASHY",
+    "ACTIVE"
+  ],
+  "SPOTTY": [
+    "UNEVEN"
+  ],
+  "SPRAIN": [
+    "WRENCH"
+  ],
+  "SPREAD": [
+    "UNFOLD"
+  ],
+  "SPRING": [
+    "BOUNCE",
+    "RECOIL",
+    "RESILE"
+  ],
+  "SPRITE": [
+    "FAERIE"
+  ],
+  "SPUNKY": [
+    "FEISTY",
+    "PLUCKY",
+    "GRITTY"
+  ],
+  "SPUTUM": [
+    "PHLEGM"
+  ],
+  "SQUALL": [
+    "HOLLER",
+    "SCREAM"
+  ],
+  "SQUARE": [
+    "HEARTY",
+    "DIRECT"
+  ],
+  "SQUAWK": [
+    "SCREAK",
+    "SKREAK",
+    "GROUSE",
+    "HOLLER"
+  ],
+  "SQUILL": [
+    "SCILLA"
+  ],
+  "SQUINT": [
+    "ASKANT"
+  ],
+  "SQUIRM": [
+    "WIGGLE",
+    "WRITHE"
+  ],
+  "SQUISH": [
+    "SPLASH",
+    "SPLOSH"
+  ],
+  "STABLE": [
+    "STATIC",
+    "STEADY"
+  ],
+  "STARCH": [
+    "AMYLUM"
+  ],
+  "STARVE": [
+    "FAMISH",
+    "HUNGER",
+    "THIRST"
+  ],
+  "STATIC": [
+    "STABLE"
+  ],
+  "STEADY": [
+    "STABLE",
+    "BECALM",
+    "SECURE"
+  ],
+  "STEAMY": [
+    "STICKY"
+  ],
+  "STENCH": [
+    "FOETOR"
+  ],
+  "STICKY": [
+    "STEAMY",
+    "VISCID"
+  ],
+  "STIFLE": [
+    "DAMPEN",
+    "MUFFLE"
+  ],
+  "STINGY": [
+    "MEAGER",
+    "MEAGRE",
+    "SCANTY",
+    "MEASLY",
+    "PALTRY",
+    "SCRIMY"
+  ],
+  "STOCKY": [
+    "LITTLE"
+  ],
+  "STODGY": [
+    "STUFFY"
+  ],
+  "STONED": [
+    "RIPPED"
+  ],
+  "STOOGE": [
+    "FLUNKY"
+  ],
+  "STORMY": [
+    "BREEZY",
+    "CHOPPY",
+    "FIERCE",
+    "RAGING"
+  ],
+  "STRAIT": [
+    "NARROW"
+  ],
+  "STREAK": [
+    "BLOTCH",
+    "MOTTLE",
+    "STRIPE"
+  ],
+  "STRESS": [
+    "ACCENT",
+    "STRAIN"
+  ],
+  "STRICT": [
+    "SEVERE"
+  ],
+  "STRIKE": [
+    "ATTAIN",
+    "EXCISE",
+    "AFFECT",
+    "ASSUME"
+  ],
+  "STRING": [
+    "THREAD"
+  ],
+  "STRIPE": [
+    "STREAK"
+  ],
+  "STRIVE": [
+    "STRAIN"
+  ],
+  "STRONG": [
+    "SECURE",
+    "POTENT",
+    "BRAWNY",
+    "VIRILE",
+    "ROBUST",
+    "SEVERE",
+    "SINEWY"
+  ],
+  "STUFFY": [
+    "STODGY"
+  ],
+  "STUMPY": [
+    "CHUNKY",
+    "LITTLE"
+  ],
+  "STUPID": [
+    "LUMPEN",
+    "OBTUSE",
+    "GOOSEY"
+  ],
+  "STURDY": [
+    "ROBUST",
+    "RUGGED"
+  ],
+  "STYMIE": [
+    "HINDER"
+  ],
+  "SUBDUE": [
+    "MASTER",
+    "REDUCE"
+  ],
+  "SUBMIT": [
+    "ACCEDE",
+    "RESIGN",
+    "RENDER"
+  ],
+  "SUCCOR": [
+    "RELIEF"
+  ],
+  "SUDDEN": [
+    "CHOPPY",
+    "ABRUPT"
+  ],
+  "SUFFER": [
+    "DIGEST",
+    "ENDURE"
+  ],
+  "SUGARY": [
+    "HONIED",
+    "SYRUPY"
+  ],
+  "SULLEN": [
+    "CLOUDY",
+    "MOROSE"
+  ],
+  "SUMMIT": [
+    "BREAST",
+    "HEIGHT",
+    "TIPTOP"
+  ],
+  "SUMMON": [
+    "MUSTER"
+  ],
+  "SUNDRY": [
+    "MOTLEY"
+  ],
+  "SUNKEN": [
+    "HOLLOW"
+  ],
+  "SUPPLE": [
+    "LIMBER",
+    "LISSOM"
+  ],
+  "SUPPLY": [
+    "RENDER",
+    "APPEND"
+  ],
+  "SURVEY": [
+    "RESUME",
+    "SKETCH",
+    "REVIEW",
+    "FOLLOW"
+  ],
+  "SVELTE": [
+    "SLIGHT"
+  ],
+  "SWITCH": [
+    "CHANGE"
+  ],
+  "SYLVAN": [
+    "WOODED"
+  ],
+  "SYSTEM": [
+    "SCHEME"
+  ],
+  "TAILOR": [
+    "SARTOR",
+    "ORIENT"
+  ],
+  "TAMPER": [
+    "FIDDLE",
+    "MONKEY",
+    "MEDDLE"
+  ],
+  "TANGLE": [
+    "TOUSLE"
+  ],
+  "TARGET": [
+    "OBJECT",
+    "QUARRY",
+    "DIRECT"
+  ],
+  "TARTAR": [
+    "DRAGON",
+    "TOPHUS"
+  ],
+  "TATTLE": [
+    "GABBLE",
+    "GIBBER",
+    "PIFFLE",
+    "BABBLE"
+  ],
+  "TAURUS": [
+    "CARLOS"
+  ],
+  "TAWDRY": [
+    "BRASSY",
+    "FLASHY",
+    "GARISH",
+    "TRASHY",
+    "SHODDY"
+  ],
+  "TEASER": [
+    "PUZZLE"
+  ],
+  "TEAZEL": [
+    "TEASLE"
+  ],
+  "TEENSY": [
+    "BITTIE",
+    "LITTLE"
+  ],
+  "TEETER": [
+    "SEESAW"
+  ],
+  "TEMPER": [
+    "SEASON",
+    "HARDEN",
+    "HUMOUR",
+    "ANNEAL"
+  ],
+  "TENANT": [
+    "RENTER"
+  ],
+  "TENNER": [
+    "DECADE"
+  ],
+  "TERROR": [
+    "THREAT"
+  ],
+  "TESTIS": [
+    "ORCHIS"
+  ],
+  "TETCHY": [
+    "CRANKY"
+  ],
+  "THIEVE": [
+    "SNITCH"
+  ],
+  "THIRST": [
+    "HUNGER",
+    "STARVE"
+  ],
+  "THORAX": [
+    "PECTUS"
+  ],
+  "THORNY": [
+    "BARBED",
+    "BRIARY",
+    "BRIERY",
+    "BURRED",
+    "SETOSE"
+  ],
+  "THREAD": [
+    "STRING",
+    "RIBBON",
+    "WANDER"
+  ],
+  "THREAT": [
+    "TERROR",
+    "MENACE"
+  ],
+  "THRILL": [
+    "TICKLE",
+    "QUIVER",
+    "SHIVER",
+    "TINGLE",
+    "CHARGE"
+  ],
+  "THRIVE": [
+    "EXPAND"
+  ],
+  "THRONE": [
+    "TOILET"
+  ],
+  "THRUST": [
+    "PIERCE",
+    "HURTLE",
+    "POKING"
+  ],
+  "THWART": [
+    "BAFFLE",
+    "SCOTCH"
+  ],
+  "TICKLE": [
+    "THRILL"
+  ],
+  "TIMBER": [
+    "FOREST"
+  ],
+  "TINGLE": [
+    "QUIVER",
+    "SHIVER",
+    "THRILL"
+  ],
+  "TINKER": [
+    "MONKEY",
+    "POTTER",
+    "PUTTER",
+    "FIDDLE"
+  ],
+  "TIPPER": [
+    "DUMPER"
+  ],
+  "TIPTOP": [
+    "HEIGHT",
+    "SUMMIT"
+  ],
+  "TITTER": [
+    "GIGGLE"
+  ],
+  "TITTLE": [
+    "SMIDGE"
+  ],
+  "TITTUP": [
+    "PRANCE",
+    "RUFFLE",
+    "SASHAY"
+  ],
+  "TODDLE": [
+    "COGGLE",
+    "DODDER",
+    "TOTTER"
+  ],
+  "TOILET": [
+    "THRONE",
+    "GUTTER"
+  ],
+  "TOMBOY": [
+    "HOYDEN"
+  ],
+  "TONGUE": [
+    "GLOSSA",
+    "LINGUA"
+  ],
+  "TOPPER": [
+    "BEAVER"
+  ],
+  "TOPPLE": [
+    "TUMBLE"
+  ],
+  "TORPID": [
+    "ASLEEP"
+  ],
+  "TORRID": [
+    "ARDENT",
+    "FERVID"
+  ],
+  "TOTTER": [
+    "SEESAW",
+    "COGGLE",
+    "DODDER",
+    "PADDLE",
+    "TODDLE",
+    "WADDLE"
+  ],
+  "TOUCHY": [
+    "FEISTY"
+  ],
+  "TOUSLE": [
+    "TANGLE"
+  ],
+  "TRADER": [
+    "DEALER",
+    "MONGER"
+  ],
+  "TRANCE": [
+    "ENAMOR"
+  ],
+  "TRAUMA": [
+    "INJURY"
+  ],
+  "TREATY": [
+    "ACCORD"
+  ],
+  "TREBLE": [
+    "DOUBLE"
+  ],
+  "TRICKY": [
+    "CATCHY",
+    "CRAFTY",
+    "ARTFUL"
+  ],
+  "TRIFLE": [
+    "FRIVOL",
+    "TRIVIA",
+    "PIDDLE",
+    "WANTON"
+  ],
+  "TRILBY": [
+    "FEDORA"
+  ],
+  "TRIVIA": [
+    "TRIFLE"
+  ],
+  "TROIKA": [
+    "TERCET",
+    "TIERCE"
+  ],
+  "TROJAN": [
+    "DARDAN"
+  ],
+  "TROUGH": [
+    "GUTTER",
+    "MANGER"
+  ],
+  "TRUANT": [
+    "ABSENT"
+  ],
+  "TRUSTY": [
+    "HONEST"
+  ],
+  "TUMBLE": [
+    "TOPPLE"
+  ],
+  "TUMULT": [
+    "RUCKUS",
+    "RUMPUS",
+    "UPROAR"
+  ],
+  "TUNNEL": [
+    "BURROW"
+  ],
+  "TURBID": [
+    "CLOUDY",
+    "OPAQUE"
+  ],
+  "TWEEDY": [
+    "NUBBLY"
+  ],
+  "TWINGE": [
+    "TWITCH"
+  ],
+  "TWITCH": [
+    "TWINGE"
+  ],
+  "TYRANT": [
+    "DESPOT"
+  ],
+  "UNDONE": [
+    "RUINED"
+  ],
+  "UNEVEN": [
+    "SPOTTY",
+    "JAGGED",
+    "PATCHY",
+    "RAGGED",
+    "UNTRUE"
+  ],
+  "UNFAIR": [
+    "UNJUST"
+  ],
+  "UNFOLD": [
+    "EXTEND",
+    "SPREAD"
+  ],
+  "UNFURL": [
+    "UNROLL"
+  ],
+  "UNHOLY": [
+    "SINFUL",
+    "WICKED"
+  ],
+  "UNIQUE": [
+    "SINGLE"
+  ],
+  "UNJUST": [
+    "UNFAIR"
+  ],
+  "UNKNOT": [
+    "UNPICK"
+  ],
+  "UNLOAD": [
+    "UNLADE"
+  ],
+  "UNPAID": [
+    "GRATIS"
+  ],
+  "UNPICK": [
+    "UNKNOT"
+  ],
+  "UNREAL": [
+    "AERIAL",
+    "HOLLOW",
+    "BIONIC",
+    "ERSATZ",
+    "STAGED",
+    "FABLED",
+    "MYTHIC"
+  ],
+  "UNRIPE": [
+    "UNAGED"
+  ],
+  "UNROLL": [
+    "UNWIND",
+    "UNFURL"
+  ],
+  "UNSAFE": [
+    "CHANCY"
+  ],
+  "UNTIDY": [
+    "FROWSY",
+    "FROWZY",
+    "SLOPPY",
+    "BLOWSY",
+    "BLOWZY"
+  ],
+  "UNTRUE": [
+    "UNEVEN"
+  ],
+  "UNVEIL": [
+    "REVEAL"
+  ],
+  "UNWELL": [
+    "AILING",
+    "PEAKED",
+    "POORLY",
+    "SICKLY"
+  ],
+  "UNWIND": [
+    "UNROLL"
+  ],
+  "UNWRAP": [
+    "EXPOSE",
+    "REVEAL"
+  ],
+  "UPHILL": [
+    "RISING"
+  ],
+  "UPLAND": [
+    "ALPINE"
+  ],
+  "UPPISH": [
+    "SNOOTY",
+    "SNOTTY"
+  ],
+  "UPROAR": [
+    "TUMULT",
+    "HUBBUB"
+  ],
+  "UPSHOT": [
+    "EFFECT",
+    "RESULT"
+  ],
+  "USABLE": [
+    "USEFUL"
+  ],
+  "USEFUL": [
+    "USABLE"
+  ],
+  "VACATE": [
+    "RESIGN",
+    "REPEAL",
+    "REVOKE"
+  ],
+  "VACUUM": [
+    "HOOVER"
+  ],
+  "VARLET": [
+    "RASCAL"
+  ],
+  "VELVET": [
+    "SMOOTH"
+  ],
+  "VENDOR": [
+    "SELLER"
+  ],
+  "VENEER": [
+    "FACING"
+  ],
+  "VERBAL": [
+    "SPOKEN",
+    "PROLIX"
+  ],
+  "VERIFY": [
+    "AFFIRM",
+    "ASSERT"
+  ],
+  "VICTOR": [
+    "MASTER",
+    "WINNER"
+  ],
+  "VIEWER": [
+    "LOOKER"
+  ],
+  "VIGOUR": [
+    "ENERGY"
+  ],
+  "VILIFY": [
+    "REVILE"
+  ],
+  "VIOLET": [
+    "PURPLE"
+  ],
+  "VIOLIN": [
+    "FIDDLE"
+  ],
+  "VIRAGO": [
+    "AMAZON"
+  ],
+  "VIRGIN": [
+    "VESTAL",
+    "CHASTE"
+  ],
+  "VIRILE": [
+    "MANFUL",
+    "POTENT",
+    "STRONG"
+  ],
+  "VISAGE": [
+    "KISSER",
+    "SMILER"
+  ],
+  "VISCID": [
+    "STICKY"
+  ],
+  "VISUAL": [
+    "OCULAR"
+  ],
+  "VIVIFY": [
+    "REPAIR",
+    "REVIVE"
+  ],
+  "VOLUTE": [
+    "SPIRAL",
+    "COILED"
+  ],
+  "VOODOO": [
+    "FETICH",
+    "FETISH",
+    "VODOUN"
+  ],
+  "VOYEUR": [
+    "PEEPER"
+  ],
+  "VULGAR": [
+    "COMMON",
+    "EARTHY",
+    "COARSE"
+  ],
+  "WADDLE": [
+    "COGGLE",
+    "DODDER",
+    "TOTTER"
+  ],
+  "WAITER": [
+    "SERVER"
+  ],
+  "WALKER": [
+    "ZIMMER",
+    "FOOTER"
+  ],
+  "WALLOP": [
+    "IMPACT"
+  ],
+  "WALLOW": [
+    "WELTER"
+  ],
+  "WAMPUM": [
+    "BOODLE",
+    "DINERO",
+    "MOOLAH"
+  ],
+  "WANDER": [
+    "RAMBLE",
+    "THREAD",
+    "BETRAY"
+  ],
+  "WANGLE": [
+    "MANAGE"
+  ],
+  "WANKER": [
+    "TOSSER"
+  ],
+  "WANTON": [
+    "PIDDLE",
+    "TRIFLE"
+  ],
+  "WARBLE": [
+    "QUAVER"
+  ],
+  "WASTER": [
+    "RUINER",
+    "UNDOER"
+  ],
+  "WATERY": [
+    "DILUTE",
+    "LIQUID"
+  ],
+  "WAYLAY": [
+    "AMBUSH"
+  ],
+  "WEAKEN": [
+    "DAMPEN",
+    "SOFTEN"
+  ],
+  "WEAKLY": [
+    "DEBILE",
+    "FEEBLE",
+    "INFIRM"
+  ],
+  "WEALTH": [
+    "RICHES"
+  ],
+  "WEIGHT": [
+    "BURDEN"
+  ],
+  "WEIRDO": [
+    "LOONEY"
+  ],
+  "WELKIN": [
+    "SPHERE"
+  ],
+  "WHIMSY": [
+    "NOTION"
+  ],
+  "WHINNY": [
+    "NICKER"
+  ],
+  "WICKED": [
+    "SINFUL",
+    "UNHOLY",
+    "IMPISH",
+    "SEVERE",
+    "SKANKY"
+  ],
+  "WICKER": [
+    "CANING"
+  ],
+  "WICKET": [
+    "GRILLE"
+  ],
+  "WIGGLE": [
+    "SQUIRM"
+  ],
+  "WINNER": [
+    "VICTOR"
+  ],
+  "WINTRY": [
+    "FRIGID",
+    "FROSTY",
+    "FROZEN",
+    "BRUMAL",
+    "HIEMAL"
+  ],
+  "WITHER": [
+    "SHRINK"
+  ],
+  "WITHIN": [
+    "INSIDE"
+  ],
+  "WIZARD": [
+    "GENIUS"
+  ],
+  "WOBBLE": [
+    "CAREEN",
+    "SHIMMY",
+    "COGGLE"
+  ],
+  "WONDER": [
+    "MARVEL"
+  ],
+  "WOODED": [
+    "BRUSHY",
+    "JUNGLY",
+    "SILVAN",
+    "SYLVAN"
+  ],
+  "WOOLLY": [
+    "ADDLED",
+    "HAIRED",
+    "LANATE"
+  ],
+  "WORTHY": [
+    "SACRED",
+    "VALUED"
+  ],
+  "WRENCH": [
+    "SPRAIN"
+  ],
+  "WRITER": [
+    "AUTHOR"
+  ],
+  "WRITHE": [
+    "SQUIRM"
+  ],
+  "YAHWEH": [
+    "JAHVEY",
+    "WAHVEY"
+  ],
+  "YEARLY": [
+    "ANNUAL"
+  ],
+  "ZEPHYR": [
+    "BREEZE"
+  ]
+}
