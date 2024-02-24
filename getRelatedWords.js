@@ -3,9 +3,8 @@
 
 "use strict";
 
-const dataFilePath = "/data_6_letters.json";
-
-export default async function getRandomRelatedWords(exceptions=null) {
+export default async function getRandomRelatedWords(wordLength=5, exceptions=null) {
+    const dataFilePath = `/data_${wordLength}_letters.json`;
     if (!exceptions) exceptions = [];
     const response = await fetch(dataFilePath);
     if (!response.ok) {

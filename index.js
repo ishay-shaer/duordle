@@ -15,6 +15,7 @@
 // TODO (DONE) Plot it
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 
+// TODO 
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add a favicon to the title
 // TODO Create welcome message and display it in the message box.
@@ -26,14 +27,14 @@
 
 "use strict";
 
-import createHistogram from "./histogram.js";
+import createHistogram from "/histogram.js";
 import getRandomRelatedWords from "/getRelatedWords.js";
 
 
 const originalHtml = document.documentElement.outerHTML;
-const wordLength = 6;
-const MAXGUESSES = wordLength + 2;
-const longFilePath = "words_6_letters.txt";
+let wordLength = 6; // default value
+let maxGuesses = wordLength + 2;
+let guessesFilePath = `words_${wordLength}_letters.txt`;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 let stopErrorDisplay; // Used for timeout in the displayErrorMessage function.
 
@@ -66,7 +67,7 @@ class Game {
     // (Promise needs to be handled properly because it's an async process)
 
     static async createGame() {
-        const gameMagicWords = await getRandomRelatedWords();
+        const gameMagicWords = await getRandomRelatedWords(wordLength);
         possibleGuesses = [...new Set([...possibleGuesses, ...gameMagicWords])];
         return new Game(...gameMagicWords);
     }
@@ -129,7 +130,7 @@ class Game {
         if (!this.state.isActive) return;
         document.querySelector("#error-box").style.visibility = "hidden";
 
-        if (this.charPosRow < MAXGUESSES && this.charPosCol < wordLength) {
+        if (this.charPosRow < maxGuesses && this.charPosCol < wordLength) {
             this.boards.forEach(board => board.addLetter(letter));
             this.currentGuess += letter;
             this.charPosCol++;
@@ -243,7 +244,7 @@ class Game {
         if (this.boards.every(board => board.state.hasWon)) {
             this.state = {...this.state, hasWon: true, isActive: false};
             this.endGame();
-        } else if (this.guesses.length === MAXGUESSES && !this.state.hasWon) {
+        } else if (this.guesses.length === maxGuesses && !this.state.hasWon) {
             this.state = {...this.state, hasLost: true, isActive: false};
             this.endGame();
         }
@@ -319,7 +320,7 @@ class Game {
         let message;
         if (this.state.hasWon) {
             message = `<h1 id="win-header">You win!</h1>
-                You got it right at guess ${this.guesses.length} out of ${MAXGUESSES}<br>`;
+                You got it right at guess ${this.guesses.length} out of ${maxGuesses}<br>`;
         } else {
             const gameMagicWords = this.boards.map((board) => board.magicWord);
             message = `Better luck next time! <br>
@@ -335,7 +336,7 @@ class Game {
         messageTextEl.appendChild(chartBoxEl);
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
-        const xRange = [...Array.from(Array(MAXGUESSES - 1).keys()).map(num => num + 2), "Lost"];
+        const xRange = [...Array.from(Array(maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
         createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight, xRange);
 
         setTimeout(() => {
@@ -350,7 +351,7 @@ class Game {
         const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
         const gamesWon = totalGames - (gameStats["Lost"] || 0);
         const averageScore = Object.entries(gameStats).reduce((total, [guesses, num]) => 
-            guesses === "Lost" ? total + ((MAXGUESSES + 1) * num) : total + (guesses * num), 0) / totalGames;
+            guesses === "Lost" ? total + ((maxGuesses + 1) * num) : total + (guesses * num), 0) / totalGames;
         let statsMessage = `Total games: ${totalGames}<br>
                             Average: ${averageScore.toFixed(2)}`; 
 
@@ -487,7 +488,7 @@ function createBoxes(boardSide){
     const board = document.querySelector(`#board-${boardSide}`);
     let boardContent = "";
 
-    for (let row=0; row<MAXGUESSES; row++){
+    for (let row=0; row<maxGuesses; row++){
         boardContent += `<div class="board-row board-row-${wordLength}-letters" id="board-row-${boardSide}-${row}">`;
         for (let column=0; column<wordLength; column++){
             boardContent += `<span class="box" id="box-${boardSide}-${row}-${column}"></span>`;
@@ -554,7 +555,7 @@ function getAlphaSimilarity(word_0, word_1) {
 }
 
 async function main() {
-    if (!possibleGuesses.length) possibleGuesses = await getWordsFromTextFile(longFilePath);
+    if (!possibleGuesses.length) possibleGuesses = await getWordsFromTextFile(guessesFilePath);
     const game = await Game.createGame();
     if (!game) main();
     console.log(game.boards[0].magicWord);
