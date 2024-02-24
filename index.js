@@ -27,8 +27,8 @@
 
 "use strict";
 
-import createHistogram from "/histogram.js";
-import getRandomRelatedWords from "/getRelatedWords.js";
+import createHistogram from "./histogram.js";
+import getRandomRelatedWords from "./getRelatedWords.js";
 
 
 const originalHtml = document.documentElement.outerHTML;
@@ -56,7 +56,7 @@ class Game {
     }
 
     static async createGame(wordLength) {
-        const guessesFilePath = `words_${wordLength}_letters.txt`;
+        const guessesFilePath = `./words_${wordLength}_letters.txt`;
         const gameMagicWords = await getRandomRelatedWords(wordLength);
         let possibleGuesses = await getWordsFromTextFile(guessesFilePath);
         possibleGuesses = [...new Set([...possibleGuesses, ...gameMagicWords])];
