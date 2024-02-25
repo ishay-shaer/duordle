@@ -263,7 +263,8 @@ class Game {
     }
     
     unifyKeyboard(boardSideToEliminate) {
-        const boardSideToTakeOver = Math.abs(boardSideToEliminate - 1);
+        // Assign 0 if argument is 1, 1 if it's 0.
+        const boardSideToTakeOver = Number(!boardSideToEliminate);
         this.boards[boardSideToEliminate].keyboardUpdater = 
             this.boards[boardSideToTakeOver].keyboardUpdater;
     }
