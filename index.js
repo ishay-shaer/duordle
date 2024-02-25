@@ -15,7 +15,7 @@
 // TODO (DONE) Plot it
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 
-// TODO 
+// TODO Add links from guesses to their respective dictionary.com page
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add a favicon to the title
 // TODO Create welcome message and display it in the message box.
@@ -46,7 +46,8 @@ class Game {
         }
         this.gameMagicWords = [word_0, word_1];
         this.possibleGuesses = possibleGuesses;
-        this.boards = [new Board(0, word_0), new Board(1, word_1)];
+        this.boards = [new Board(0, word_0, this.wordLength, this.maxGuesses),
+                       new Board(1, word_1, this.wordLength, this.maxGuesses)];
         this.charPosCol = 0;
         this.charPosRow = 0;
         this.currentGuess = "";
@@ -61,6 +62,10 @@ class Game {
         let possibleGuesses = await getWordsFromTextFile(guessesFilePath);
         possibleGuesses = [...new Set([...possibleGuesses, ...gameMagicWords])];
         return new Game(gameMagicWords, possibleGuesses);
+    }
+
+    createBoxes() {
+        this.boards.forEach(board => board.createBoxes());
     }
 
     // refactor?
@@ -354,9 +359,10 @@ class Game {
 }
 
 class Board {
-    constructor(side, magicWord) {
-        this.wordLength = magicWord.length;
+    constructor(side, magicWord, wordLength, maxGuesses) {
         this.side = side;
+        this.wordLength = wordLength;
+        this.maxGuesses = maxGuesses;        
         this.magicWord = magicWord;
         this.guesses = [];
         this.keyboardUpdater = {};
@@ -367,6 +373,21 @@ class Board {
         this.charPosRow = 0;
         this.charPosCol = 0;
         this.lastMatch = [];
+    }
+
+    createBoxes() {
+        const board = document.querySelector(`#board-${this.side}`);
+        let boardContent = "";
+    
+        for (let row = 0; row < this.maxGuesses; row++) {
+            boardContent += `<div class="board-row board-row-${this.wordLength}-letters" id="board-row-${this.side}-${row}">`;
+            for (let column = 0; column < this.wordLength; column++) {
+                boardContent += `<span class="box" id="box-${this.side}-${row}-${column}"></span>`;
+            }
+            boardContent += `</div>`;
+        }
+    
+        board.innerHTML = boardContent;
     }
 
     addLetter(letter) {
@@ -477,21 +498,6 @@ async function getWordsFromTextFile(filePath) {
     }
 }
 
-function createBoxes(boardSide, wordLength, maxGuesses) {
-    const board = document.querySelector(`#board-${boardSide}`);
-    let boardContent = "";
-
-    for (let row = 0; row < maxGuesses; row++){
-        boardContent += `<div class="board-row board-row-${wordLength}-letters" id="board-row-${boardSide}-${row}">`;
-        for (let column=0; column<wordLength; column++){
-            boardContent += `<span class="box" id="box-${boardSide}-${row}-${column}"></span>`;
-        }
-        boardContent += `</div>`;
-    }
-
-    board.innerHTML = boardContent;
-}
-
 function restoreOriginalHtml() {
     document.open();
     document.write(originalHtml);
@@ -500,7 +506,7 @@ function restoreOriginalHtml() {
 
 function renderColorScheme() {
     const colorScheme = localStorage.getItem("colorScheme") || "default";
-    const htmlClassList = document.querySelector("html").classList;
+    let htmlEl = document.querySelector("html");
     const colorSelectOptionEls = document.querySelector("#color-select").children;
     
     localStorage.setItem("colorScheme", colorScheme);
@@ -514,41 +520,20 @@ function renderColorScheme() {
     });
 
     if (localStorage.getItem("colorScheme") === "high-contrast") {
-        htmlClassList.remove("default");
-        htmlClassList.add("high-contrast");
+        htmlEl.className = "high-contrast";
     } else {
-        htmlClassList.remove("high-contrast");
-        htmlClassList.add("default");
+        htmlEl.className = "default";
     }
 }
 
 function setColorScheme() {
     const selectedColorScheme = document.querySelector("#color-select").value;
-    const htmlClassList = document.querySelector("html").classList;
+    const htmlEl = document.querySelector("html");
 
-    htmlClassList.remove(...htmlClassList);
-    htmlClassList.add(selectedColorScheme);
+    htmlEl.className = selectedColorScheme;
     localStorage.setItem("colorScheme", selectedColorScheme);
     this.blur();
 }
-
-// Calculates alphabetic similarity between 2 words of the same length.
-// Returns number of letters that are identical and identically positioned in the 2 words
-// Not currently used
-// function getAlphaSimilarity(word_0, word_1) {
-//     if (word_0.length != word_1.length) {
-//         throw new Error("Cannot calculate alphabetic similarity of words of different lengths");
-//     }
-    
-//     const numOfLetters = word_0.length;
-//     let similarityCounter = 0;
-//     for (let i=0; i<numOfLetters; i++) {
-//         if (word_0[i] === word_1[i]) {
-//             similarityCounter++;
-//         }
-//     }
-//     return similarityCounter;
-// }
 
 async function main() {
     let wordLength = window.prompt("Enter word length (4-6)");
@@ -561,8 +546,7 @@ async function main() {
     renderColorScheme();
     window.addEventListener("keydown", (e) => {game.keyboardHandler(e)});
     game.createScreenKeyboard();
-    createBoxes(0, game.wordLength, game.maxGuesses);
-    createBoxes(1, game.wordLength, game.maxGuesses);
+    game.createBoxes();
 }
 
 main();
