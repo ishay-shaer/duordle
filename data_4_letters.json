@@ -1,0 +1,3331 @@
+{
+  "ABUT": [
+    "BUTT",
+    "EDGE"
+  ],
+  "ACHE": [
+    "HURT",
+    "PINE"
+  ],
+  "ACID": [
+    "DOSE",
+    "PANE",
+    "SOUR"
+  ],
+  "ACME": [
+    "APEX",
+    "PEAK"
+  ],
+  "ACRE": [
+    "AKKA",
+    "AKKO"
+  ],
+  "AGED": [
+    "RIPE",
+    "WORN"
+  ],
+  "AIRY": [
+    "AERY"
+  ],
+  "AJAR": [
+    "OPEN"
+  ],
+  "ALTO": [
+    "HIGH"
+  ],
+  "ALUM": [
+    "GRAD"
+  ],
+  "AMEN": [
+    "AMON",
+    "AMUN"
+  ],
+  "AMIR": [
+    "EMIR"
+  ],
+  "APEX": [
+    "ACME",
+    "PEAK"
+  ],
+  "ARID": [
+    "DULL"
+  ],
+  "ARSE": [
+    "BUNS",
+    "BUTT",
+    "PRAT",
+    "REAR",
+    "RUMP",
+    "SEAT",
+    "TAIL",
+    "TUSH"
+  ],
+  "ATOM": [
+    "MOTE"
+  ],
+  "AURA": [
+    "HALO"
+  ],
+  "AVER": [
+    "AVOW",
+    "SWAN"
+  ],
+  "AVOW": [
+    "AVER",
+    "SWAN"
+  ],
+  "AXIS": [
+    "BLOC"
+  ],
+  "BABE": [
+    "BABY"
+  ],
+  "BABY": [
+    "BABE"
+  ],
+  "BACK": [
+    "REAR",
+    "GAGE",
+    "GAME",
+    "PUNT",
+    "HIND"
+  ],
+  "BAIT": [
+    "HOOK",
+    "LURE",
+    "RAZZ",
+    "RIDE",
+    "TWIT"
+  ],
+  "BALD": [
+    "BARE",
+    "OPEN"
+  ],
+  "BAND": [
+    "RING"
+  ],
+  "BANG": [
+    "BASH",
+    "BELT",
+    "BONK",
+    "FUCK",
+    "HUMP",
+    "JAZZ",
+    "KNOW",
+    "LOVE",
+    "SLAM",
+    "BOLT",
+    "SLAP",
+    "CLAP",
+    "BOOT",
+    "KICK",
+    "RUSH"
+  ],
+  "BARB": [
+    "GIBE",
+    "JIBE",
+    "SHOT",
+    "SLAM"
+  ],
+  "BARE": [
+    "MERE",
+    "NUDE",
+    "BALD"
+  ],
+  "BASH": [
+    "BONK",
+    "SOCK",
+    "WHAP",
+    "WHOP",
+    "BANG",
+    "BELT"
+  ],
+  "BATS": [
+    "DAFT",
+    "LOCO",
+    "NUTS"
+  ],
+  "BAWL": [
+    "YAWP"
+  ],
+  "BIDE": [
+    "STAY"
+  ],
+  "BIFF": [
+    "LICK",
+    "POKE",
+    "SLUG"
+  ],
+  "BILE": [
+    "GALL"
+  ],
+  "BILK": [
+    "FOIL"
+  ],
+  "BILL": [
+    "NOTE",
+    "CARD",
+    "BEAK",
+    "PEAK"
+  ],
+  "BIND": [
+    "BOND",
+    "HOLD"
+  ],
+  "BIRD": [
+    "DAME",
+    "DOLL",
+    "HISS",
+    "HOOT",
+    "RAZZ",
+    "FOWL"
+  ],
+  "BITE": [
+    "BURN"
+  ],
+  "BLAB": [
+    "SING",
+    "TALK"
+  ],
+  "BLOB": [
+    "BLOT",
+    "SPOT"
+  ],
+  "BLOC": [
+    "AXIS"
+  ],
+  "BLOT": [
+    "SPOT",
+    "DAUB",
+    "SLUR",
+    "BLOB"
+  ],
+  "BLUE": [
+    "DARK",
+    "DRAB",
+    "GRIM",
+    "GAMY",
+    "RACY",
+    "SEXY",
+    "DOWN"
+  ],
+  "BLUR": [
+    "FUZZ",
+    "SLUR"
+  ],
+  "BODE": [
+    "OMEN"
+  ],
+  "BOLD": [
+    "RASH"
+  ],
+  "BOMB": [
+    "FAIL"
+  ],
+  "BOND": [
+    "BIND",
+    "BAIL"
+  ],
+  "BONE": [
+    "CRAM",
+    "DRUM",
+    "SWOT",
+    "BONY"
+  ],
+  "BONK": [
+    "BASH",
+    "SOCK",
+    "WHAP",
+    "WHOP",
+    "BANG",
+    "FUCK",
+    "HUMP",
+    "JAZZ",
+    "KNOW",
+    "LOVE"
+  ],
+  "BONY": [
+    "BONE",
+    "LEAN",
+    "THIN"
+  ],
+  "BOOK": [
+    "WORD",
+    "HOLD"
+  ],
+  "BOOR": [
+    "GOTH",
+    "TIKE",
+    "TYKE"
+  ],
+  "BOSH": [
+    "TOSH"
+  ],
+  "BOTH": [
+    "SOME"
+  ],
+  "BOUT": [
+    "BUST",
+    "TEAR",
+    "TURN"
+  ],
+  "BRAG": [
+    "BOSS",
+    "BLOW",
+    "TOUT",
+    "CROW"
+  ],
+  "BRAY": [
+    "MASH"
+  ],
+  "BULK": [
+    "MASS"
+  ],
+  "BUMP": [
+    "FIND",
+    "BLOW",
+    "HUMP"
+  ],
+  "BURY": [
+    "SINK"
+  ],
+  "CAGE": [
+    "COOP"
+  ],
+  "CAKE": [
+    "COAT"
+  ],
+  "CALL": [
+    "NAME",
+    "YELL",
+    "RING",
+    "SONG"
+  ],
+  "CALM": [
+    "LULL"
+  ],
+  "CALX": [
+    "LIME"
+  ],
+  "CANE": [
+    "FLOG"
+  ],
+  "CARE": [
+    "LIKE",
+    "WISH",
+    "FEAR",
+    "DEAL"
+  ],
+  "CART": [
+    "DRAG",
+    "HALE",
+    "HAUL"
+  ],
+  "CAST": [
+    "FORM",
+    "HURL",
+    "MOLD",
+    "ROLL",
+    "ROAM",
+    "ROVE",
+    "SWAN",
+    "DROP",
+    "SHED",
+    "BARF",
+    "HONK",
+    "PUKE",
+    "SICK",
+    "SPEW",
+    "SPUE",
+    "DRAW"
+  ],
+  "CAUL": [
+    "VEIL"
+  ],
+  "CELT": [
+    "KELT"
+  ],
+  "CHEW": [
+    "CHAW",
+    "PLUG",
+    "QUID"
+  ],
+  "CHIN": [
+    "KUKI"
+  ],
+  "CHIP": [
+    "NICK",
+    "KNAP"
+  ],
+  "CHOW": [
+    "EATS",
+    "GRUB",
+    "CHOU",
+    "ZHOU"
+  ],
+  "CITE": [
+    "NAME"
+  ],
+  "CLAM": [
+    "BUCK"
+  ],
+  "CLAW": [
+    "HOOK"
+  ],
+  "CLOD": [
+    "GAWK",
+    "GOON",
+    "LOUT",
+    "LUMP",
+    "BALL",
+    "GLOB"
+  ],
+  "CLOG": [
+    "FOUL",
+    "GETA",
+    "CLOT"
+  ],
+  "CLOT": [
+    "CLOG"
+  ],
+  "CLOY": [
+    "PALL"
+  ],
+  "CLUB": [
+    "NINE",
+    "GILD"
+  ],
+  "CLUE": [
+    "HINT",
+    "CLEW"
+  ],
+  "COAL": [
+    "CHAR"
+  ],
+  "COAT": [
+    "CAKE"
+  ],
+  "COIL": [
+    "CURL",
+    "LOOP",
+    "GYRE",
+    "ROLL"
+  ],
+  "COIN": [
+    "MINT"
+  ],
+  "COLA": [
+    "DOPE"
+  ],
+  "COLD": [
+    "COOL",
+    "RIMY",
+    "DEAD"
+  ],
+  "COLE": [
+    "KAIL",
+    "KALE"
+  ],
+  "COME": [
+    "SEED",
+    "HAIL",
+    "FARE",
+    "FALL"
+  ],
+  "CONY": [
+    "PIKA"
+  ],
+  "COOK": [
+    "FAKE",
+    "MAKE"
+  ],
+  "COOL": [
+    "FINE",
+    "OKAY",
+    "COLD"
+  ],
+  "COOP": [
+    "CAGE"
+  ],
+  "CORE": [
+    "GIST",
+    "MEAT",
+    "PITH"
+  ],
+  "COST": [
+    "TOLL"
+  ],
+  "COSY": [
+    "COZY",
+    "SNUG"
+  ],
+  "COWL": [
+    "HOOD"
+  ],
+  "COZY": [
+    "COSY",
+    "SNUG"
+  ],
+  "CRAM": [
+    "BONE",
+    "DRUM",
+    "SWOT"
+  ],
+  "CRAP": [
+    "DIRT",
+    "POOP",
+    "SHIT",
+    "TURD",
+    "MAKE",
+    "BULL"
+  ],
+  "CRAW": [
+    "CROP"
+  ],
+  "CRIB": [
+    "PONY",
+    "TROT"
+  ],
+  "CROP": [
+    "CLIP",
+    "SNIP",
+    "TRIM",
+    "WORK",
+    "CRAW"
+  ],
+  "CUBE": [
+    "DICE"
+  ],
+  "CULL": [
+    "PICK"
+  ],
+  "CULT": [
+    "RAGE"
+  ],
+  "CUNT": [
+    "PUSS",
+    "SLIT",
+    "TWAT"
+  ],
+  "CURB": [
+    "HOLD",
+    "AMEX",
+    "KERB"
+  ],
+  "CURE": [
+    "HEAL"
+  ],
+  "CURL": [
+    "COIL",
+    "LOOP",
+    "KINK",
+    "GYRE",
+    "ROLL",
+    "WAVE",
+    "LOCK"
+  ],
+  "CUSS": [
+    "OATH",
+    "PEST",
+    "CHAP",
+    "GENT"
+  ],
+  "CZAR": [
+    "TSAR",
+    "TZAR"
+  ],
+  "DADA": [
+    "PAPA"
+  ],
+  "DAFT": [
+    "BATS",
+    "LOCO",
+    "NUTS"
+  ],
+  "DAIS": [
+    "AMBO"
+  ],
+  "DAME": [
+    "BIRD",
+    "DOLL",
+    "LADY"
+  ],
+  "DAMN": [
+    "DARN",
+    "HOOT",
+    "SHIT"
+  ],
+  "DAMP": [
+    "DULL",
+    "MUTE"
+  ],
+  "DARE": [
+    "DEFY"
+  ],
+  "DARK": [
+    "EVIL",
+    "BLUE",
+    "DRAB",
+    "GRIM",
+    "DOUR",
+    "GLUM",
+    "SOUR"
+  ],
+  "DART": [
+    "DASH",
+    "SCUD",
+    "FLIT"
+  ],
+  "DASH": [
+    "BOLT",
+    "DART",
+    "SCUD",
+    "ELAN",
+    "PALL"
+  ],
+  "DAUB": [
+    "BLOT",
+    "SLUR",
+    "SPOT"
+  ],
+  "DAZE": [
+    "HAZE",
+    "STUN"
+  ],
+  "DEAD": [
+    "NUMB",
+    "BEAT",
+    "IDLE",
+    "COLD",
+    "GONE",
+    "LATE"
+  ],
+  "DEAR": [
+    "LAMB",
+    "GOOD",
+    "NEAR",
+    "LOVE"
+  ],
+  "DECK": [
+    "DUMP"
+  ],
+  "DEEM": [
+    "HOLD"
+  ],
+  "DEEP": [
+    "LATE",
+    "RICH",
+    "BASS",
+    "WIDE"
+  ],
+  "DEFY": [
+    "HOLD",
+    "DARE"
+  ],
+  "DEMO": [
+    "SHOW"
+  ],
+  "DENT": [
+    "SLIT",
+    "DING",
+    "NICK"
+  ],
+  "DHAL": [
+    "DAHL"
+  ],
+  "DICE": [
+    "CUBE"
+  ],
+  "DING": [
+    "DONG",
+    "DENT",
+    "NICK"
+  ],
+  "DIRT": [
+    "CRAP",
+    "POOP",
+    "SHIT",
+    "TURD",
+    "SOIL"
+  ],
+  "DISC": [
+    "DISK"
+  ],
+  "DISH": [
+    "LULU"
+  ],
+  "DISK": [
+    "DISC"
+  ],
+  "DOLE": [
+    "POGY"
+  ],
+  "DOLL": [
+    "BIRD",
+    "DAME"
+  ],
+  "DOME": [
+    "BEAN"
+  ],
+  "DOOM": [
+    "FATE"
+  ],
+  "DOPE": [
+    "POOP",
+    "GAGE",
+    "SENS",
+    "SESS",
+    "WEED",
+    "BOOB",
+    "COLA"
+  ],
+  "DOSE": [
+    "ACID",
+    "PANE",
+    "DRUG"
+  ],
+  "DOUR": [
+    "GRIM",
+    "DARK",
+    "GLUM",
+    "SOUR"
+  ],
+  "DRAB": [
+    "BLUE",
+    "DARK",
+    "GRIM",
+    "DULL"
+  ],
+  "DRAG": [
+    "DRAW",
+    "PUFF",
+    "CART",
+    "HALE",
+    "HAUL",
+    "PULL"
+  ],
+  "DRAW": [
+    "DRAG",
+    "PUFF",
+    "LINE",
+    "REAP",
+    "PASS",
+    "PULL",
+    "HOOK",
+    "MAKE",
+    "SUCK",
+    "HAUL",
+    "CAST"
+  ],
+  "DRIP": [
+    "DROP"
+  ],
+  "DROP": [
+    "BEAD",
+    "SINK",
+    "FALL",
+    "DRIP",
+    "DRIB",
+    "CAST",
+    "SHED",
+    "FELL",
+    "MISS",
+    "OMIT"
+  ],
+  "DRUB": [
+    "LICK"
+  ],
+  "DRUG": [
+    "DOSE"
+  ],
+  "DRUM": [
+    "BEAT",
+    "BONE",
+    "CRAM",
+    "SWOT"
+  ],
+  "DUDE": [
+    "BEAU"
+  ],
+  "DUET": [
+    "DUAD",
+    "DYAD",
+    "PAIR",
+    "SPAN",
+    "YOKE"
+  ],
+  "DULL": [
+    "NUMB",
+    "PALL",
+    "SLOW",
+    "DUMB",
+    "SOFT",
+    "DAMP",
+    "MUTE",
+    "FLAT",
+    "MATT",
+    "DRAB",
+    "ARID"
+  ],
+  "DUMB": [
+    "MUTE",
+    "DULL",
+    "SLOW"
+  ],
+  "DUMP": [
+    "DECK",
+    "SHIT"
+  ],
+  "DUNG": [
+    "MUCK"
+  ],
+  "DUPE": [
+    "FOOL",
+    "GULL"
+  ],
+  "DUSK": [
+    "FALL"
+  ],
+  "DUST": [
+    "JUNK"
+  ],
+  "EARN": [
+    "GAIN",
+    "MAKE"
+  ],
+  "EASE": [
+    "REST"
+  ],
+  "EASY": [
+    "RICH",
+    "SLOW",
+    "SOFT",
+    "WAXY"
+  ],
+  "ECHO": [
+    "RING"
+  ],
+  "ECHT": [
+    "GOOD"
+  ],
+  "EDDY": [
+    "PURL"
+  ],
+  "EDGE": [
+    "ABUT",
+    "BUTT",
+    "INCH"
+  ],
+  "EMIR": [
+    "AMIR"
+  ],
+  "EPIC": [
+    "EPOS"
+  ],
+  "EPOS": [
+    "EPIC"
+  ],
+  "ESPY": [
+    "SPOT"
+  ],
+  "EVIL": [
+    "UGLY",
+    "DARK",
+    "VILE"
+  ],
+  "EXAM": [
+    "TEST"
+  ],
+  "EXIT": [
+    "CONK",
+    "PASS",
+    "LOSS"
+  ],
+  "FACE": [
+    "CASE",
+    "FONT",
+    "LOOK",
+    "SIDE"
+  ],
+  "FADE": [
+    "MELT",
+    "PASS"
+  ],
+  "FAIL": [
+    "BOMB"
+  ],
+  "FAIN": [
+    "LIEF"
+  ],
+  "FAKE": [
+    "COOK",
+    "SHAM",
+    "FAUX",
+    "BULL",
+    "JUKE"
+  ],
+  "FALL": [
+    "FLOW",
+    "HANG",
+    "DROP",
+    "DUSK",
+    "COME",
+    "PASS"
+  ],
+  "FARE": [
+    "MENU",
+    "COME"
+  ],
+  "FARM": [
+    "GROW"
+  ],
+  "FART": [
+    "WIND"
+  ],
+  "FATE": [
+    "DOOM",
+    "LUCK"
+  ],
+  "FEAR": [
+    "CARE"
+  ],
+  "FEED": [
+    "PREY",
+    "GIVE",
+    "FLOW"
+  ],
+  "FEEL": [
+    "LOOK",
+    "TONE",
+    "FIND"
+  ],
+  "FILL": [
+    "MEET",
+    "TAKE",
+    "SATE"
+  ],
+  "FILM": [
+    "TAKE"
+  ],
+  "FIND": [
+    "BUMP",
+    "FEEL",
+    "RULE"
+  ],
+  "FIRE": [
+    "FUEL",
+    "FLAK",
+    "SACK",
+    "BURN"
+  ],
+  "FIZZ": [
+    "FOAM"
+  ],
+  "FLAK": [
+    "FIRE"
+  ],
+  "FLAP": [
+    "BEAT",
+    "FUSS",
+    "ROLL",
+    "WAVE"
+  ],
+  "FLIT": [
+    "DART"
+  ],
+  "FLOG": [
+    "LASH",
+    "WELT",
+    "WHIP",
+    "CANE"
+  ],
+  "FLOP": [
+    "BUST"
+  ],
+  "FLOW": [
+    "FALL",
+    "HANG",
+    "FLUX",
+    "FEED"
+  ],
+  "FLUX": [
+    "FLOW",
+    "FUSE",
+    "MELD"
+  ],
+  "FOAM": [
+    "FIZZ"
+  ],
+  "FOGY": [
+    "DODO"
+  ],
+  "FOLK": [
+    "SEPT"
+  ],
+  "FOOT": [
+    "BASE",
+    "PICK",
+    "HOOF"
+  ],
+  "FORE": [
+    "PROW",
+    "STEM"
+  ],
+  "FORM": [
+    "CAST",
+    "MOLD",
+    "WORK",
+    "KIND",
+    "SORT",
+    "SOMA",
+    "MAKE"
+  ],
+  "FOUL": [
+    "CLOG"
+  ],
+  "FOWL": [
+    "BIRD"
+  ],
+  "FOXY": [
+    "WILY"
+  ],
+  "FUCK": [
+    "BANG",
+    "BONK",
+    "HUMP",
+    "JAZZ",
+    "KNOW",
+    "LOVE",
+    "SHAG"
+  ],
+  "FUEL": [
+    "FIRE"
+  ],
+  "FUME": [
+    "REEK"
+  ],
+  "FURY": [
+    "RAGE"
+  ],
+  "FUSS": [
+    "SPAT",
+    "TIFF",
+    "STIR",
+    "FLAP",
+    "FRET"
+  ],
+  "FUZE": [
+    "FUSE"
+  ],
+  "FUZZ": [
+    "BULL",
+    "BLUR",
+    "HAIR"
+  ],
+  "GAGA": [
+    "WILD"
+  ],
+  "GAIN": [
+    "EARN",
+    "MAKE"
+  ],
+  "GAIT": [
+    "PACE"
+  ],
+  "GAMY": [
+    "HIGH",
+    "BLUE",
+    "RACY",
+    "SEXY",
+    "GAME"
+  ],
+  "GANG": [
+    "CREW",
+    "PACK",
+    "RING"
+  ],
+  "GAOL": [
+    "JAIL",
+    "POKY"
+  ],
+  "GAPE": [
+    "GAWK",
+    "GAWP",
+    "YAWN"
+  ],
+  "GASP": [
+    "PANT",
+    "PUFF"
+  ],
+  "GAUL": [
+    "FROG"
+  ],
+  "GAWK": [
+    "GAPE",
+    "GAWP",
+    "CLOD",
+    "GOON",
+    "LOUT",
+    "LUMP"
+  ],
+  "GAWP": [
+    "GAPE",
+    "GAWK"
+  ],
+  "GENT": [
+    "GAND",
+    "CHAP",
+    "CUSS"
+  ],
+  "GERM": [
+    "SEED"
+  ],
+  "GIBE": [
+    "BARB",
+    "JIBE",
+    "SHOT",
+    "SLAM",
+    "JEER"
+  ],
+  "GIFT": [
+    "GIVE"
+  ],
+  "GIMP": [
+    "LIMP"
+  ],
+  "GIRL": [
+    "MISS"
+  ],
+  "GIST": [
+    "CORE",
+    "MEAT",
+    "PITH"
+  ],
+  "GIVE": [
+    "FEED",
+    "HAND",
+    "PASS",
+    "HAVE",
+    "HOLD",
+    "MAKE",
+    "OPEN",
+    "GIFT"
+  ],
+  "GLOB": [
+    "BALL",
+    "CLOD",
+    "LUMP"
+  ],
+  "GLOW": [
+    "BURN",
+    "BEAM"
+  ],
+  "GLUM": [
+    "DARK",
+    "DOUR",
+    "SOUR"
+  ],
+  "GOAD": [
+    "PROD",
+    "SPUR"
+  ],
+  "GOAT": [
+    "BUTT"
+  ],
+  "GOLD": [
+    "GILT"
+  ],
+  "GONE": [
+    "PAST",
+    "HIGH",
+    "DEAD"
+  ],
+  "GONG": [
+    "BELL"
+  ],
+  "GOOD": [
+    "DEAR",
+    "NEAR",
+    "WELL",
+    "JUST",
+    "ECHT",
+    "FULL",
+    "SAFE",
+    "RIPE",
+    "NICE",
+    "NEAT",
+    "KEEN"
+  ],
+  "GOOF": [
+    "BOOB",
+    "BOZO",
+    "TWAT",
+    "ZANY"
+  ],
+  "GOON": [
+    "CLOD",
+    "GAWK",
+    "LOUT",
+    "LUMP",
+    "HOOD",
+    "PUNK",
+    "THUG"
+  ],
+  "GOTH": [
+    "BOOR",
+    "TIKE",
+    "TYKE"
+  ],
+  "GOWN": [
+    "ROBE"
+  ],
+  "GRAB": [
+    "SNAP"
+  ],
+  "GRAY": [
+    "GREY",
+    "HOAR"
+  ],
+  "GREY": [
+    "GRAY",
+    "HOAR"
+  ],
+  "GRIM": [
+    "DOUR",
+    "BLUE",
+    "DARK",
+    "DRAB",
+    "SICK",
+    "DOWN"
+  ],
+  "GRIP": [
+    "HOLD"
+  ],
+  "GRIT": [
+    "GUTS",
+    "SAND"
+  ],
+  "GROW": [
+    "TURN",
+    "RISE",
+    "FARM"
+  ],
+  "GRUB": [
+    "CHOW",
+    "EATS"
+  ],
+  "GUFF": [
+    "BUNK"
+  ],
+  "GULP": [
+    "SWIG"
+  ],
+  "GUSH": [
+    "RAVE"
+  ],
+  "GUST": [
+    "BLOW"
+  ],
+  "GYBE": [
+    "JIBE"
+  ],
+  "HADJ": [
+    "HAJJ"
+  ],
+  "HAIR": [
+    "FUZZ"
+  ],
+  "HAJJ": [
+    "HADJ"
+  ],
+  "HALE": [
+    "CART",
+    "DRAG",
+    "HAUL"
+  ],
+  "HALL": [
+    "DORM"
+  ],
+  "HALO": [
+    "AURA",
+    "RING"
+  ],
+  "HAND": [
+    "MITT",
+    "GIVE",
+    "PASS",
+    "DEAL"
+  ],
+  "HANG": [
+    "FALL",
+    "FLOW",
+    "BENT"
+  ],
+  "HARD": [
+    "SURD",
+    "TALL",
+    "FIRM"
+  ],
+  "HARM": [
+    "HURT"
+  ],
+  "HART": [
+    "STAG"
+  ],
+  "HAUL": [
+    "CART",
+    "DRAG",
+    "HALE",
+    "DRAW"
+  ],
+  "HAVE": [
+    "TAKE",
+    "HOLD",
+    "MAKE",
+    "GIVE",
+    "BEAR"
+  ],
+  "HAZE": [
+    "DAZE"
+  ],
+  "HEAD": [
+    "LEAD",
+    "MIND",
+    "NOUS",
+    "PASS"
+  ],
+  "HEAL": [
+    "CURE",
+    "MEND"
+  ],
+  "HEAP": [
+    "PILE",
+    "DEAL",
+    "MASS",
+    "MESS",
+    "MINT",
+    "PECK",
+    "RAFT",
+    "SLEW"
+  ],
+  "HEAT": [
+    "WAKE"
+  ],
+  "HEED": [
+    "MIND"
+  ],
+  "HERD": [
+    "RUCK"
+  ],
+  "HERE": [
+    "HERA"
+  ],
+  "HICK": [
+    "RUBE"
+  ],
+  "HIGH": [
+    "GONE",
+    "GAMY",
+    "ALTO",
+    "FULL",
+    "LAST"
+  ],
+  "HIKE": [
+    "RISE"
+  ],
+  "HINT": [
+    "CLUE",
+    "TINT",
+    "MITE",
+    "LEAD",
+    "WIND"
+  ],
+  "HIRE": [
+    "RENT",
+    "TAKE"
+  ],
+  "HISS": [
+    "SISS",
+    "SIZZ",
+    "BIRD",
+    "HOOT",
+    "RAZZ"
+  ],
+  "HOLE": [
+    "MESS",
+    "TRAP"
+  ],
+  "HOME": [
+    "BASE"
+  ],
+  "HONK": [
+    "BEEP",
+    "TOOT",
+    "BARF",
+    "CAST",
+    "PUKE",
+    "SICK",
+    "SPEW",
+    "SPUE"
+  ],
+  "HOOF": [
+    "FOOT"
+  ],
+  "HOOK": [
+    "BAIT",
+    "LURE",
+    "LIFT",
+    "GLOM",
+    "DRAW",
+    "CLAW",
+    "SOAK"
+  ],
+  "HOOP": [
+    "RING"
+  ],
+  "HOOT": [
+    "DAMN",
+    "DARN",
+    "SHIT",
+    "BIRD",
+    "HISS",
+    "RAZZ"
+  ],
+  "HORN": [
+    "TUSK"
+  ],
+  "HOWL": [
+    "ROAR",
+    "WAIL",
+    "YAUP",
+    "YAWL",
+    "YOWL"
+  ],
+  "HUFF": [
+    "PUFF",
+    "MIFF"
+  ],
+  "HUGE": [
+    "VAST"
+  ],
+  "HULK": [
+    "LOOM"
+  ],
+  "HUMP": [
+    "BANG",
+    "BONK",
+    "FUCK",
+    "JAZZ",
+    "KNOW",
+    "LOVE",
+    "BUMP"
+  ],
+  "HUNK": [
+    "LUMP"
+  ],
+  "HURL": [
+    "CAST"
+  ],
+  "HURT": [
+    "HARM",
+    "ACHE",
+    "PAIN"
+  ],
+  "HYPE": [
+    "PLUG"
+  ],
+  "ICON": [
+    "IKON"
+  ],
+  "IDEA": [
+    "MIND"
+  ],
+  "IDLE": [
+    "WILD",
+    "LAZE",
+    "SLUG",
+    "DEAD",
+    "LAZY"
+  ],
+  "IKON": [
+    "ICON"
+  ],
+  "INCA": [
+    "INKA"
+  ],
+  "INCH": [
+    "EDGE"
+  ],
+  "IOTA": [
+    "WHIT"
+  ],
+  "IRIS": [
+    "FLAG"
+  ],
+  "ITCH": [
+    "URGE"
+  ],
+  "JACK": [
+    "SHIT"
+  ],
+  "JAIL": [
+    "GAOL",
+    "POKY"
+  ],
+  "JAPE": [
+    "JEST",
+    "JOKE"
+  ],
+  "JAZZ": [
+    "WIND",
+    "BANG",
+    "BONK",
+    "FUCK",
+    "HUMP",
+    "KNOW",
+    "LOVE"
+  ],
+  "JEER": [
+    "GIBE"
+  ],
+  "JEST": [
+    "JOKE",
+    "JAPE"
+  ],
+  "JOIN": [
+    "LINK"
+  ],
+  "JOKE": [
+    "JEST",
+    "JAPE"
+  ],
+  "JOLT": [
+    "JERK"
+  ],
+  "JUMP": [
+    "SKIP",
+    "LEAP",
+    "RISE"
+  ],
+  "JUST": [
+    "FAIR",
+    "GOOD",
+    "ONLY",
+    "MEET"
+  ],
+  "KALE": [
+    "COLE",
+    "KAIL",
+    "GELT",
+    "LOOT",
+    "PELF"
+  ],
+  "KEEL": [
+    "REEL",
+    "SWAG"
+  ],
+  "KEEP": [
+    "SAVE",
+    "HOLD"
+  ],
+  "KELT": [
+    "CELT"
+  ],
+  "KERB": [
+    "CURB"
+  ],
+  "KICK": [
+    "BOOT",
+    "BEEF",
+    "BANG",
+    "RUSH"
+  ],
+  "KILL": [
+    "DOWN"
+  ],
+  "KIND": [
+    "FORM",
+    "SORT"
+  ],
+  "KINK": [
+    "RICK",
+    "CURL"
+  ],
+  "KISS": [
+    "BUSS",
+    "SNOG"
+  ],
+  "KNEE": [
+    "GENU"
+  ],
+  "KNOB": [
+    "NODE",
+    "BOSS"
+  ],
+  "KNOW": [
+    "BANG",
+    "BONK",
+    "FUCK",
+    "HUMP",
+    "JAZZ",
+    "LOVE",
+    "LIVE"
+  ],
+  "KOLA": [
+    "DABA"
+  ],
+  "LACK": [
+    "MISS",
+    "WANT"
+  ],
+  "LADE": [
+    "LOAD"
+  ],
+  "LADY": [
+    "DAME"
+  ],
+  "LAMB": [
+    "DEAR",
+    "ELIA"
+  ],
+  "LAME": [
+    "WEAK",
+    "GAME",
+    "HALT"
+  ],
+  "LAND": [
+    "SOIL",
+    "DOWN"
+  ],
+  "LANK": [
+    "LEAN",
+    "THIN",
+    "LONG"
+  ],
+  "LAPP": [
+    "SAME",
+    "SAMI"
+  ],
+  "LASH": [
+    "FLOG",
+    "WELT",
+    "WHIP"
+  ],
+  "LATE": [
+    "DEEP",
+    "PAST",
+    "RIPE",
+    "DEAD"
+  ],
+  "LAVE": [
+    "WASH"
+  ],
+  "LAZE": [
+    "IDLE",
+    "SLUG"
+  ],
+  "LAZY": [
+    "IDLE",
+    "SLOW"
+  ],
+  "LEAF": [
+    "FLIP",
+    "RIFF"
+  ],
+  "LEAP": [
+    "JUMP"
+  ],
+  "LEND": [
+    "LOAN"
+  ],
+  "LEWD": [
+    "SEXY"
+  ],
+  "LICK": [
+    "BIFF",
+    "POKE",
+    "SLUG",
+    "WORK",
+    "DRUB"
+  ],
+  "LIFT": [
+    "WIND",
+    "HOOK",
+    "REAR",
+    "RISE"
+  ],
+  "LINK": [
+    "JOIN",
+    "YOKE"
+  ],
+  "LOAD": [
+    "LODE",
+    "LADE",
+    "ONUS"
+  ],
+  "LOAN": [
+    "LEND"
+  ],
+  "LODE": [
+    "LOAD"
+  ],
+  "LOLL": [
+    "LOAF"
+  ],
+  "LONE": [
+    "ONLY",
+    "SOLE"
+  ],
+  "LOOK": [
+    "FEEL",
+    "TONE",
+    "BANK",
+    "RELY",
+    "SEEM",
+    "WAIT",
+    "FACE"
+  ],
+  "LOOP": [
+    "COIL",
+    "CURL"
+  ],
+  "LOOT": [
+    "SWAG",
+    "GELT",
+    "KALE",
+    "PELF"
+  ],
+  "LOPE": [
+    "TROT"
+  ],
+  "LOSE": [
+    "MISS"
+  ],
+  "LOSS": [
+    "EXIT"
+  ],
+  "LOUT": [
+    "CLOD",
+    "GAWK",
+    "GOON",
+    "LUMP"
+  ],
+  "LOVE": [
+    "DEAR",
+    "BANG",
+    "BONK",
+    "FUCK",
+    "HUMP",
+    "JAZZ",
+    "KNOW"
+  ],
+  "LUCK": [
+    "FATE"
+  ],
+  "LULL": [
+    "CALM"
+  ],
+  "LURE": [
+    "BAIT",
+    "HOOK"
+  ],
+  "LURK": [
+    "LOAF"
+  ],
+  "MAID": [
+    "AMAH"
+  ],
+  "MAKE": [
+    "PISS",
+    "CRAP",
+    "SHIT",
+    "NAME",
+    "TAKE",
+    "HAVE",
+    "EARN",
+    "GAIN",
+    "WORK",
+    "GIVE",
+    "HOLD",
+    "DRAW",
+    "COOK",
+    "FORM"
+  ],
+  "MANY": [
+    "SOME"
+  ],
+  "MASH": [
+    "BRAY"
+  ],
+  "MATT": [
+    "FLAT",
+    "DULL"
+  ],
+  "MEAT": [
+    "CORE",
+    "GIST",
+    "PITH"
+  ],
+  "MEEK": [
+    "TAME",
+    "MILD"
+  ],
+  "MELD": [
+    "FLUX",
+    "FUSE",
+    "MELT"
+  ],
+  "MELT": [
+    "THAW",
+    "FADE",
+    "MELD"
+  ],
+  "MEND": [
+    "DARN",
+    "HEAL"
+  ],
+  "MENU": [
+    "CARD",
+    "FARE"
+  ],
+  "MESH": [
+    "LOCK"
+  ],
+  "MESS": [
+    "HOLE",
+    "MUSS",
+    "DEAL",
+    "HEAP",
+    "MASS",
+    "MINT",
+    "PECK",
+    "PILE",
+    "RAFT",
+    "SLEW"
+  ],
+  "MEWL": [
+    "PULE",
+    "WAIL"
+  ],
+  "MIFF": [
+    "HUFF"
+  ],
+  "MILD": [
+    "SOFT",
+    "MEEK"
+  ],
+  "MINA": [
+    "MYNA"
+  ],
+  "MIND": [
+    "HEED",
+    "HEAD",
+    "NOUS",
+    "IDEA"
+  ],
+  "MINX": [
+    "VAMP"
+  ],
+  "MIRE": [
+    "QUAG",
+    "MUCK",
+    "SLOP"
+  ],
+  "MITT": [
+    "HAND"
+  ],
+  "MODE": [
+    "MOOD"
+  ],
+  "MOLT": [
+    "SHED"
+  ],
+  "MOST": [
+    "NEAR",
+    "NIGH"
+  ],
+  "MOTE": [
+    "ATOM"
+  ],
+  "MUCH": [
+    "LOTS",
+    "SOME",
+    "SUCH"
+  ],
+  "MUCK": [
+    "MIRE",
+    "GOOK",
+    "GOOP",
+    "GUCK",
+    "GUNK",
+    "OOZE",
+    "DUNG"
+  ],
+  "MUSH": [
+    "GLOP",
+    "SLOP",
+    "PULP"
+  ],
+  "MUTE": [
+    "DUMB",
+    "DAMP",
+    "DULL"
+  ],
+  "MYNA": [
+    "MINA"
+  ],
+  "NAIL": [
+    "BOOM"
+  ],
+  "NAME": [
+    "CALL",
+    "LIST",
+    "GENS",
+    "MAKE",
+    "CITE"
+  ],
+  "NARK": [
+    "NARC",
+    "RILE"
+  ],
+  "NEAR": [
+    "DEAR",
+    "GOOD",
+    "NIGH",
+    "WARM",
+    "MOST",
+    "LEFT"
+  ],
+  "NEAT": [
+    "TIDY",
+    "KEEN",
+    "GOOD"
+  ],
+  "NEED": [
+    "WANT",
+    "TAKE"
+  ],
+  "NERD": [
+    "SWOT",
+    "WONK"
+  ],
+  "NEWS": [
+    "WORD"
+  ],
+  "NICE": [
+    "GOOD"
+  ],
+  "NICK": [
+    "CHIP",
+    "DENT",
+    "DING"
+  ],
+  "NIFF": [
+    "PONG"
+  ],
+  "NIGH": [
+    "NEAR",
+    "WARM",
+    "MOST",
+    "LEFT"
+  ],
+  "NINE": [
+    "CLUB"
+  ],
+  "NODE": [
+    "KNOB"
+  ],
+  "NOEL": [
+    "YULE"
+  ],
+  "NOSE": [
+    "WIND",
+    "POKE"
+  ],
+  "NOTE": [
+    "BILL",
+    "TONE",
+    "LINE",
+    "MARK"
+  ],
+  "NOUS": [
+    "HEAD",
+    "MIND"
+  ],
+  "NUDE": [
+    "BARE"
+  ],
+  "NULL": [
+    "VOID",
+    "NADA",
+    "ZERO"
+  ],
+  "NUMB": [
+    "DULL",
+    "DEAD"
+  ],
+  "NUTS": [
+    "BATS",
+    "DAFT",
+    "LOCO"
+  ],
+  "OATH": [
+    "CUSS"
+  ],
+  "OKAY": [
+    "OKEH",
+    "OKEY",
+    "COOL",
+    "FINE"
+  ],
+  "OMEN": [
+    "BODE"
+  ],
+  "OMIT": [
+    "DROP",
+    "MISS"
+  ],
+  "ONCE": [
+    "ERST"
+  ],
+  "ONLY": [
+    "JUST",
+    "LONE",
+    "SOLE"
+  ],
+  "ONUS": [
+    "LOAD"
+  ],
+  "OPEN": [
+    "WIDE",
+    "GIVE",
+    "BALD",
+    "AJAR"
+  ],
+  "ORAL": [
+    "VIVA"
+  ],
+  "ORGY": [
+    "RIOT"
+  ],
+  "OXEN": [
+    "COWS",
+    "KINE"
+  ],
+  "PAIN": [
+    "HURT"
+  ],
+  "PAIR": [
+    "DUAD",
+    "DUET",
+    "DYAD",
+    "SPAN",
+    "YOKE",
+    "MATE",
+    "TWIN"
+  ],
+  "PANE": [
+    "ACID",
+    "DOSE"
+  ],
+  "PANG": [
+    "STAB"
+  ],
+  "PANT": [
+    "GASP",
+    "PUFF"
+  ],
+  "PAPA": [
+    "DADA"
+  ],
+  "PARE": [
+    "PEEL",
+    "SKIN",
+    "TRIM"
+  ],
+  "PART": [
+    "ROLE"
+  ],
+  "PAST": [
+    "THEN",
+    "GONE",
+    "LAST",
+    "LATE"
+  ],
+  "PATE": [
+    "POLL"
+  ],
+  "PEAL": [
+    "ROLL",
+    "RING"
+  ],
+  "PEEK": [
+    "PEEP"
+  ],
+  "PEEL": [
+    "SKIN",
+    "PARE"
+  ],
+  "PELF": [
+    "GELT",
+    "KALE",
+    "LOOT"
+  ],
+  "PEST": [
+    "CUSS"
+  ],
+  "PIER": [
+    "DOCK"
+  ],
+  "PING": [
+    "PINK"
+  ],
+  "PIPE": [
+    "TUBE"
+  ],
+  "PISS": [
+    "MAKE"
+  ],
+  "PITH": [
+    "CORE",
+    "GIST",
+    "MEAT"
+  ],
+  "PITY": [
+    "RUTH"
+  ],
+  "PLAY": [
+    "MEET",
+    "ROMP",
+    "WORK",
+    "TURN"
+  ],
+  "PLOD": [
+    "SLOG"
+  ],
+  "PLOT": [
+    "PLAT",
+    "GAME"
+  ],
+  "PLOW": [
+    "TURN",
+    "DEAL"
+  ],
+  "PLUG": [
+    "HACK",
+    "JADE",
+    "HYPE",
+    "CHAW",
+    "CHEW",
+    "QUID"
+  ],
+  "POCK": [
+    "MARK",
+    "SCAR"
+  ],
+  "POKY": [
+    "GAOL",
+    "JAIL",
+    "SLOW"
+  ],
+  "POLE": [
+    "PUNT"
+  ],
+  "POLL": [
+    "PATE"
+  ],
+  "POND": [
+    "POOL"
+  ],
+  "PONG": [
+    "NIFF"
+  ],
+  "PONY": [
+    "CRIB",
+    "TROT"
+  ],
+  "POOF": [
+    "POUF"
+  ],
+  "POOP": [
+    "CRAP",
+    "DIRT",
+    "SHIT",
+    "TURD",
+    "TAIL",
+    "DOPE"
+  ],
+  "POOR": [
+    "MEAN",
+    "BUST"
+  ],
+  "PORK": [
+    "PORC"
+  ],
+  "PORN": [
+    "SMUT"
+  ],
+  "POSE": [
+    "BEAT",
+    "AIRS"
+  ],
+  "POUR": [
+    "PELT",
+    "TEEM"
+  ],
+  "POUT": [
+    "MOUE",
+    "SULK"
+  ],
+  "PRAT": [
+    "ARSE",
+    "BUNS",
+    "BUTT",
+    "REAR",
+    "RUMP",
+    "SEAT",
+    "TAIL",
+    "TUSH"
+  ],
+  "PREY": [
+    "FEED"
+  ],
+  "PRIG": [
+    "SNOB",
+    "SNOT"
+  ],
+  "PRIM": [
+    "TWEE"
+  ],
+  "PROD": [
+    "GOAD",
+    "SPUR",
+    "POKE",
+    "STAB"
+  ],
+  "PROW": [
+    "FORE",
+    "STEM"
+  ],
+  "PUFF": [
+    "DRAG",
+    "DRAW",
+    "HUFF",
+    "PULL",
+    "BLOW",
+    "GASP",
+    "PANT",
+    "POUF"
+  ],
+  "PUKE": [
+    "BARF",
+    "CAST",
+    "HONK",
+    "SICK",
+    "SPEW",
+    "SPUE"
+  ],
+  "PULE": [
+    "MEWL",
+    "WAIL"
+  ],
+  "PULL": [
+    "TEAR",
+    "DRAW",
+    "DRAG",
+    "PUFF",
+    "REND",
+    "RIVE"
+  ],
+  "PULP": [
+    "MUSH"
+  ],
+  "PUNK": [
+    "GOON",
+    "HOOD",
+    "THUG"
+  ],
+  "PUNY": [
+    "WEAK"
+  ],
+  "PURE": [
+    "FINE"
+  ],
+  "PURR": [
+    "BIRR",
+    "WHIR",
+    "WHIZ"
+  ],
+  "PUSS": [
+    "CUNT",
+    "SLIT",
+    "TWAT"
+  ],
+  "QUIT": [
+    "STOP"
+  ],
+  "QUIZ": [
+    "TEST"
+  ],
+  "RACY": [
+    "RICH",
+    "BLUE",
+    "GAMY",
+    "SEXY"
+  ],
+  "RAFT": [
+    "DEAL",
+    "HEAP",
+    "MASS",
+    "MESS",
+    "MINT",
+    "PECK",
+    "PILE",
+    "SLEW"
+  ],
+  "RAGE": [
+    "RAMP",
+    "CULT",
+    "FURY"
+  ],
+  "RAID": [
+    "BUST"
+  ],
+  "RAMP": [
+    "RAGE"
+  ],
+  "RAND": [
+    "REEF"
+  ],
+  "RANT": [
+    "RAVE",
+    "BLAH"
+  ],
+  "RASE": [
+    "RAZE"
+  ],
+  "RAVE": [
+    "RANT",
+    "GUSH"
+  ],
+  "RAZE": [
+    "RASE"
+  ],
+  "READ": [
+    "SCAN",
+    "SHOW",
+    "TAKE"
+  ],
+  "REAP": [
+    "DRAW"
+  ],
+  "REEK": [
+    "FUME"
+  ],
+  "REEL": [
+    "SPIN",
+    "KEEL",
+    "SWAG"
+  ],
+  "REIN": [
+    "RULE"
+  ],
+  "RELY": [
+    "BANK",
+    "LOOK"
+  ],
+  "REND": [
+    "PULL",
+    "RIVE"
+  ],
+  "RICH": [
+    "RACY",
+    "DEEP",
+    "FULL",
+    "EASY",
+    "LUSH"
+  ],
+  "RIDE": [
+    "BAIT",
+    "RAZZ",
+    "TWIT"
+  ],
+  "RIFF": [
+    "FLIP",
+    "LEAF"
+  ],
+  "RILE": [
+    "ROIL",
+    "NARK"
+  ],
+  "RIOT": [
+    "ORGY"
+  ],
+  "RIPE": [
+    "LATE",
+    "AGED",
+    "GOOD"
+  ],
+  "RISE": [
+    "HIKE",
+    "LIFT",
+    "REAR",
+    "JUMP",
+    "GROW"
+  ],
+  "ROAM": [
+    "CAST",
+    "ROLL",
+    "ROVE",
+    "SWAN"
+  ],
+  "ROAR": [
+    "HOWL",
+    "WAIL",
+    "YAUP",
+    "YAWL",
+    "BOOM",
+    "YOWL"
+  ],
+  "ROBE": [
+    "GOWN",
+    "VEST"
+  ],
+  "ROLE": [
+    "PART"
+  ],
+  "ROLL": [
+    "PEAL",
+    "WIND",
+    "WRAP",
+    "CAST",
+    "ROAM",
+    "ROVE",
+    "SWAN",
+    "COIL",
+    "CURL",
+    "GYRE",
+    "BOWL",
+    "FLAP",
+    "WAVE"
+  ],
+  "ROMP": [
+    "PLAY",
+    "LARK"
+  ],
+  "RULE": [
+    "FIND",
+    "REIN"
+  ],
+  "RUMP": [
+    "ARSE",
+    "BUNS",
+    "BUTT",
+    "PRAT",
+    "REAR",
+    "SEAT",
+    "TAIL",
+    "TUSH"
+  ],
+  "SAFE": [
+    "GOOD"
+  ],
+  "SAID": [
+    "SAME"
+  ],
+  "SAME": [
+    "LAPP",
+    "SAMI",
+    "LIKE",
+    "VERY",
+    "SAID"
+  ],
+  "SAND": [
+    "GRIT",
+    "GUTS"
+  ],
+  "SATE": [
+    "FILL"
+  ],
+  "SCAB": [
+    "FINK"
+  ],
+  "SCAM": [
+    "ROOK"
+  ],
+  "SCAN": [
+    "RAKE",
+    "SKIM",
+    "READ"
+  ],
+  "SCUD": [
+    "DART",
+    "DASH",
+    "RACK"
+  ],
+  "SEAM": [
+    "LINE"
+  ],
+  "SEAR": [
+    "SERE",
+    "CHAR"
+  ],
+  "SEAT": [
+    "ARSE",
+    "BUNS",
+    "BUTT",
+    "PRAT",
+    "REAR",
+    "RUMP",
+    "TAIL",
+    "TUSH"
+  ],
+  "SEED": [
+    "COME",
+    "GERM"
+  ],
+  "SEEM": [
+    "LOOK"
+  ],
+  "SEEP": [
+    "OOZE"
+  ],
+  "SELL": [
+    "DEAL"
+  ],
+  "SEND": [
+    "MAIL",
+    "POST",
+    "BEAM",
+    "SHIP"
+  ],
+  "SEPT": [
+    "FOLK"
+  ],
+  "SEXY": [
+    "BLUE",
+    "GAMY",
+    "LEWD",
+    "LUSH",
+    "RACY"
+  ],
+  "SHAM": [
+    "FAKE"
+  ],
+  "SHEW": [
+    "SHOW"
+  ],
+  "SHIN": [
+    "SKIN"
+  ],
+  "SHIP": [
+    "SEND"
+  ],
+  "SHIT": [
+    "CRAP",
+    "DIRT",
+    "POOP",
+    "TURD",
+    "MAKE",
+    "DAMN",
+    "DARN",
+    "HOOT",
+    "DUMP",
+    "SHOP",
+    "STAG",
+    "BULL",
+    "JACK"
+  ],
+  "SHOE": [
+    "SKID"
+  ],
+  "SHOP": [
+    "SHIT",
+    "STAG"
+  ],
+  "SHOW": [
+    "READ",
+    "DEMO",
+    "SHEW"
+  ],
+  "SICK": [
+    "PALE",
+    "WEAK",
+    "GRIM",
+    "BARF",
+    "CAST",
+    "HONK",
+    "PUKE",
+    "SPEW",
+    "SPUE"
+  ],
+  "SIDE": [
+    "FACE"
+  ],
+  "SIGN": [
+    "MARK"
+  ],
+  "SING": [
+    "BLAB",
+    "TALK"
+  ],
+  "SINK": [
+    "DROP",
+    "SUMP",
+    "PASS",
+    "BURY"
+  ],
+  "SKID": [
+    "SLEW",
+    "SLIP",
+    "SLUE",
+    "SHOE"
+  ],
+  "SKIM": [
+    "RAKE",
+    "SCAN",
+    "SKIP"
+  ],
+  "SKIN": [
+    "SHIN",
+    "BARK",
+    "PEEL",
+    "PARE",
+    "HIDE",
+    "PELT"
+  ],
+  "SLAP": [
+    "BANG",
+    "BOLT"
+  ],
+  "SLIM": [
+    "THIN",
+    "LEAN"
+  ],
+  "SLIT": [
+    "DENT",
+    "CUNT",
+    "PUSS",
+    "TWAT"
+  ],
+  "SLOG": [
+    "SLUG",
+    "SWIG",
+    "PLOD"
+  ],
+  "SLOP": [
+    "GLOP",
+    "MUSH",
+    "MIRE"
+  ],
+  "SLOW": [
+    "EASY",
+    "DULL",
+    "DUMB",
+    "LAZY",
+    "POKY"
+  ],
+  "SLUE": [
+    "SKID",
+    "SLEW",
+    "SLIP",
+    "VEER"
+  ],
+  "SLUR": [
+    "BLOT",
+    "DAUB",
+    "SPOT",
+    "BLUR"
+  ],
+  "SLUT": [
+    "JADE"
+  ],
+  "SMUT": [
+    "SOOT",
+    "PORN"
+  ],
+  "SNAG": [
+    "RENT",
+    "TEAR"
+  ],
+  "SNAP": [
+    "SHOT",
+    "GRAB",
+    "BUST",
+    "TEAR"
+  ],
+  "SNIP": [
+    "CLIP",
+    "CROP",
+    "TRIM"
+  ],
+  "SNOB": [
+    "PRIG",
+    "SNOT"
+  ],
+  "SNOG": [
+    "BUSS",
+    "KISS"
+  ],
+  "SNOT": [
+    "PRIG",
+    "SNOB"
+  ],
+  "SNOW": [
+    "BLOW",
+    "COKE"
+  ],
+  "SNUG": [
+    "COSY",
+    "COZY"
+  ],
+  "SOAK": [
+    "HOCK",
+    "PAWN",
+    "HOOK"
+  ],
+  "SOAP": [
+    "GOOP"
+  ],
+  "SOAR": [
+    "ZOOM"
+  ],
+  "SOFT": [
+    "DULL",
+    "EASY",
+    "MILD"
+  ],
+  "SOME": [
+    "BOTH",
+    "MANY",
+    "MUCH"
+  ],
+  "SONG": [
+    "SUNG",
+    "CALL"
+  ],
+  "SOOT": [
+    "SMUT"
+  ],
+  "SORT": [
+    "FORM",
+    "KIND"
+  ],
+  "SOUR": [
+    "DARK",
+    "DOUR",
+    "GLUM",
+    "TURN",
+    "WORK",
+    "ACID",
+    "TART"
+  ],
+  "SOYA": [
+    "SOJA"
+  ],
+  "SPEW": [
+    "SPIT",
+    "SPUE",
+    "BARF",
+    "CAST",
+    "HONK",
+    "PUKE",
+    "SICK"
+  ],
+  "SPIN": [
+    "BIRL",
+    "REEL"
+  ],
+  "SPOT": [
+    "POST",
+    "BLOT",
+    "DAUB",
+    "SLUR",
+    "BLOB",
+    "ESPY"
+  ],
+  "SPUE": [
+    "SPEW",
+    "SPIT",
+    "BARF",
+    "CAST",
+    "HONK",
+    "PUKE",
+    "SICK"
+  ],
+  "SPUR": [
+    "GOAD",
+    "PROD"
+  ],
+  "STAB": [
+    "PANG",
+    "POKE",
+    "PROD",
+    "SHOT"
+  ],
+  "STAG": [
+    "HART",
+    "SHIT",
+    "SHOP"
+  ],
+  "STAR": [
+    "WHIZ",
+    "LEAD"
+  ],
+  "STEP": [
+    "TONE",
+    "PACE"
+  ],
+  "STEW": [
+    "FRET"
+  ],
+  "STOP": [
+    "QUIT",
+    "HALT",
+    "STAY"
+  ],
+  "STUB": [
+    "BUTT"
+  ],
+  "STUN": [
+    "DAZE"
+  ],
+  "SUCH": [
+    "MUCH"
+  ],
+  "SUCK": [
+    "BLOW",
+    "DRAW"
+  ],
+  "SUIT": [
+    "CASE"
+  ],
+  "SULK": [
+    "POUT"
+  ],
+  "SUMP": [
+    "SINK"
+  ],
+  "SUNG": [
+    "SONG"
+  ],
+  "SURD": [
+    "HARD"
+  ],
+  "SURE": [
+    "TRUE"
+  ],
+  "SWAB": [
+    "SWOB"
+  ],
+  "SWAG": [
+    "LOOT",
+    "FLAG",
+    "KEEL",
+    "REEL"
+  ],
+  "SWAN": [
+    "CAST",
+    "ROAM",
+    "ROLL",
+    "ROVE",
+    "AVER",
+    "AVOW"
+  ],
+  "SWAP": [
+    "SWOP"
+  ],
+  "SWAY": [
+    "ROCK",
+    "TILT"
+  ],
+  "SWIG": [
+    "GULP",
+    "SLOG",
+    "SLUG"
+  ],
+  "SWOP": [
+    "SWAP"
+  ],
+  "SWOT": [
+    "BONE",
+    "CRAM",
+    "DRUM",
+    "NERD",
+    "WONK"
+  ],
+  "TAKE": [
+    "HOLD",
+    "HAVE",
+    "FILM",
+    "LEAD",
+    "PACK",
+    "MAKE",
+    "DEAL",
+    "FILL",
+    "READ",
+    "HIRE",
+    "RENT",
+    "NEED"
+  ],
+  "TALK": [
+    "BLAB",
+    "SING"
+  ],
+  "TALL": [
+    "LONG",
+    "HARD"
+  ],
+  "TAME": [
+    "MEEK"
+  ],
+  "TAMP": [
+    "PACK"
+  ],
+  "TANG": [
+    "ZEST"
+  ],
+  "TARO": [
+    "DALO",
+    "EDDO",
+    "EDDA"
+  ],
+  "TAXI": [
+    "HACK"
+  ],
+  "TEAL": [
+    "CYAN"
+  ],
+  "TENT": [
+    "CAMP"
+  ],
+  "THAW": [
+    "MELT"
+  ],
+  "THEN": [
+    "PAST"
+  ],
+  "THIN": [
+    "LEAN",
+    "SLIM",
+    "TRIM",
+    "WIRY",
+    "LANK",
+    "BONY",
+    "FINE",
+    "FLAT",
+    "PALE",
+    "RARE"
+  ],
+  "THUG": [
+    "GOON",
+    "HOOD",
+    "PUNK"
+  ],
+  "TIDY": [
+    "TRIG",
+    "TRIM",
+    "NEAT",
+    "RULY"
+  ],
+  "TIED": [
+    "EVEN"
+  ],
+  "TIFF": [
+    "FUSS",
+    "SPAT"
+  ],
+  "TIKE": [
+    "BOOR",
+    "GOTH",
+    "TYKE"
+  ],
+  "TILT": [
+    "ROCK",
+    "SWAY",
+    "CANT",
+    "LEAN",
+    "LIST"
+  ],
+  "TIME": [
+    "CLIP"
+  ],
+  "TINT": [
+    "TONE",
+    "HINT"
+  ],
+  "TIRO": [
+    "TYRO"
+  ],
+  "TOAD": [
+    "FROG"
+  ],
+  "TOIL": [
+    "MOIL"
+  ],
+  "TONE": [
+    "TINT",
+    "FEEL",
+    "LOOK",
+    "NOTE",
+    "STEP"
+  ],
+  "TOOL": [
+    "COCK",
+    "DICK",
+    "PUTZ"
+  ],
+  "TOOT": [
+    "BEEP",
+    "HONK"
+  ],
+  "TOSH": [
+    "BOSH"
+  ],
+  "TOSS": [
+    "FLIP",
+    "PASS"
+  ],
+  "TOUR": [
+    "TURN"
+  ],
+  "TOUT": [
+    "BLOW",
+    "BRAG"
+  ],
+  "TRIG": [
+    "TRIM",
+    "TIDY"
+  ],
+  "TRIM": [
+    "CLIP",
+    "CROP",
+    "SNIP",
+    "LEAN",
+    "THIN",
+    "TRIG",
+    "TIDY",
+    "PARE"
+  ],
+  "TRIO": [
+    "TREY"
+  ],
+  "TRIP": [
+    "SLIP"
+  ],
+  "TROT": [
+    "CLIP",
+    "LOPE",
+    "CRIB",
+    "PONY"
+  ],
+  "TRUE": [
+    "EVEN",
+    "REAL",
+    "SURE"
+  ],
+  "TSAR": [
+    "CZAR",
+    "TZAR"
+  ],
+  "TUBE": [
+    "PIPE"
+  ],
+  "TUFA": [
+    "TUFF"
+  ],
+  "TUFF": [
+    "TUFA"
+  ],
+  "TUNE": [
+    "LINE"
+  ],
+  "TURD": [
+    "CRAP",
+    "DIRT",
+    "POOP",
+    "SHIT"
+  ],
+  "TURN": [
+    "PLOW",
+    "RICK",
+    "GROW",
+    "BEND",
+    "FLEX",
+    "PLAY",
+    "BOUT",
+    "TOUR",
+    "SOUR",
+    "WORK"
+  ],
+  "TUSK": [
+    "HORN"
+  ],
+  "TWAT": [
+    "BOZO",
+    "GOOF",
+    "ZANY",
+    "CUNT",
+    "PUSS",
+    "SLIT"
+  ],
+  "TWEE": [
+    "PRIM"
+  ],
+  "TWIN": [
+    "MATE",
+    "PAIR"
+  ],
+  "TYKE": [
+    "BOOR",
+    "GOTH",
+    "TIKE"
+  ],
+  "TYPE": [
+    "CASE"
+  ],
+  "TYRE": [
+    "TIRE"
+  ],
+  "TYRO": [
+    "TIRO"
+  ],
+  "UGLY": [
+    "VILE",
+    "EVIL"
+  ],
+  "URGE": [
+    "ITCH"
+  ],
+  "VAST": [
+    "HUGE"
+  ],
+  "VEAL": [
+    "VEAU"
+  ],
+  "VEER": [
+    "SLEW",
+    "SLUE"
+  ],
+  "VEIL": [
+    "HIDE",
+    "CAUL"
+  ],
+  "VEIN": [
+    "VENA"
+  ],
+  "VEND": [
+    "HAWK"
+  ],
+  "VERY": [
+    "SAME",
+    "REAL"
+  ],
+  "VEST": [
+    "ROBE"
+  ],
+  "VILE": [
+    "UGLY",
+    "EVIL"
+  ],
+  "VINO": [
+    "WINE"
+  ],
+  "VOID": [
+    "NULL"
+  ],
+  "WAIL": [
+    "HOWL",
+    "ROAR",
+    "YAUP",
+    "YAWL",
+    "MEWL",
+    "PULE"
+  ],
+  "WAIT": [
+    "LOOK",
+    "HOLD"
+  ],
+  "WALE": [
+    "WEAL",
+    "WELT"
+  ],
+  "WALK": [
+    "PASS"
+  ],
+  "WANT": [
+    "NEED",
+    "LACK",
+    "WISH"
+  ],
+  "WARM": [
+    "NEAR",
+    "NIGH"
+  ],
+  "WASH": [
+    "RACE",
+    "LAVE"
+  ],
+  "WAVE": [
+    "FLAP",
+    "ROLL",
+    "CURL"
+  ],
+  "WEAK": [
+    "DOWN",
+    "LAME",
+    "LIMP",
+    "PALE",
+    "PUNY",
+    "SICK"
+  ],
+  "WEAR": [
+    "JADE",
+    "TIRE",
+    "BEAR",
+    "BUST"
+  ],
+  "WEED": [
+    "DOPE",
+    "GAGE",
+    "SENS",
+    "SESS"
+  ],
+  "WEFT": [
+    "PICK",
+    "WOOF"
+  ],
+  "WELT": [
+    "FLOG",
+    "LASH",
+    "WHIP",
+    "WALE",
+    "WEAL"
+  ],
+  "WHAM": [
+    "WHOP"
+  ],
+  "WHIP": [
+    "FLOG",
+    "LASH",
+    "WELT"
+  ],
+  "WHIT": [
+    "IOTA"
+  ],
+  "WHIZ": [
+    "BIRR",
+    "PURR",
+    "WHIR",
+    "STAR"
+  ],
+  "WHOP": [
+    "BASH",
+    "BONK",
+    "SOCK",
+    "WHAM",
+    "WHAP"
+  ],
+  "WIDE": [
+    "OPEN",
+    "DEEP",
+    "FULL"
+  ],
+  "WILD": [
+    "IDLE",
+    "GAGA"
+  ],
+  "WILY": [
+    "FOXY"
+  ],
+  "WINE": [
+    "VINO"
+  ],
+  "WIRY": [
+    "LEAN",
+    "THIN"
+  ],
+  "WISH": [
+    "CARE",
+    "LIKE",
+    "WANT"
+  ],
+  "WORD": [
+    "NEWS",
+    "BOOK"
+  ],
+  "WORK": [
+    "FORM",
+    "MOLD",
+    "PLAY",
+    "LICK",
+    "MAKE",
+    "CROP",
+    "SOUR",
+    "TURN"
+  ],
+  "WORN": [
+    "AGED"
+  ],
+  "WRAP": [
+    "ROLL",
+    "WIND"
+  ],
+  "YANK": [
+    "JERK"
+  ],
+  "YAWL": [
+    "HOWL",
+    "ROAR",
+    "WAIL",
+    "YAUP"
+  ],
+  "YAWN": [
+    "GAPE"
+  ],
+  "YELL": [
+    "CALL"
+  ],
+  "YOKE": [
+    "LINK",
+    "DUAD",
+    "DUET",
+    "DYAD",
+    "PAIR",
+    "SPAN"
+  ],
+  "YOWL": [
+    "HOWL",
+    "ROAR"
+  ],
+  "YUAN": [
+    "KWAI"
+  ],
+  "YULE": [
+    "NOEL"
+  ],
+  "ZANY": [
+    "BOZO",
+    "GOOF",
+    "TWAT"
+  ],
+  "ZEAL": [
+    "ELAN"
+  ],
+  "ZERO": [
+    "NADA",
+    "NULL"
+  ],
+  "ZEST": [
+    "TANG"
+  ],
+  "ZION": [
+    "SION"
+  ],
+  "ZONE": [
+    "ZONA"
+  ],
+  "ZOOM": [
+    "SOAR"
+  ]
+}
