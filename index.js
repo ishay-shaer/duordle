@@ -124,7 +124,7 @@ class Game {
 
     addLetter(letter) {
         if (!this.state.isActive) return;
-        document.querySelector("#error-box").style.visibility = "hidden";
+        this.hideErrorMessage();
 
         if (this.charPosRow < this.maxGuesses && this.charPosCol < this.wordLength) {
             this.boards.forEach(board => board.addLetter(letter));
@@ -142,10 +142,9 @@ class Game {
         }
     }
 
-    // refactor: make Board.deleteLastLetter and seperate
     deleteLastLetter() {
         if (!this.state.isActive || this.charPosCol === 0) return;
-        document.querySelector("#error-box").style.visibility = "hidden";
+        this.hideErrorMessage();
         
         this.charPosCol--;
         this.boards.forEach(board => board.deleteLastLetter());
@@ -160,7 +159,7 @@ class Game {
 
     enterAndMatchWord() {
         if (!this.state.isActive) return;
-        document.querySelector("#error-box").style.visibility = "hidden";
+        this.hideErrorMessage();
 
         if (!this.isCurrentGuessValid) {
             this.displayErrorMessage();
@@ -208,15 +207,19 @@ class Game {
             const plural = numOfLettersMissing > 1 ? "s" : "";
             errorBoxEl.textContent = `${numOfLettersMissing} letter${plural} missing`;
         } else {
-            errorBoxEl.textContent = "Word not found"
+            errorBoxEl.textContent = "Word not found";
         }
         clearTimeout(stopErrorDisplay);
         errorBoxEl.style.visibility = "visible";
         errorBoxEl.style.opacity = "1";
-        stopErrorDisplay = setTimeout(() => {
-            errorBoxEl.style.visibility = "hidden";
-            errorBoxEl.style.opacity = "0";
-        }, 2500);
+        stopErrorDisplay = setTimeout(() => this.hideErrorMessage(), 2500);
+    }
+
+    hideErrorMessage() {
+        const errorBoxEl = document.querySelector("#error-box");
+        errorBoxEl.style.visibility = "hidden";
+        errorBoxEl.style.opacity = "0";
+        clearTimeout(stopErrorDisplay);
     }
 
     // Game
