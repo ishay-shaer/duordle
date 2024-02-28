@@ -33,7 +33,7 @@ import getRandomRelatedWords from "./getRelatedWords.js";
 
 const originalHtml = document.documentElement.outerHTML;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
-let stopErrorDisplay; // Used for timeout in the displayErrorMessage function.
+let stopErrorDisplay; // For timeout in the displayErrorMessage function.
 
 class Game {
     constructor([word_0, word_1], possibleGuesses) {
@@ -554,3 +554,12 @@ async function main() {
 }
 
 main();
+
+
+// function rgb(red, green, blue) {
+//     if (!(0 <= red <=255) || !(0 <= green <=255) || !(0 <= blue <=255)) {
+//         console.error("Invalid RGB value");
+//         return null;
+//     }
+//     return `rgb(${red}, ${green}, ${blue})`;
+// }
