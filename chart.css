@@ -7,7 +7,7 @@
 }
 
 .chart-container {
-    height: 260px;
+    height: 50svh;
     display: flex;
     padding-bottom: 10px;
 }

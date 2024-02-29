@@ -261,12 +261,12 @@ class Game {
 
     // Should only be called after the game has ended.
     storeGameResult() {
-        const storedResultsString = localStorage.getItem("gameResults") || "{}";
-        const storedResultsObj = JSON.parse(storedResultsString);
+        let results = JSON.parse(localStorage.getItem("gameResults") || "{}");
+        let thisLengthResults = results[`wordLength-${this.wordLength}`] || {};
         const gameResult = this.state.hasLost ? "Lost" : this.guesses.length;
-        const newResults = {...storedResultsObj, [gameResult]: (storedResultsObj[gameResult] || 0) + 1};
-
-        localStorage.setItem("gameResults", JSON.stringify(newResults));
+        thisLengthResults = {...thisLengthResults, [gameResult]: (thisLengthResults[gameResult] || 0) + 1};
+        results = {...results, [`wordLength-${this.wordLength}`]: thisLengthResults};
+        localStorage.setItem("gameResults", JSON.stringify(results));
     }
     
     unifyKeyboard(boardSideToEliminate) {
@@ -314,16 +314,14 @@ class Game {
         mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
         const dynamicMessage = document.querySelector("#dynamic-message");
         const header = getEndGameHeader(this.state.hasWon);
-        const messageEl = this.getEndGameMessage();
-        
+        const messageEl = this.getEndGameMessage();        
         dynamicMessage.append(header,
                               getLengthSlider(),
                               getPlayButton("Play again"),
                               messageEl,
                               this.getStatsHistogram(),
                               getPlayButton("Play again")
-        );
-        
+        );        
         setTimeout(() => {
             messageDivEl.style.display = "block";
             document.querySelectorAll(".play-btn")[0].focus();
@@ -377,10 +375,10 @@ class Game {
     //     chartBoxEl.id = "chart-box";
     //     chartBoxEl.style.height = "250px";
     //     // messageTextEl.appendChild(chartBoxEl);
-    //     const gameStats = JSON.parse(localStorage.getItem("gameResults"));
+    //     const thisLengthStats = JSON.parse(localStorage.getItem("gameResults"));
     //     const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
     //     const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
-    //     createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight, xRange);
+    //     createHistogram(chartBoxEl, thisLengthStats, "Number of guesses", barToHighlight, xRange);
 
     //     setTimeout(() => {
     //         messageDivEl.style.display = "block";
@@ -391,9 +389,10 @@ class Game {
 
     getStatsHistogram() {
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
+        const thisLengthStats = gameStats[`wordLength-${this.wordLength}`];
         const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
         const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
-        const histogram = createHistogram(gameStats, "Number of guesses", barToHighlight, xRange);
+        const histogram = createHistogram(thisLengthStats, "Number of guesses", barToHighlight, xRange);
         return histogram;
     }
 
@@ -407,9 +406,10 @@ class Game {
 
     getGameStatsHtml() {
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
-        const totalGames = Object.values(gameStats).reduce((total, num) => total + num, 0);
-        const gamesWon = totalGames - (gameStats["Lost"] || 0);
-        const averageScore = Object.entries(gameStats).reduce((total, [guesses, num]) => 
+        const thisLengthStats = gameStats[`wordLength-${this.wordLength}`];
+        const totalGames = Object.values(thisLengthStats).reduce((total, num) => total + num, 0);
+        const gamesWon = totalGames - (thisLengthStats["Lost"] || 0);
+        const averageScore = Object.entries(thisLengthStats).reduce((total, [guesses, num]) => 
             guesses === "Lost" ? total + ((this.maxGuesses + 1) * num) : total + (guesses * num), 0) / totalGames;
         let statsMessage = `Total games: ${totalGames}<br>
                             Average: ${averageScore.toFixed(2)}`; 
