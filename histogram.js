@@ -3,11 +3,13 @@
 const GAP_WIDTH_RATIO = .1;
 const PERCENT_DIGITS = 0;
 
-export default function createHistogram(divEl, dataObject, xLabel="x", highlightedBar=null, keys=null) {
+export default function createHistogram(dataObject, xLabel="x", highlightedBar=null, keys=null) {
+    const divEl = document.createElement("div");
+    divEl.className = "chart-box";
     if (!keys) keys = Object.keys(dataObject).sort((a, b) => a - b);
     const values = Object.values(dataObject);
     const chartContainer = document.createElement("div");
-    chartContainer.id = "chart-container";
+    chartContainer.className = "chart-container";
     const maxValue = Math.max(...values);
     const sumValues = values.reduce((total, value) => total + value, 0);
     
@@ -21,22 +23,28 @@ export default function createHistogram(divEl, dataObject, xLabel="x", highlight
     let chartContent = "";
 
     for (const key of keys) {
-        const height = (dataObject[key] / maxValue * .75 * divEl.style.height.replace("px", "")) + "px";
-        chartContent += `<span class="data-column" id="data-column-${key}">
-                             <div class="datum">${stringData[key]}</div>
+        const height = (dataObject[key] / maxValue * 75) + "%";
+        const highlightIfShould = key === highlightedBar ? "highlighted-column" : "";
+        chartContent += `<span class="data-column ${highlightIfShould}" id="data-column-${key}">
+                             <div class="num-guesses">${key}</div>                             
                              <div class="bar" id="key-${key}-bar" style="height: ${height};"></div>
-                             <div class="num-guesses">${key}</div>
+                             <div class="datum">${stringData[key]}</div>                             
                          </span>`;
     }
     
-    chartContainer.innerHTML = chartContent;
-    divEl.appendChild(chartContainer);
-    if (highlightedBar != null)
-        document.querySelector(`#data-column-${highlightedBar}`).classList.add("highlighted-column");
+    
 
-    chartContainer.style.gridTemplateColumns = `repeat(${keys.length}, auto)`;
+    chartContainer.innerHTML = chartContent;
     const gapWidth = ((100 / (keys.length - 1)) * GAP_WIDTH_RATIO) + "%";
     chartContainer.style.columnGap = gapWidth;
+    divEl.appendChild(chartContainer);
+
+    // if (highlightedBar != null)
+    //     document.querySelector(`#data-column-${highlightedBar}`).classList.add("highlighted-column");
+
+    // const gapWidth = ((100 / (keys.length - 1)) * GAP_WIDTH_RATIO) + "%";
+    // chartContainer.style.columnGap = gapWidth;
     
     divEl.innerHTML += `<div id='x-label'>${xLabel}</div>`;
+    return divEl;
 }

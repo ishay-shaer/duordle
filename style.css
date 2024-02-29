@@ -56,8 +56,8 @@ body {
 
 h1 {
     text-align: center;
-    height: 9svh;
-    margin: -1svh 0 0 0;
+    text-wrap: nowrap;
+    margin: 0;
     padding: 0;
     font-family: "Luckiest Guy";
     font-size: 7svh;
@@ -71,9 +71,15 @@ h1 {
     -webkit-text-stroke: 1px black;
 }
 
+.lost-header {
+    all: inherit;
+    font-size: 5svh;
+}
+
 h2 {
     text-align: center;
     font-size: 6svh;
+    margin: 2svh 0;
 }
 
 #keyboard {
@@ -239,12 +245,13 @@ h2 {
 }
 
 #dynamic-message {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#win-header {
+.win-header {
     font-size: 10svh;
-    height: 12.5svh;
 }
 
 #message-text {
@@ -256,11 +263,6 @@ h2 {
     font-size: 4svh;
 }
 
-#chart-div {
-    width: 100%;
-    height: 40svh;
-}
-
 #success-line{
     color: var(--perfect-box);
     background-color: #222;
@@ -268,10 +270,13 @@ h2 {
     margin: 2svh 0 0 0;
 }
 
-#reload-btn {
+#slider-text {
+    font-size: 3svh;
+}
+
+.play-btn {
     margin: 3svh;
-    margin-bottom: 10svh;
-    padding: 2svh 8vw;
+    padding: 1.5svh 10vw;
     font-family: inherit;
     font-size: 3.5svh;
     border: none;
@@ -280,8 +285,8 @@ h2 {
     cursor: pointer;
 }
 
-#reload-btn:hover {
-    background-color: #a5a5a5;
+.play-btn:hover {
+    background-color: #bababa;
 }
 
 #close-btn {
@@ -294,7 +299,7 @@ h2 {
     border: none;
     border-radius: 50%;
     font-family: auto;
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 2.5svh);
     color: #555;
     font-weight: bold;
     cursor: pointer;

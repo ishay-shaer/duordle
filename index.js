@@ -33,12 +33,16 @@ import getRandomRelatedWords from "./getRelatedWords.js";
 
 const originalHtml = document.documentElement.outerHTML;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
+const MIN_WORD_LENGTH = 4;
+const MAX_WORD_LENGTH = 6;
+const DEFAULT_WORD_LENGTH = 5;
+const LENGTH_SLIDER_TEXT = "Word length";
 let stopErrorDisplay; // For timeout in the displayErrorMessage function.
 
 class Game {
     constructor([word_0, word_1], possibleGuesses) {
         this.wordLength = word_0.length;
-        this.maxGuesses = this.wordLength + 2;
+        this.maxGuesses = this.wordLength === 6 ? 8 : 7;
         this.state = {
             hasWon: false,
             hasLost: false,
@@ -304,46 +308,101 @@ class Game {
 
     displayEndGameMessage() {
         const messageDivEl = document.querySelector("#message-box");
-        const messageTextEl = document.querySelector("#message-text");
-        const reloadBtnEl = document.querySelector("#reload-btn");
         const closeBtnEl = document.querySelector("#close-btn");
-        const mainEl = document.querySelector("main");
-
-        reloadBtnEl.addEventListener("click", () => {
-            restoreOriginalHtml();
-            main();
-        })
-
         closeBtnEl.addEventListener("click", () => messageDivEl.style.display = "none");
+        const mainEl = document.querySelector("main");
         mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
-
-        let message;
-        if (this.state.hasWon) {
-            message = `<h1 id="win-header">You win!</h1>
-                You got it right at guess ${this.guesses.length} out of ${this.maxGuesses}<br>`;
-        } else {
-            const gameMagicWords = this.boards.map((board) => board.magicWord);
-            message = `Better luck next time! <br>
-                The words were ${gameMagicWords[0]} and ${gameMagicWords[1]}<br>`;
-        }
+        const dynamicMessage = document.querySelector("#dynamic-message");
+        const header = getEndGameHeader(this.state.hasWon);
+        const messageEl = this.getEndGameMessage();
         
-        message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
+        dynamicMessage.append(header,
+                              getLengthSlider(),
+                              getPlayButton("Play again"),
+                              messageEl,
+                              this.getStatsHistogram(),
+                              getPlayButton("Play again")
+        );
+        
+        setTimeout(() => {
+            messageDivEl.style.display = "block";
+            document.querySelectorAll(".play-btn")[0].focus();
+            messageDivEl.scrollTo(0, 0);
+        }, 2500);
+    }
 
-        messageTextEl.innerHTML = message;
-        const chartBoxEl = document.createElement("div");
-        chartBoxEl.id = "chart-box";
-        chartBoxEl.style.height = "250px";
-        messageTextEl.appendChild(chartBoxEl);
+    // displayEndGameMessage() {
+    //     const messageDivEl = document.querySelector("#message-box");
+    //     const messageTextEl = document.querySelector("#message-text");
+    //     // const reloadBtnEl = document.querySelector("#reload-btn");
+    //     const closeBtnEl = document.querySelector("#close-btn");
+    //     const mainEl = document.querySelector("main");
+    //     const dynamicMessage = document.querySelector("#dynamic-message");
+
+    //     // const reloadBtn = `<button class="reload-btn" type="button">Play another game</button>`;
+    //     const playButton = document.createElement("button");
+    //     const attributes = {class: "reload-btn", type: "button", textContent: "Play again" };
+    //     for (let attribute in attributes) playButton.setAttribute(attribute, attributes[attribute]);
+
+    //     dynamicMessage.appendChild(playButton);
+    //     dynamicMessage.appendChild(playButton);
+
+    //     const content = `<div id="dynamic-message">
+    //                          <div id="message-text"></div>
+    //                          <button id="reload-btn" type="button">Play another game</button>
+    //                      </div>`;
+
+    //     playButton.addEventListener("click", () => {
+    //         restoreOriginalHtml();
+    //         main();
+    //     })
+
+    //     closeBtnEl.addEventListener("click", () => messageDivEl.style.display = "none");
+    //     mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
+
+    //     let message;
+    //     if (this.state.hasWon) {
+    //         message = `<h1 id="win-header">You win!</h1>
+    //             You got it right at guess ${this.guesses.length} out of ${this.maxGuesses}<br>`;
+    //     } else {
+    //         const gameMagicWords = this.boards.map((board) => board.magicWord);
+    //         message = `Better luck next time! <br>
+    //             The words were ${gameMagicWords[0]} and ${gameMagicWords[1]}<br>`;
+    //     }
+        
+    //     message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
+
+    //     // messageTextEl.innerHTML = message;
+    //     const chartBoxEl = document.createElement("div");
+    //     chartBoxEl.id = "chart-box";
+    //     chartBoxEl.style.height = "250px";
+    //     // messageTextEl.appendChild(chartBoxEl);
+    //     const gameStats = JSON.parse(localStorage.getItem("gameResults"));
+    //     const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
+    //     const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
+    //     createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight, xRange);
+
+    //     setTimeout(() => {
+    //         messageDivEl.style.display = "block";
+    //         reloadBtnEl.focus();
+    //         messageDivEl.scrollTo(0, 0);
+    //     }, 2500);
+    // }
+
+    getStatsHistogram() {
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
         const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
-        createHistogram(chartBoxEl, gameStats, "Number of guesses", barToHighlight, xRange);
+        const histogram = createHistogram(gameStats, "Number of guesses", barToHighlight, xRange);
+        return histogram;
+    }
 
-        setTimeout(() => {
-            messageDivEl.style.display = "block";
-            reloadBtnEl.focus();
-            messageDivEl.scrollTo(0, 0);
-        }, 2500);
+    getEndGameMessage() {
+        const message = "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
+        const messageTextEl = document.createElement("div");
+        messageTextEl.id = "message-text";
+        messageTextEl.innerHTML = message;
+        return messageTextEl;
     }
 
     getGameStatsHtml() {
@@ -508,6 +567,48 @@ function restoreOriginalHtml() {
     document.close();
 }
 
+function getEndGameHeader(hasWon) {
+    const header = document.createElement("h1");
+    header.textContent = hasWon ? "You win!" : "Better luck next time!";
+    header.classList.add(hasWon ? "win-header" : "lost-header");
+    return header;
+}
+
+function getPlayButton(text) {
+    const playButton = document.createElement("button");
+    playButton.setAttribute("class", "play-btn");
+    playButton.setAttribute("type", "button");
+    playButton.textContent = text;    
+    playButton.onclick = () => {
+        const lengthSlider = document.querySelector("#length-slider");
+        localStorage.setItem("wordLength", lengthSlider.value);
+        restoreOriginalHtml();
+        main();
+    };
+    return playButton;
+}
+
+function getLengthSlider() {   
+    const lengthSlider = document.createElement("input");
+    lengthSlider.type = "range";
+    lengthSlider.id = "length-slider";
+    lengthSlider.min = MIN_WORD_LENGTH;
+    lengthSlider.max = MAX_WORD_LENGTH;
+    lengthSlider.value = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
+    lengthSlider.onchange = () => {
+        const sliderText = document.querySelector("#slider-text");
+        const lengthSlider = document.querySelector("#length-slider");
+        sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
+    }    
+    const sliderText = document.createElement("div");
+    sliderText.id = "slider-text";
+    sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
+    const container = document.createElement("div");
+    container.id = "slider-container";
+    container.append(sliderText, lengthSlider);
+    return container;
+}
+
 function renderColorScheme() {
     const colorScheme = localStorage.getItem("colorScheme") || "default";
     let htmlEl = document.querySelector("html");
@@ -540,8 +641,7 @@ function setColorScheme() {
 }
 
 async function main() {
-    let wordLength = window.prompt("Enter word length (4-6)");
-    if (!wordLength) wordLength = 5;
+    let wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
     const game = await Game.createGame(wordLength);
     if (!game) main();
     console.log(game.boards[0].magicWord);
