@@ -30,7 +30,6 @@
 import createHistogram from "./histogram.js";
 import getRandomRelatedWords from "./getRelatedWords.js";
 
-
 const originalHtml = document.documentElement.outerHTML;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 const MIN_WORD_LENGTH = 4;
@@ -39,10 +38,12 @@ const DEFAULT_WORD_LENGTH = 5;
 const LENGTH_SLIDER_TEXT = "Word length";
 let stopErrorDisplay; // For timeout in the displayErrorMessage function.
 
+const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
+
 class Game {
     constructor([word_0, word_1], possibleGuesses) {
         this.wordLength = word_0.length;
-        this.maxGuesses = this.wordLength === 6 ? 8 : 7;
+        this.maxGuesses = getMaxGuesses(this.wordLength);
         this.state = {
             hasWon: false,
             hasLost: false,
@@ -226,7 +227,6 @@ class Game {
         clearTimeout(stopErrorDisplay);
     }
 
-    // Game
     matchWord() {
         if (!this.state.isActive) return;
 
@@ -270,13 +270,13 @@ class Game {
     }
     
     unifyKeyboard(boardSideToEliminate) {
-        // Assign 0 if argument is 1, 1 if it's 0.
+        // Assign 0 if boardSideToEliminate is 1, 1 if it's 0.
         const boardSideToTakeOver = Number(!boardSideToEliminate);
         this.boards[boardSideToEliminate].keyboardUpdater = 
             this.boards[boardSideToTakeOver].keyboardUpdater;
     }
 
-    renderKeyboardStyle(renderAll = false, ) {
+    renderKeyboardStyle(renderAll = false) {
         const leftUpdater = this.boards[0].keyboardUpdater;
         const rightUpdater = this.boards[1].keyboardUpdater;
         let lettersToRender;
@@ -313,15 +313,17 @@ class Game {
         const mainEl = document.querySelector("main");
         mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
         const dynamicMessage = document.querySelector("#dynamic-message");
-        const header = getEndGameHeader(this.state.hasWon);
-        const messageEl = this.getEndGameMessage();        
-        dynamicMessage.append(header,
-                              getLengthSlider(),
-                              getPlayButton("Play again"),
-                              messageEl,
-                              this.getStatsHistogram(),
-                              getPlayButton("Play again")
-        );        
+        const sliderBtnCtnr = document.createElement("div");
+        sliderBtnCtnr.className = "slider-button-container";
+        sliderBtnCtnr.append(this.getLengthSlider(), getPlayButton("Play again"));
+        dynamicMessage.append(getEndGameHeader(this.state.hasWon),
+                              this.revealWordsIfShould(),                              
+                            //   getPlayButton("Play again"),
+                              this.getEndGameMessage(),
+                              sliderBtnCtnr,
+                              this.getStatsHistogram()
+        );
+        document.querySelectorAll(".length-slider")[0].onchange = () => this.updateStatsDisplay();
         setTimeout(() => {
             messageDivEl.style.display = "block";
             document.querySelectorAll(".play-btn")[0].focus();
@@ -329,94 +331,91 @@ class Game {
         }, 2500);
     }
 
-    // displayEndGameMessage() {
-    //     const messageDivEl = document.querySelector("#message-box");
-    //     const messageTextEl = document.querySelector("#message-text");
-    //     // const reloadBtnEl = document.querySelector("#reload-btn");
-    //     const closeBtnEl = document.querySelector("#close-btn");
-    //     const mainEl = document.querySelector("main");
-    //     const dynamicMessage = document.querySelector("#dynamic-message");
+    revealWordsIfShould() {
+        if (!this.state.hasLost) return "";
+        const wordsRevealEl = document.createElement("p");
+        wordsRevealEl.className = "magic-words-reveal";
+        const [word_0, word_1] = this.gameMagicWords;
+        const dictionaryUrl = "https://www.dictionary.com/browse/";
+        wordsRevealEl.innerHTML = 
+            `The words were <a target="blank" href="${dictionaryUrl}${word_0.toLowerCase()}">${word_0}</a> 
+            and <a target="blank" href="${dictionaryUrl}${word_1.toLowerCase()}">${word_1}</a>`;
+        return wordsRevealEl;
+    }
 
-    //     // const reloadBtn = `<button class="reload-btn" type="button">Play another game</button>`;
-    //     const playButton = document.createElement("button");
-    //     const attributes = {class: "reload-btn", type: "button", textContent: "Play again" };
-    //     for (let attribute in attributes) playButton.setAttribute(attribute, attributes[attribute]);
-
-    //     dynamicMessage.appendChild(playButton);
-    //     dynamicMessage.appendChild(playButton);
-
-    //     const content = `<div id="dynamic-message">
-    //                          <div id="message-text"></div>
-    //                          <button id="reload-btn" type="button">Play another game</button>
-    //                      </div>`;
-
-    //     playButton.addEventListener("click", () => {
-    //         restoreOriginalHtml();
-    //         main();
-    //     })
-
-    //     closeBtnEl.addEventListener("click", () => messageDivEl.style.display = "none");
-    //     mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
-
-    //     let message;
-    //     if (this.state.hasWon) {
-    //         message = `<h1 id="win-header">You win!</h1>
-    //             You got it right at guess ${this.guesses.length} out of ${this.maxGuesses}<br>`;
-    //     } else {
-    //         const gameMagicWords = this.boards.map((board) => board.magicWord);
-    //         message = `Better luck next time! <br>
-    //             The words were ${gameMagicWords[0]} and ${gameMagicWords[1]}<br>`;
-    //     }
-        
-    //     message += "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
-
-    //     // messageTextEl.innerHTML = message;
-    //     const chartBoxEl = document.createElement("div");
-    //     chartBoxEl.id = "chart-box";
-    //     chartBoxEl.style.height = "250px";
-    //     // messageTextEl.appendChild(chartBoxEl);
-    //     const thisLengthStats = JSON.parse(localStorage.getItem("gameResults"));
-    //     const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
-    //     const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
-    //     createHistogram(chartBoxEl, thisLengthStats, "Number of guesses", barToHighlight, xRange);
-
-    //     setTimeout(() => {
-    //         messageDivEl.style.display = "block";
-    //         reloadBtnEl.focus();
-    //         messageDivEl.scrollTo(0, 0);
-    //     }, 2500);
-    // }
-
-    getStatsHistogram() {
+    getStatsHistogram(wordLength=null, maxGuesses=null) {
+        if (!wordLength) wordLength = this.wordLength;
+        if (!maxGuesses) maxGuesses = this.maxGuesses;
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
-        const thisLengthStats = gameStats[`wordLength-${this.wordLength}`];
-        const barToHighlight = this.state.hasWon ? this.guesses.length : "Lost";
-        const xRange = [...Array.from(Array(this.maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
+        const thisLengthStats = gameStats[`wordLength-${wordLength}`];
+        const barToHighlight = wordLength !== this.wordLength ? null
+            : this.state.hasWon ? this.guesses.length : "Lost";
+        const xRange = [...Array.from(Array(maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
         const histogram = createHistogram(thisLengthStats, "Number of guesses", barToHighlight, xRange);
         return histogram;
     }
 
-    getEndGameMessage() {
-        const message = "<h2>Your statistics:</h2>" + this.getGameStatsHtml();
+    getEndGameMessage(wordLength=null) {
+        if (!wordLength) wordLength = this.wordLength;
+        const subHeader = document.createElement("h2");
+        subHeader.textContent = "Your statistics:";
+        const gameStats = this.getGameStatsHtml(wordLength);
         const messageTextEl = document.createElement("div");
         messageTextEl.id = "message-text";
-        messageTextEl.innerHTML = message;
+        messageTextEl.append(subHeader, gameStats);
         return messageTextEl;
     }
 
-    getGameStatsHtml() {
+    getGameStatsHtml(wordLength=null) {
+        if (!wordLength) wordLength = this.wordLength;
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
-        const thisLengthStats = gameStats[`wordLength-${this.wordLength}`];
+        const thisLengthStats = gameStats[`wordLength-${wordLength}`];
         const totalGames = Object.values(thisLengthStats).reduce((total, num) => total + num, 0);
         const gamesWon = totalGames - (thisLengthStats["Lost"] || 0);
         const averageScore = Object.entries(thisLengthStats).reduce((total, [guesses, num]) => 
             guesses === "Lost" ? total + ((this.maxGuesses + 1) * num) : total + (guesses * num), 0) / totalGames;
-        let statsMessage = `Total games: ${totalGames}<br>
-                            Average: ${averageScore.toFixed(2)}`; 
+        let statsMessage = `<div class="stats-text">
+                                <div class="stats-bit">Total games: ${totalGames}</div>
+                                <div class="stats-bit">Average: ${averageScore.toFixed(2)}</div>
+                            </div>`;
 
-        statsMessage += `<br><p id="success-line">Success rate: ${(gamesWon / totalGames * 100).toFixed(2)}%<p>`;
+        statsMessage += `<div id="success-line">Success rate: ${(gamesWon / totalGames * 100).toFixed(2)}%</div>`;
 
-        return `<div id="stats">${statsMessage}</div>`;
+        const statsEl = document.createElement("div");
+        statsEl.id = "stats";
+        statsEl.innerHTML = statsMessage;
+
+        return statsEl;
+    }
+
+    getLengthSlider() {
+        const lengthSlider = document.createElement("input");
+        lengthSlider.type = "range";
+        lengthSlider.className = "length-slider";
+        lengthSlider.min = MIN_WORD_LENGTH;
+        lengthSlider.max = MAX_WORD_LENGTH;
+        lengthSlider.value = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
+        const sliderText = document.createElement("div");
+        sliderText.className = "slider-text";
+        sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
+        const container = document.createElement("div");
+        container.id = "slider-container";
+        container.append(sliderText, lengthSlider);
+        return container;
+    }
+
+    updateStatsDisplay() {
+        const sliderText = document.querySelectorAll(".slider-text")[0];
+        const lengthSlider = document.querySelectorAll(".length-slider")[0];
+        sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
+        const oldChart = document.querySelectorAll(".chart-box")[0];
+        const oldChartParent = oldChart.parentNode;
+        const wordLength = Number(lengthSlider.value);
+        const maxGuesses = getMaxGuesses(wordLength);
+        oldChartParent.replaceChild(this.getStatsHistogram(wordLength, maxGuesses), oldChart);
+        const messageTextEl = document.querySelector("#message-text");
+        const messageTextParent = messageTextEl.parentNode;
+        messageTextParent.replaceChild(this.getEndGameMessage(Number(lengthSlider.value)), messageTextEl);
     }
 
 }
@@ -471,7 +470,6 @@ class Board {
         currentBox.textContent = "";
     }
 
-    // Board
     matchWord(guess) {
         if (!this.state.isActive) return;
 
@@ -548,7 +546,6 @@ class Board {
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
-
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
@@ -580,33 +577,12 @@ function getPlayButton(text) {
     playButton.setAttribute("type", "button");
     playButton.textContent = text;    
     playButton.onclick = () => {
-        const lengthSlider = document.querySelector("#length-slider");
+        const lengthSlider = document.querySelectorAll(".length-slider")[0];
         localStorage.setItem("wordLength", lengthSlider.value);
         restoreOriginalHtml();
         main();
     };
     return playButton;
-}
-
-function getLengthSlider() {   
-    const lengthSlider = document.createElement("input");
-    lengthSlider.type = "range";
-    lengthSlider.id = "length-slider";
-    lengthSlider.min = MIN_WORD_LENGTH;
-    lengthSlider.max = MAX_WORD_LENGTH;
-    lengthSlider.value = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
-    lengthSlider.onchange = () => {
-        const sliderText = document.querySelector("#slider-text");
-        const lengthSlider = document.querySelector("#length-slider");
-        sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
-    }    
-    const sliderText = document.createElement("div");
-    sliderText.id = "slider-text";
-    sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
-    const container = document.createElement("div");
-    container.id = "slider-container";
-    container.append(sliderText, lengthSlider);
-    return container;
 }
 
 function renderColorScheme() {
@@ -640,8 +616,20 @@ function setColorScheme() {
     this.blur();
 }
 
+function displayWelcome() {
+    const messageDivEl = document.querySelector("#message-box");
+    const closeBtnEl = document.querySelector("#close-btn");
+    closeBtnEl.addEventListener("click", () => {
+        messageDivEl.style.display = "none";
+        main();
+    });
+    const playButton = getPlayButton("Play now");
+    messageDivEl.append(playButton);
+    messageDivEl.style.display = "block";
+}
+
 async function main() {
-    let wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
+    const wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
     const game = await Game.createGame(wordLength);
     if (!game) main();
     console.log(game.boards[0].magicWord);
@@ -653,7 +641,7 @@ async function main() {
     game.createBoxes();
 }
 
-main();
+displayWelcome();
 
 
 // function rgb(red, green, blue) {

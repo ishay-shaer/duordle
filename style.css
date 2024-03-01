@@ -73,7 +73,7 @@ h1 {
 
 .lost-header {
     all: inherit;
-    font-size: 5svh;
+    font-size: 7svh;
 }
 
 h2 {
@@ -248,6 +248,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 4svh;
 }
 
 .win-header {
@@ -263,11 +264,32 @@ h2 {
     font-size: 4svh;
 }
 
+.stats-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stats-bit {
+    margin: 15px;
+}
+
 #success-line{
     color: var(--perfect-box);
     background-color: #222;
     font-weight: bold;
     margin: 2svh 0 0 0;
+}
+
+.slider-button-container {
+    padding: 2svh;
+    border-radius: 4svh;
+    background: #def;
+    margin-top: 5svh;
+}
+
+.length-slider {
+    width: 15vw;
 }
 
 #slider-text {
@@ -281,7 +303,7 @@ h2 {
     font-size: 3.5svh;
     border: none;
     border-radius: 15px;
-    background-color: var(--undefined-key);
+    background-color: #d3d3d3;
     cursor: pointer;
 }
 
