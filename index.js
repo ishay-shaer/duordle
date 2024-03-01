@@ -31,6 +31,7 @@ import createHistogram from "./histogram.js";
 import getRandomRelatedWords from "./getRelatedWords.js";
 
 const originalHtml = document.documentElement.outerHTML;
+const originalMessageBoxHtml = document.querySelector("#message-box").outerHTML;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 const MIN_WORD_LENGTH = 4;
 const MAX_WORD_LENGTH = 6;
@@ -315,15 +316,19 @@ class Game {
         const dynamicMessage = document.querySelector("#dynamic-message");
         const sliderBtnCtnr = document.createElement("div");
         sliderBtnCtnr.className = "slider-button-container";
-        sliderBtnCtnr.append(this.getLengthSlider(), getPlayButton("Play again"));
+        const lengthSlider = getLengthSlider();
+        sliderBtnCtnr.append(lengthSlider, getPlayButton("Play again"));
         dynamicMessage.append(getEndGameHeader(this.state.hasWon),
-                              this.revealWordsIfShould(),                              
-                            //   getPlayButton("Play again"),
+                              this.revealWordsIfShould(),
+                              getPlayButton("Play again"),
                               this.getEndGameMessage(),
-                              sliderBtnCtnr,
-                              this.getStatsHistogram()
+                              this.getStatsHistogram(),
+                              sliderBtnCtnr
         );
-        document.querySelectorAll(".length-slider")[0].onchange = () => this.updateStatsDisplay();
+        lengthSlider.onchange = () => {
+            updateSliderText();
+            this.updateStatsDisplay();
+        }
         setTimeout(() => {
             messageDivEl.style.display = "block";
             document.querySelectorAll(".play-btn")[0].focus();
@@ -387,27 +392,9 @@ class Game {
 
         return statsEl;
     }
-
-    getLengthSlider() {
-        const lengthSlider = document.createElement("input");
-        lengthSlider.type = "range";
-        lengthSlider.className = "length-slider";
-        lengthSlider.min = MIN_WORD_LENGTH;
-        lengthSlider.max = MAX_WORD_LENGTH;
-        lengthSlider.value = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
-        const sliderText = document.createElement("div");
-        sliderText.className = "slider-text";
-        sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
-        const container = document.createElement("div");
-        container.id = "slider-container";
-        container.append(sliderText, lengthSlider);
-        return container;
-    }
-
-    updateStatsDisplay() {
-        const sliderText = document.querySelectorAll(".slider-text")[0];
+    
+    updateStatsDisplay() {        
         const lengthSlider = document.querySelectorAll(".length-slider")[0];
-        sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
         const oldChart = document.querySelectorAll(".chart-box")[0];
         const oldChartParent = oldChart.parentNode;
         const wordLength = Number(lengthSlider.value);
@@ -424,7 +411,7 @@ class Board {
     constructor(side, magicWord, wordLength, maxGuesses) {
         this.side = side;
         this.wordLength = wordLength;
-        this.maxGuesses = maxGuesses;        
+        this.maxGuesses = maxGuesses;
         this.magicWord = magicWord;
         this.guesses = [];
         this.keyboardUpdater = {};
@@ -585,6 +572,28 @@ function getPlayButton(text) {
     return playButton;
 }
 
+function getLengthSlider() {
+    const lengthSlider = document.createElement("input");
+    lengthSlider.type = "range";
+    lengthSlider.className = "length-slider";
+    lengthSlider.min = MIN_WORD_LENGTH;
+    lengthSlider.max = MAX_WORD_LENGTH;
+    lengthSlider.value = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
+    const sliderText = document.createElement("div");
+    sliderText.className = "slider-text";
+    sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
+    const container = document.createElement("div");
+    container.id = "slider-container";
+    container.append(sliderText, lengthSlider);
+    return container;
+}
+
+function updateSliderText() {
+    const sliderText = document.querySelectorAll(".slider-text")[0];
+    const lengthSlider = document.querySelectorAll(".length-slider")[0];
+    sliderText.textContent = `${LENGTH_SLIDER_TEXT}: ${lengthSlider.value}`;
+}
+
 function renderColorScheme() {
     const colorScheme = localStorage.getItem("colorScheme") || "default";
     let htmlEl = document.querySelector("html");
@@ -621,10 +630,16 @@ function displayWelcome() {
     const closeBtnEl = document.querySelector("#close-btn");
     closeBtnEl.addEventListener("click", () => {
         messageDivEl.style.display = "none";
+        // Restoring the original (clean) #message-box
+        restoreOriginalHtml();
         main();
     });
-    const playButton = getPlayButton("Play now");
-    messageDivEl.append(playButton);
+    const sliderBtnCtnr = document.createElement("div");
+    sliderBtnCtnr.className = "slider-button-container";
+    const lengthSlider = getLengthSlider();
+    sliderBtnCtnr.append(lengthSlider, getPlayButton("Play now!"));
+    messageDivEl.append(sliderBtnCtnr);
+    lengthSlider.onchange = updateSliderText;
     messageDivEl.style.display = "block";
 }
 
