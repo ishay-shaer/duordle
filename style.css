@@ -1,5 +1,5 @@
 :root {    
-    --excluded-box: #656565;
+    --excluded-box: #858585;
     --invalid-guess: #f00;
     --undefined-key: #d3d3d3;
 }
@@ -43,7 +43,7 @@ body {
     background: linear-gradient(to right, #782dfa, #4700c2 25%, #4700c2 75%, #782dfa 100%);
 }
 
-#grid-container {
+#boards-container {
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
@@ -52,6 +52,8 @@ body {
     width: 60vw;
     justify-content: space-around;
     height: 88svh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5svh;    
 }
 
 h1 {
@@ -134,8 +136,7 @@ h2 {
 
 .board {
     display: grid;
-    gap: .5vw;
-    font-size: 5svh;
+    gap: .5vw;    
 }
 
 #board-1 {
@@ -152,6 +153,10 @@ h2 {
     gap: .5vw;
     color: black;
     transition: background-color 1s ease;
+}
+
+.sample-row {
+    margin: 20px 0;
 }
 
 .box {

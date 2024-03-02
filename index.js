@@ -16,6 +16,7 @@
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 // TODO (DONE) Make available in 4, 5 or 6-letter words and let user choose on welcome screen.
 
+// TODO Make color-scheme select element work while welcome screen is showing
 // TODO Fix stats and histogram display for word lengths that have not been played yet (NaN)
 // TODO Add links from guesses to their respective dictionary.com page
 // TODO Arrange all or most addEventListener's in one function
@@ -46,7 +47,7 @@ const WELCOME_TEXT = `<p>
                       <p>
                       So pick a word length of ${MIN_WORD_LENGTH} to ${MAX_WORD_LENGTH} letters and let the Duordle journey begin!
                       </p>`;
-let stopErrorDisplay; // For timeout in the displayErrorMessage function.
+let stopErrorDisplay = setTimeout(() => {}); // For timeout in the displayErrorMessage function.
 
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
 
@@ -319,7 +320,7 @@ class Game {
     displayEndGameMessage() {
         const messageDivEl = document.querySelector("#message-box");
         const closeBtnEl = document.querySelector("#close-btn");
-        closeBtnEl.addEventListener("click", () => messageDivEl.style.display = "none");
+        closeBtnEl.addEventListener("click", playNewGame);
         const mainEl = document.querySelector("main");
         mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
         const dynamicMessage = document.querySelector("#dynamic-message");
@@ -364,8 +365,10 @@ class Game {
         if (!maxGuesses) maxGuesses = this.maxGuesses;
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
         const thisLengthStats = gameStats[`wordLength-${wordLength}`] || {};
-        const barToHighlight = wordLength !== this.wordLength ? null
-            : this.state.hasWon ? this.guesses.length : "Lost";
+        const barToHighlight = this.state.isActive 
+            ? null : wordLength !== this.wordLength 
+                ? null : this.state.hasWon
+                    ? this.guesses.length : "Lost";
         const xRange = [...Array.from(Array(maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
         const histogram = createHistogram(thisLengthStats, "Number of guesses", barToHighlight, xRange);
         return histogram;
@@ -536,11 +539,10 @@ class Board {
     }
 }
 
-// Not currently used
-// function getRandomElFromArray(arr) {
-//     const index = Math.floor(Math.random() * arr.length);
-//     return arr[index];
-// }
+function getRandomElFromArray(arr) {
+    const index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+}
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
@@ -607,49 +609,42 @@ function updateSliderText() {
 
 function renderColorScheme() {
     const colorScheme = localStorage.getItem("colorScheme") || "default";
-    let htmlEl = document.querySelector("html");
-    const colorSelectOptionEls = document.querySelector("#color-select").children;
-    
     localStorage.setItem("colorScheme", colorScheme);
-
-    Array.from(colorSelectOptionEls).forEach(el => {
-        if (el.id === `${colorScheme}-option`) {
-            el.setAttribute("selected", "");
+    const colorSelectOptionEls = document.querySelector("#color-select").children;    
+    Array.from(colorSelectOptionEls).forEach(option => {
+        if (option.id === `${colorScheme}-option`) {
+            option.setAttribute("selected", "");
         } else {
-            el.removeAttribute("selected");
+            option.removeAttribute("selected");
         }
     });
-
-    if (localStorage.getItem("colorScheme") === "high-contrast") {
-        htmlEl.className = "high-contrast";
-    } else {
-        htmlEl.className = "default";
-    }
+    document.documentElement.className = colorScheme;
 }
 
 function setColorScheme() {
     const selectedColorScheme = document.querySelector("#color-select").value;
-    const htmlEl = document.querySelector("html");
-
-    htmlEl.className = selectedColorScheme;
+    document.documentElement.className = selectedColorScheme;
     localStorage.setItem("colorScheme", selectedColorScheme);
     this.blur();
 }
 
+function playNewGame() {
+    const lengthSlider = document.querySelectorAll(".length-slider")[0];
+    localStorage.setItem("wordLength", lengthSlider.value);
+    restoreOriginalHtml();
+    document.querySelector("#message-box").style.display = "none";
+    main();
+}
+
 function displayWelcome() {
+    document.querySelector("#color-select").addEventListener("change", setColorScheme);
     renderColorScheme();
     const welcomeHeader = document.createElement("h1");
     welcomeHeader.textContent = "Welcome to Duordle";
     // welcomeHeader.className = "win-header";
 
     const closeBtnEl = document.querySelector("#close-btn");
-    const startPlaying = () => {
-        document.querySelector("#message-box").style.display = "none";
-        // Restoring the original (clean) #message-box
-        restoreOriginalHtml();
-        main();
-    }
-    closeBtnEl.addEventListener("click", startPlaying);
+    closeBtnEl.addEventListener("click", playNewGame);
     const sliderBtnCtnr = document.createElement("div");
     sliderBtnCtnr.className = "slider-button-container";
     const lengthSlider = getLengthSlider();
@@ -670,17 +665,16 @@ function displayWelcome() {
                      ...sampleBoardRows
                     );
 
-    const messageDivEl = document.querySelector("#message-box");
-    messageDivEl.insertBefore(welcomeEl, document.querySelector("footer"));
+    const dynamicMessage = document.querySelector("#dynamic-message");
+    dynamicMessage.appendChild(welcomeEl);
     lengthSlider.onchange = updateSliderText;
-    messageDivEl.style.display = "block";
+    document.querySelector("#message-box").style.display = "block";
 }
 
-function createSampleRow(word, [boxToHighlight, highlightCategory]=[]) {
-    const numOfBoxes = word.length;
+function createSampleRow(wordLength, [boxToHighlight, highlightCategory]=[]) {
     const boardRow = document.createElement("div");
-    boardRow.className = "board-row";
-    for (let i = 0; i < numOfBoxes; i++) {
+    boardRow.classList.add("board-row", "sample-row");
+    for (let i = 0; i < wordLength; i++) {
         const box = document.createElement("div");
         const match = i === boxToHighlight ? highlightCategory : "excluded";
         box.classList.add("box", match);
