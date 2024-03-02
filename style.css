@@ -282,10 +282,9 @@ h2 {
 }
 
 .slider-button-container {
-    padding: 2svh;
+    padding: 2svh 0;
     border-radius: 4svh;
     background: #def;
-    margin-top: 5svh;
 }
 
 .length-slider {

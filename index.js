@@ -14,15 +14,15 @@
 // TODO (DONE BUT UNUSED) Download Plotly and use the file directly in the HTML head.
 // TODO (DONE) Plot it
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
+// TODO (DONE) Make available in 4, 5 or 6-letter words and let user choose on welcome screen.
 
+// TODO Fix stats and histogram display for word lengths that have not been played yet
 // TODO Add links from guesses to their respective dictionary.com page
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add a favicon to the title
 // TODO Create welcome message and display it in the message box.
 // TODO Add magic word if not exist into the guesses file instead of each game into the array.
 // TODO Every time a game is played, add magic words to an array in localStorage of max size 50? to avoid them in following games.
-// TODO Create a "Loading..." message (with some animation?) that will show while fetching word from WordsAPI
-// TODO Make available in 4, 5 or 6-letter words and let user choose on welcome screen.
 // TODO Add confetti effect when game has been won.
 
 "use strict";
@@ -31,12 +31,17 @@ import createHistogram from "./histogram.js";
 import getRandomRelatedWords from "./getRelatedWords.js";
 
 const originalHtml = document.documentElement.outerHTML;
-const originalMessageBoxHtml = document.querySelector("#message-box").outerHTML;
+// const originalMessageBoxHtml = document.querySelector("#message-box").outerHTML;
 const QWERTY = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 const MIN_WORD_LENGTH = 4;
 const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const LENGTH_SLIDER_TEXT = "Word length";
+const WELCOME_TEXT = `Duordle is like Wordle's adventurous cousin.
+                      Instead of just one word, you're on the hunt for two words that are connected in meaning.
+                      With each guess, you'll get hints for both words, leading you closer to cracking the code.
+                      Once you've nailed both words, victory is yours.
+                      So pick a word length of ${MIN_WORD_LENGTH} to ${MAX_WORD_LENGTH} letters and let the Duordle journey begin!`;
 let stopErrorDisplay; // For timeout in the displayErrorMessage function.
 
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
@@ -319,7 +324,7 @@ class Game {
         const lengthSlider = getLengthSlider();
         sliderBtnCtnr.append(lengthSlider, getPlayButton("Play again"));
         dynamicMessage.append(getEndGameHeader(this.state.hasWon),
-                              this.revealWordsIfShould(),
+                              this.revealMagicWords(),
                               getPlayButton("Play again"),
                               this.getEndGameMessage(),
                               this.getStatsHistogram(),
@@ -336,15 +341,16 @@ class Game {
         }, 2500);
     }
 
-    revealWordsIfShould() {
-        if (!this.state.hasLost) return "";
+    revealMagicWords() {
+        // if (!this.state.hasLost) return "";
         const wordsRevealEl = document.createElement("p");
         wordsRevealEl.className = "magic-words-reveal";
         const [word_0, word_1] = this.gameMagicWords;
         const dictionaryUrl = "https://www.dictionary.com/browse/";
         wordsRevealEl.innerHTML = 
-            `The words were <a target="blank" href="${dictionaryUrl}${word_0.toLowerCase()}">${word_0}</a> 
-            and <a target="blank" href="${dictionaryUrl}${word_1.toLowerCase()}">${word_1}</a>`;
+            `The words were <a target="blank" title="Look up '${word_0.toLowerCase()}' on Dictionary.com"
+            href="${dictionaryUrl}${word_0.toLowerCase()}">${word_0}</a> and
+            <a target="blank" title="Look up '${word_1.toLowerCase()}' on Dictionary.com" href="${dictionaryUrl}${word_1.toLowerCase()}">${word_1}</a>`;
         return wordsRevealEl;
     }
 
@@ -352,7 +358,7 @@ class Game {
         if (!wordLength) wordLength = this.wordLength;
         if (!maxGuesses) maxGuesses = this.maxGuesses;
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
-        const thisLengthStats = gameStats[`wordLength-${wordLength}`];
+        const thisLengthStats = gameStats[`wordLength-${wordLength}`] || {};
         const barToHighlight = wordLength !== this.wordLength ? null
             : this.state.hasWon ? this.guesses.length : "Lost";
         const xRange = [...Array.from(Array(maxGuesses - 1).keys()).map(num => num + 2), "Lost"];
@@ -374,7 +380,7 @@ class Game {
     getGameStatsHtml(wordLength=null) {
         if (!wordLength) wordLength = this.wordLength;
         const gameStats = JSON.parse(localStorage.getItem("gameResults"));
-        const thisLengthStats = gameStats[`wordLength-${wordLength}`];
+        const thisLengthStats = gameStats[`wordLength-${wordLength}`] || {};
         const totalGames = Object.values(thisLengthStats).reduce((total, num) => total + num, 0);
         const gamesWon = totalGames - (thisLengthStats["Lost"] || 0);
         const averageScore = Object.entries(thisLengthStats).reduce((total, [guesses, num]) => 
@@ -393,7 +399,7 @@ class Game {
         return statsEl;
     }
     
-    updateStatsDisplay() {        
+    updateStatsDisplay() {
         const lengthSlider = document.querySelectorAll(".length-slider")[0];
         const oldChart = document.querySelectorAll(".chart-box")[0];
         const oldChartParent = oldChart.parentNode;
@@ -554,7 +560,7 @@ function restoreOriginalHtml() {
 function getEndGameHeader(hasWon) {
     const header = document.createElement("h1");
     header.textContent = hasWon ? "You win!" : "Better luck next time!";
-    header.classList.add(hasWon ? "win-header" : "lost-header");
+    header.className = hasWon ? "win-header" : "lost-header";
     return header;
 }
 
@@ -637,8 +643,9 @@ function displayWelcome() {
     const sliderBtnCtnr = document.createElement("div");
     sliderBtnCtnr.className = "slider-button-container";
     const lengthSlider = getLengthSlider();
-    sliderBtnCtnr.append(lengthSlider, getPlayButton("Play now!"));
-    messageDivEl.append(sliderBtnCtnr);
+    sliderBtnCtnr.append(lengthSlider, getPlayButton("Start playing!"));
+    const footerEl = document.querySelector("footer");
+    messageDivEl.insertBefore(sliderBtnCtnr, footerEl);
     lengthSlider.onchange = updateSliderText;
     messageDivEl.style.display = "block";
 }
