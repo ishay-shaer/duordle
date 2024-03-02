@@ -539,10 +539,11 @@ class Board {
     }
 }
 
-function getRandomElFromArray(arr) {
-    const index = Math.floor(Math.random() * arr.length);
-    return arr[index];
-}
+// currently unused
+// function getRandomElFromArray(arr) {
+//     const index = Math.floor(Math.random() * arr.length);
+//     return arr[index];
+// }
 
 // returns an array
 async function getWordsFromTextFile(filePath) {
@@ -636,7 +637,7 @@ function playNewGame() {
     main();
 }
 
-function displayWelcome() {
+async function displayWelcome() {
     document.querySelector("#color-select").addEventListener("change", setColorScheme);
     renderColorScheme();
     const welcomeHeader = document.createElement("h1");
@@ -653,27 +654,33 @@ function displayWelcome() {
     welcomeTextEl.className = "align-left";
     welcomeTextEl.innerHTML = WELCOME_TEXT;
     const welcomeEl = document.createElement("div");
-    
-    const sampleBoardRows = [createSampleRow("GHOST", [3, "perfect"]),
-                             createSampleRow("BREAK", [1, "imperfect"]),
-                             createSampleRow("ELECT")
-                            ];
 
     welcomeEl.append(welcomeHeader,
                      sliderBtnCtnr,
                      welcomeTextEl,
-                     ...sampleBoardRows
-                    );
+    );
 
     const dynamicMessage = document.querySelector("#dynamic-message");
     dynamicMessage.appendChild(welcomeEl);
+    
+    const sampleBoardRows = [await createSampleRow("perfect"),
+                             await createSampleRow("imperfect"),
+                             await createSampleRow()
+    ];
+
+    welcomeEl.append(...sampleBoardRows);
+
     lengthSlider.onchange = updateSliderText;
     document.querySelector("#message-box").style.display = "block";
 }
 
-function createSampleRow(wordLength, [boxToHighlight, highlightCategory]=[]) {
+async function createSampleRow(highlightCategory="excluded") {
+    const wordLength = document.querySelector(".length-slider").value;
+    const words = await getRandomRelatedWords(wordLength);
+    const word = words[0];
     const boardRow = document.createElement("div");
     boardRow.classList.add("board-row", "sample-row");
+    const boxToHighlight = Math.floor(Math.random() * wordLength);
     for (let i = 0; i < wordLength; i++) {
         const box = document.createElement("div");
         const match = i === boxToHighlight ? highlightCategory : "excluded";
@@ -681,6 +688,14 @@ function createSampleRow(wordLength, [boxToHighlight, highlightCategory]=[]) {
         box.textContent = word[i];
         boardRow.appendChild(box);
     }
+    const exampleDiv = document.createElement("div");
+    exampleDiv.className = "example"
+    exampleDiv.textContent = highlightCategory === "excluded"
+        ? `The secret word does not contain any of the letters in '${word}'.`
+            : highlightCategory === "perfect" 
+            ? `The letter ${word[boxToHighlight]} is in the correct place.`
+                : `The letter ${word[boxToHighlight]} exists in the secret word, but not in that place.`;
+    boardRow.appendChild(exampleDiv);
     return boardRow;
 }
 
