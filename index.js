@@ -16,7 +16,7 @@
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 // TODO (DONE) Make available in 4, 5 or 6-letter words and let user choose on welcome screen.
 
-// TODO Fix stats and histogram display for word lengths that have not been played yet
+// TODO Fix stats and histogram display for word lengths that have not been played yet (NaN)
 // TODO Add links from guesses to their respective dictionary.com page
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add a favicon to the title
@@ -37,11 +37,15 @@ const MIN_WORD_LENGTH = 4;
 const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const LENGTH_SLIDER_TEXT = "Word length";
-const WELCOME_TEXT = `Duordle is like Wordle's adventurous cousin.
+const WELCOME_TEXT = `<p>
+                      Duordle is like Wordle's adventurous cousin.
                       Instead of just one word, you're on the hunt for two words that are connected in meaning.
                       With each guess, you'll get hints for both words, leading you closer to cracking the code.
                       Once you've nailed both words, victory is yours.
-                      So pick a word length of ${MIN_WORD_LENGTH} to ${MAX_WORD_LENGTH} letters and let the Duordle journey begin!`;
+                      </p>
+                      <p>
+                      So pick a word length of ${MIN_WORD_LENGTH} to ${MAX_WORD_LENGTH} letters and let the Duordle journey begin!
+                      </p>`;
 let stopErrorDisplay; // For timeout in the displayErrorMessage function.
 
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
@@ -345,12 +349,13 @@ class Game {
         // if (!this.state.hasLost) return "";
         const wordsRevealEl = document.createElement("p");
         wordsRevealEl.className = "magic-words-reveal";
-        const [word_0, word_1] = this.gameMagicWords;
+        const [word_0, word_1] = this.gameMagicWords.map(word => word.toLowerCase());
         const dictionaryUrl = "https://www.dictionary.com/browse/";
         wordsRevealEl.innerHTML = 
-            `The words were <a target="blank" title="Look up '${word_0.toLowerCase()}' on Dictionary.com"
-            href="${dictionaryUrl}${word_0.toLowerCase()}">${word_0}</a> and
-            <a target="blank" title="Look up '${word_1.toLowerCase()}' on Dictionary.com" href="${dictionaryUrl}${word_1.toLowerCase()}">${word_1}</a>`;
+            `The words were <a target="blank" title="Look up '${word_0}' on Dictionary.com"
+            href="${dictionaryUrl}${word_0}">${word_0.toUpperCase()}</a> and
+            <a target="blank" title="Look up '${word_1}' on Dictionary.com" 
+            href="${dictionaryUrl}${word_1}">${word_1.toUpperCase()}</a>`;
         return wordsRevealEl;
     }
 
@@ -435,9 +440,9 @@ class Board {
         let boardContent = "";
     
         for (let row = 0; row < this.maxGuesses; row++) {
-            boardContent += `<div class="board-row board-row-${this.wordLength}-letters" id="board-row-${this.side}-${row}">`;
+            boardContent += `<div class="board-row" id="board-row-${this.side}-${row}">`;
             for (let column = 0; column < this.wordLength; column++) {
-                boardContent += `<span class="box" id="box-${this.side}-${row}-${column}"></span>`;
+                boardContent += `<div class="box" id="box-${this.side}-${row}-${column}"></div>`;
             }
             boardContent += `</div>`;
         }
@@ -632,32 +637,67 @@ function setColorScheme() {
 }
 
 function displayWelcome() {
-    const messageDivEl = document.querySelector("#message-box");
+    renderColorScheme();
+    const welcomeHeader = document.createElement("h1");
+    welcomeHeader.textContent = "Welcome to Duordle";
+    // welcomeHeader.className = "win-header";
+
     const closeBtnEl = document.querySelector("#close-btn");
-    closeBtnEl.addEventListener("click", () => {
-        messageDivEl.style.display = "none";
+    const startPlaying = () => {
+        document.querySelector("#message-box").style.display = "none";
         // Restoring the original (clean) #message-box
         restoreOriginalHtml();
         main();
-    });
+    }
+    closeBtnEl.addEventListener("click", startPlaying);
     const sliderBtnCtnr = document.createElement("div");
     sliderBtnCtnr.className = "slider-button-container";
     const lengthSlider = getLengthSlider();
     sliderBtnCtnr.append(lengthSlider, getPlayButton("Start playing!"));
-    const footerEl = document.querySelector("footer");
-    messageDivEl.insertBefore(sliderBtnCtnr, footerEl);
+    const welcomeTextEl = document.createElement("div");
+    welcomeTextEl.className = "align-left";
+    welcomeTextEl.innerHTML = WELCOME_TEXT;
+    const welcomeEl = document.createElement("div");
+    
+    const sampleBoardRows = [createSampleRow("GHOST", [3, "perfect"]),
+                             createSampleRow("BREAK", [1, "imperfect"]),
+                             createSampleRow("ELECT")
+                            ];
+
+    welcomeEl.append(welcomeHeader,
+                     sliderBtnCtnr,
+                     welcomeTextEl,
+                     ...sampleBoardRows
+                    );
+
+    const messageDivEl = document.querySelector("#message-box");
+    messageDivEl.insertBefore(welcomeEl, document.querySelector("footer"));
     lengthSlider.onchange = updateSliderText;
     messageDivEl.style.display = "block";
 }
 
+function createSampleRow(word, [boxToHighlight, highlightCategory]=[]) {
+    const numOfBoxes = word.length;
+    const boardRow = document.createElement("div");
+    boardRow.className = "board-row";
+    for (let i = 0; i < numOfBoxes; i++) {
+        const box = document.createElement("div");
+        const match = i === boxToHighlight ? highlightCategory : "excluded";
+        box.classList.add("box", match);
+        box.textContent = word[i];
+        boardRow.appendChild(box);
+    }
+    return boardRow;
+}
+
 async function main() {
+    renderColorScheme();
     const wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
     const game = await Game.createGame(wordLength);
     if (!game) main();
     console.log(game.boards[0].magicWord);
     console.log(game.boards[1].magicWord);
     document.querySelector("#color-select").addEventListener("change", setColorScheme);
-    renderColorScheme();
     window.addEventListener("keydown", (e) => {game.keyboardHandler(e)});
     game.createScreenKeyboard();
     game.createBoxes();
@@ -667,7 +707,7 @@ displayWelcome();
 
 
 // function rgb(red, green, blue) {
-//     if (!(0 <= red <=255) || !(0 <= green <=255) || !(0 <= blue <=255)) {
+//     if (red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255) {
 //         console.error("Invalid RGB value");
 //         return null;
 //     }

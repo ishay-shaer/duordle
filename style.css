@@ -147,24 +147,11 @@ h2 {
 }
 
 .board-row {
-    display: grid;
-    /* grid-template-columns: repeat(5, auto); */
+    display: flex;
+    flex-wrap: nowrap;
     gap: .5vw;
     color: black;
     transition: background-color 1s ease;
-    /* transition: background-color 1s ease, transform 1s ease; */
-}
-
-.board-row-4-letters {
-    grid-template-columns: repeat(4, auto);
-}
-
-.board-row-5-letters {
-    grid-template-columns: repeat(5, auto);
-}
-
-.board-row-6-letters {
-    grid-template-columns: repeat(6, auto);
 }
 
 .box {
@@ -258,6 +245,10 @@ h2 {
 #message-text {
     margin: auto;
     font-size: 5svh;
+}
+
+.align-left {
+    text-align: left;
 }
 
 #stats {
