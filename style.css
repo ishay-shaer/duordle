@@ -156,7 +156,8 @@ h2 {
 }
 
 .sample-row {
-    margin: 20px 0;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .box {
@@ -290,6 +291,18 @@ h2 {
 
 #slider-text {
     font-size: 3svh;
+}
+
+.examples-container {
+    width: 100%;
+}
+
+.example-container {
+    margin-bottom: 30px;
+}
+
+.example {
+    text-align: left;
 }
 
 .play-btn {

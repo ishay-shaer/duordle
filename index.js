@@ -39,7 +39,7 @@ const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const LENGTH_SLIDER_TEXT = "Word length";
 const WELCOME_TEXT = `<p>
-                        Duordle is like Wordle's adventurous cousin.
+                        <strong>Duordle</strong> is like Wordle's adventurous cousin.
                         Instead of just one word, you're on the hunt for two words that are connected in meaning.
                         With each guess, you'll get hints for both words, leading you closer to cracking the code.
                         Once you've nailed both words, victory is yours!
@@ -696,15 +696,18 @@ async function createExampleRow(wordLength, highlightCategory="excluded") {
         box.textContent = word[i];
         boardRow.appendChild(box);
     }
-    const exampleDiv = document.createElement("div");
-    exampleDiv.className = "example"
-    exampleDiv.textContent = highlightCategory === "excluded"
+    const explanationDiv = document.createElement("div");
+    explanationDiv.className = "example";
+    explanationDiv.textContent = highlightCategory === "excluded"
         ? `The secret word does not contain any of the letters in '${word}'.`
             : highlightCategory === "perfect" 
             ? `The letter ${word[boxToHighlight]} is in the right place.`
                 : `The letter ${word[boxToHighlight]} exists in the secret word, but not as the ${ordinalNums[boxToHighlight + 1]} letter.`;
-    boardRow.appendChild(exampleDiv);
-    return boardRow;
+    // boardRow.appendChild(explanationDiv);
+    const exampleCtnr = document.createElement("div");
+    exampleCtnr.className = "example-container";
+    exampleCtnr.append(boardRow, explanationDiv);
+    return exampleCtnr;
 }
 
 async function main() {
