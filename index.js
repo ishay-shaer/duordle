@@ -32,7 +32,7 @@
 
 import createHistogram from "./histogram.js";
 import { getRandomRelatedWords, getRandomWord } from "./getRelatedWords.js";
-import e from "./getElement.js";
+import el from "./getElement.js";
 
 const originalHtml = document.documentElement.outerHTML;
 // const originalMessageBoxHtml = document.querySelector("#message-box").outerHTML;
@@ -688,7 +688,7 @@ async function getExamples(wordLength) {
     ];
     const examplesCtnr = document.createElement("div");
     examplesCtnr.className = "examples-container";
-    const examplesHeader = e("h2", { class: "examples-header", textContent: "Examples:" });
+    const examplesHeader = el("h2", { class: "examples-header", textContent: "Examples:" });
     examplesCtnr.append(examplesHeader, ...examples);
     return examplesCtnr;
 }
