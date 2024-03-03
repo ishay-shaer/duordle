@@ -73,6 +73,10 @@ h1 {
     -webkit-text-stroke: 1px black;
 }
 
+p {
+    line-height: 1.5;
+}
+
 .lost-header {
     all: inherit;
     font-size: 7svh;
@@ -286,11 +290,42 @@ h2 {
 }
 
 .length-slider {
+    -webkit-appearance: none;
     width: 15vw;
+    height: 3svh;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.length-slider:hover {
+    opacity: 1;
+}
+
+.length-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 3svh;
+    height: 3svh;
+    background: #000;
+    cursor: pointer;
+}
+
+.length-slider::-moz-range-thumb {
+    width: 3svh;
+    height: 3svh;
+    background: #000;
+    cursor: pointer;
 }
 
 #slider-text {
     font-size: 3svh;
+}
+
+.examples-header {
+    text-align: left;
 }
 
 .examples-container {

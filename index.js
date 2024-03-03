@@ -15,9 +15,10 @@
 // TODO (DONE) Plot it
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 // TODO (DONE) Make available in 4, 5 or 6-letter words and let user choose on welcome screen.
+// TODO (DONE) Make color-scheme select element work while welcome screen is showing
+// TODO (DONE) Fix stats and histogram display for word lengths that have not been played yet (NaN)
 
-// TODO Make color-scheme select element work while welcome screen is showing
-// TODO Fix stats and histogram display for word lengths that have not been played yet (NaN)
+// TODO Style the length slider
 // TODO Add links from guesses to their respective dictionary.com page
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add a favicon to the title
@@ -44,7 +45,7 @@ const WELCOME_TEXT = `<p>
                         With each guess, you'll get hints for both words, leading you closer to cracking the code.
                         Once you've nailed both words, victory is yours!
                       </p>
-                      <h2>Examples:</h2>`;
+                      <h2 class="examples-header">Examples:</h2>`;
 let stopErrorDisplay = setTimeout(() => {}); // For timeout in the displayErrorMessage function.
 const ordinalNums = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"};
 
@@ -390,19 +391,25 @@ class Game {
         const thisLengthStats = gameStats[`wordLength-${wordLength}`] || {};
         const totalGames = Object.values(thisLengthStats).reduce((total, num) => total + num, 0);
         const gamesWon = totalGames - (thisLengthStats["Lost"] || 0);
-        const averageScore = Object.entries(thisLengthStats).reduce((total, [guesses, num]) => 
-            guesses === "Lost" ? total + ((this.maxGuesses + 1) * num) : total + (guesses * num), 0) / totalGames;
+        // For averageScore, a lost game is calculated as one more than the maximum guesses
+        const lostGameValue = this.maxGuesses + 1;
+        // If games have been played at this.wordLength, calculate the average score, else "N/A"
+        let averageScore = totalGames
+            ? (Object.entries(thisLengthStats).reduce((total, [guesses, num]) => 
+            guesses === "Lost"
+                ? total + (lostGameValue * num)
+                : total + (guesses * num),
+            0) / totalGames).toFixed(2)
+            : "N/A";
         let statsMessage = `<div class="stats-text">
                                 <div class="stats-bit">Total games: ${totalGames}</div>
-                                <div class="stats-bit">Average: ${averageScore.toFixed(2)}</div>
+                                <div class="stats-bit">Average: ${averageScore}</div>
                             </div>`;
-
-        statsMessage += `<div id="success-line">Success rate: ${(gamesWon / totalGames * 100).toFixed(2)}%</div>`;
-
+        let successRate = totalGames ? (gamesWon / totalGames * 100).toFixed(2) + "%" : "N/A";
+        statsMessage += `<div id="success-line">Success rate: ${successRate}</div>`;
         const statsEl = document.createElement("div");
         statsEl.id = "stats";
         statsEl.innerHTML = statsMessage;
-
         return statsEl;
     }
     
