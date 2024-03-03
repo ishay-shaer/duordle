@@ -11,19 +11,20 @@
 // TODO (DONE) Fix box CSS transitions to be cool only when the guess is correct.
 // TODO (DONE) Show results from localStorage as statistics in the message box.
 // TODO (DONE) Make the use of "" or '' consistent
-// TODO (DONE BUT UNUSED) Download Plotly and use the file directly in the HTML head.
+// TODO (DONE - but unused) Download Plotly and use the file directly in the HTML head.
 // TODO (DONE) Plot it
 // TODO (DONE) Understand why scrollTo in displayEndGameMessage is not working - is it the focus on the button?
 // TODO (DONE) Make available in 4, 5 or 6-letter words and let user choose on welcome screen.
 // TODO (DONE) Make color-scheme select element work while welcome screen is showing
 // TODO (DONE) Fix stats and histogram display for word lengths that have not been played yet (NaN)
+// TODO (DONE) Style the length slider
+// TODO (DONE - on end game message) Add links from guesses to their respective dictionary.com page
+// TODO (DONE) Create welcome message and display it in the message box.
 
-// TODO Style the length slider
-// TODO Add links from guesses to their respective dictionary.com page
+// TODO Replace all createElement instances with the el function from getElement.js
+// TODO Improve word data with datamuse
 // TODO Arrange all or most addEventListener's in one function
 // TODO Add a favicon to the title
-// TODO Create welcome message and display it in the message box.
-// TODO Add magic word if not exist into the guesses file instead of each game into the array.
 // TODO Every time a game is played, add magic words to an array in localStorage of max size 50? to avoid them in following games.
 // TODO Add confetti effect when game has been won.
 
@@ -31,6 +32,7 @@
 
 import createHistogram from "./histogram.js";
 import { getRandomRelatedWords, getRandomWord } from "./getRelatedWords.js";
+import e from "./getElement.js";
 
 const originalHtml = document.documentElement.outerHTML;
 // const originalMessageBoxHtml = document.querySelector("#message-box").outerHTML;
@@ -44,8 +46,7 @@ const WELCOME_TEXT = `<p>
                         Instead of just one word, you're on the hunt for two words that are connected in meaning.
                         With each guess, you'll get hints for both words, leading you closer to cracking the code.
                         Once you've nailed both words, victory is yours!
-                      </p>
-                      <h2 class="examples-header">Examples:</h2>`;
+                      </p>`;
 let stopErrorDisplay = setTimeout(() => {}); // For timeout in the displayErrorMessage function.
 const ordinalNums = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"};
 
@@ -92,11 +93,11 @@ class Game {
                 const delBtn = document.createElement("button");
                 delBtn.textContent = "Del";
                 delBtn.id = "del-key";
-                delBtn.classList.add("key");
-                delBtn.addEventListener("click", () => {
+                delBtn.className = "key";
+                delBtn.onclick = () => {
                     this.deleteLastLetter();
                     document.activeElement.blur();
-                });
+                };
                 delBtn.tabIndex = "-1";
                 rowEl.appendChild(delBtn);
             }
@@ -104,11 +105,11 @@ class Game {
                 const charBtn = document.createElement("button");
                 charBtn.textContent = letter;
                 charBtn.id = `${letter}-key`
-                charBtn.classList.add("key");
-                charBtn.addEventListener("click", () => {
+                charBtn.className = "key";
+                charBtn.onclick = () => {
                     this.addLetter(letter);
                     document.activeElement.blur();
-                });
+                };
                 charBtn.tabIndex = "-1";
                 rowEl.appendChild(charBtn);
             }
@@ -116,11 +117,11 @@ class Game {
                 const enterBtn = document.createElement("button");
                 enterBtn.textContent = "Enter";
                 enterBtn.id = "enter-key";
-                enterBtn.classList.add("key");
-                enterBtn.addEventListener("click", () => {
+                enterBtn.className = "key";
+                enterBtn.onclick = () => {
                     this.enterAndMatchWord();
                     document.activeElement.blur();
-                });
+                };
                 enterBtn.tabIndex = "-1";
                 rowEl.appendChild(enterBtn);
             }
@@ -320,9 +321,9 @@ class Game {
     displayEndGameMessage() {
         const messageDivEl = document.querySelector("#message-box");
         const closeBtnEl = document.querySelector("#close-btn");
-        closeBtnEl.addEventListener("click", playNewGame);
+        closeBtnEl.onclick = () => messageDivEl.style.display = "none";
         const mainEl = document.querySelector("main");
-        mainEl.addEventListener("click", () => messageDivEl.style.display = "none");
+        mainEl.onclick = () => messageDivEl.style.display = "none";
         const dynamicMessage = document.querySelector("#dynamic-message");
         const sliderBtnCtnr = document.createElement("div");
         sliderBtnCtnr.className = "slider-button-container";
@@ -660,12 +661,12 @@ async function displayWelcome() {
 
     const dynamicMessage = document.querySelector("#dynamic-message");
     dynamicMessage.append(welcomeHeader,
-                          sliderBtnCtnr,
                           welcomeTextEl,
+                          sliderBtnCtnr
     );
     const lengthSlider = document.querySelector(".length-slider");
     const wordLength = lengthSlider.value;
-    dynamicMessage.append(await getExamples(wordLength));
+    dynamicMessage.append(await getExamples(wordLength), getPlayButton("Start playing!"));
     lengthSlider.onchange = () => {
         updateSliderText();
         const oldExamples = document.querySelector(".examples-container");
@@ -681,17 +682,18 @@ async function getExamples(wordLength) {
         console.error("No slider found in the DOM");
         return
     }
-    const examples = [await createExampleRow(wordLength, "perfect"),
-                      await createExampleRow(wordLength, "imperfect"),
-                      await createExampleRow(wordLength)
+    const examples = [await getExampleRow(wordLength, "perfect"),
+                      await getExampleRow(wordLength, "imperfect"),
+                      await getExampleRow(wordLength)
     ];
     const examplesCtnr = document.createElement("div");
     examplesCtnr.className = "examples-container";
-    examplesCtnr.append(...examples);
+    const examplesHeader = e("h2", { class: "examples-header", textContent: "Examples:" });
+    examplesCtnr.append(examplesHeader, ...examples);
     return examplesCtnr;
 }
 
-async function createExampleRow(wordLength, highlightCategory="excluded") {
+async function getExampleRow(wordLength, highlightCategory="excluded") {
     const word = await getRandomWord(wordLength);
     const boardRow = document.createElement("div");
     boardRow.classList.add("board-row", "sample-row");
