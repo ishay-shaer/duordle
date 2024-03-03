@@ -3,7 +3,39 @@
 
 "use strict";
 
-export default async function getRandomRelatedWords(wordLength=5, exceptions=null) {
+const DEFAULT_WORD_LENGTH = 5;
+
+export async function getRandomRelatedWords(wordLength=DEFAULT_WORD_LENGTH, exceptions=null) {
+    // const dataFilePath = `./data_${wordLength}_letters.json`;
+    // if (!exceptions) exceptions = [];
+    // const response = await fetch(dataFilePath);
+    // if (!response.ok) {
+    //     throw new Error("Network response was not ok");
+    // }
+    // const data = await response.text();
+    // const dataObject = JSON.parse(data);
+    // let primaryWords = Object.keys(dataObject);
+    // // Eliminating exceptions from primaryWords array
+    // exceptions.forEach(exception => {
+    //     if (primaryWords.includes(exception)) {
+    //         exceptionIndex = primaryWords.indexOf(exception);
+    //         primaryWords = [...primaryWords.slice(0, exceptionIndex), ...primaryWords.slice(exceptionIndex + 1)];
+    //     }
+    // });
+    // const randomWord = getRandomElFromArray(primaryWords);
+    // const relatedWord = getRandomElFromArray(dataObject[randomWord]);
+    // return [randomWord, relatedWord];
+    const wordsObject = await getWordsObject(wordLength, exceptions);
+    const randomWord = getRandomElFromArray(Object.keys(wordsObject));
+    const relatedWord = getRandomElFromArray(wordsObject[randomWord]);
+    return [randomWord, relatedWord];
+}
+
+export async function getRandomWord(wordLength=DEFAULT_WORD_LENGTH, exceptions=null) {
+    return getRandomElFromArray(Object.keys(await getWordsObject(wordLength, exceptions)));
+}
+
+async function getWordsObject(wordLength, exceptions=null) {
     const dataFilePath = `./data_${wordLength}_letters.json`;
     if (!exceptions) exceptions = [];
     const response = await fetch(dataFilePath);
@@ -11,18 +43,17 @@ export default async function getRandomRelatedWords(wordLength=5, exceptions=nul
         throw new Error("Network response was not ok");
     }
     const data = await response.text();
-    const dataObject = JSON.parse(data);
-    let primaryWords = Object.keys(dataObject);
-    // Eliminating exceptions from primaryWords array
-    exceptions.forEach(exception => {
-        if (primaryWords.includes(exception)) {
-            exceptionIndex = primaryWords.indexOf(exception);
-            primaryWords = [...primaryWords.slice(0, exceptionIndex), ...primaryWords.slice(exceptionIndex + 1)];
-        }
-    });
-    const randomWord = getRandomElFromArray(primaryWords);
-    const relatedWord = getRandomElFromArray(dataObject[randomWord]);
-    return [randomWord, relatedWord];
+    return JSON.parse(data);
+    // const dataObject = JSON.parse(data);
+    // let primaryWords = Object.keys(dataObject);
+    // // Eliminating exceptions from primaryWords array
+    // exceptions.forEach(exception => {
+    //     if (primaryWords.includes(exception)) {
+    //         exceptionIndex = primaryWords.indexOf(exception);
+    //         primaryWords = [...primaryWords.slice(0, exceptionIndex), ...primaryWords.slice(exceptionIndex + 1)];
+    //     }
+    // });
+    // return primaryWords;
 }
 
 function getRandomElFromArray(arr) {

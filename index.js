@@ -29,7 +29,7 @@
 "use strict";
 
 import createHistogram from "./histogram.js";
-import getRandomRelatedWords from "./getRelatedWords.js";
+import { getRandomRelatedWords, getRandomWord } from "./getRelatedWords.js";
 
 const originalHtml = document.documentElement.outerHTML;
 // const originalMessageBoxHtml = document.querySelector("#message-box").outerHTML;
@@ -39,15 +39,14 @@ const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const LENGTH_SLIDER_TEXT = "Word length";
 const WELCOME_TEXT = `<p>
-                      Duordle is like Wordle's adventurous cousin.
-                      Instead of just one word, you're on the hunt for two words that are connected in meaning.
-                      With each guess, you'll get hints for both words, leading you closer to cracking the code.
-                      Once you've nailed both words, victory is yours.
+                        Duordle is like Wordle's adventurous cousin.
+                        Instead of just one word, you're on the hunt for two words that are connected in meaning.
+                        With each guess, you'll get hints for both words, leading you closer to cracking the code.
+                        Once you've nailed both words, victory is yours!
                       </p>
-                      <p>
-                      So pick a word length of ${MIN_WORD_LENGTH} to ${MAX_WORD_LENGTH} letters and let the Duordle journey begin!
-                      </p>`;
+                      <h2>Examples:</h2>`;
 let stopErrorDisplay = setTimeout(() => {}); // For timeout in the displayErrorMessage function.
+const ordinalNums = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"};
 
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
 
@@ -642,42 +641,51 @@ async function displayWelcome() {
     renderColorScheme();
     const welcomeHeader = document.createElement("h1");
     welcomeHeader.textContent = "Welcome to Duordle";
-    // welcomeHeader.className = "win-header";
-
     const closeBtnEl = document.querySelector("#close-btn");
     closeBtnEl.addEventListener("click", playNewGame);
     const sliderBtnCtnr = document.createElement("div");
     sliderBtnCtnr.className = "slider-button-container";
-    const lengthSlider = getLengthSlider();
-    sliderBtnCtnr.append(lengthSlider, getPlayButton("Start playing!"));
+    const sliderCtnr = getLengthSlider();
+    sliderBtnCtnr.append(sliderCtnr, getPlayButton("Start playing!"));
     const welcomeTextEl = document.createElement("div");
     welcomeTextEl.className = "align-left";
     welcomeTextEl.innerHTML = WELCOME_TEXT;
-    const welcomeEl = document.createElement("div");
-
-    welcomeEl.append(welcomeHeader,
-                     sliderBtnCtnr,
-                     welcomeTextEl,
-    );
 
     const dynamicMessage = document.querySelector("#dynamic-message");
-    dynamicMessage.appendChild(welcomeEl);
-    
-    const sampleBoardRows = [await createSampleRow("perfect"),
-                             await createSampleRow("imperfect"),
-                             await createSampleRow()
-    ];
-
-    welcomeEl.append(...sampleBoardRows);
-
-    lengthSlider.onchange = updateSliderText;
+    dynamicMessage.append(welcomeHeader,
+                          sliderBtnCtnr,
+                          welcomeTextEl,
+    );
+    const lengthSlider = document.querySelector(".length-slider");
+    const wordLength = lengthSlider.value;
+    dynamicMessage.append(await getExamples(wordLength));
+    lengthSlider.onchange = () => {
+        updateSliderText();
+        const oldExamples = document.querySelector(".examples-container");
+        getExamples(lengthSlider.value).then(newExamples => {
+            oldExamples.parentNode.replaceChild(newExamples, oldExamples);
+        });
+    }
     document.querySelector("#message-box").style.display = "block";
 }
 
-async function createSampleRow(highlightCategory="excluded") {
-    const wordLength = document.querySelector(".length-slider").value;
-    const words = await getRandomRelatedWords(wordLength);
-    const word = words[0];
+async function getExamples(wordLength) {
+    if (!document.querySelector(".length-slider")) {
+        console.error("No slider found in the DOM");
+        return
+    }
+    const examples = [await createExampleRow(wordLength, "perfect"),
+                      await createExampleRow(wordLength, "imperfect"),
+                      await createExampleRow(wordLength)
+    ];
+    const examplesCtnr = document.createElement("div");
+    examplesCtnr.className = "examples-container";
+    examplesCtnr.append(...examples);
+    return examplesCtnr;
+}
+
+async function createExampleRow(wordLength, highlightCategory="excluded") {
+    const word = await getRandomWord(wordLength);
     const boardRow = document.createElement("div");
     boardRow.classList.add("board-row", "sample-row");
     const boxToHighlight = Math.floor(Math.random() * wordLength);
@@ -693,8 +701,8 @@ async function createSampleRow(highlightCategory="excluded") {
     exampleDiv.textContent = highlightCategory === "excluded"
         ? `The secret word does not contain any of the letters in '${word}'.`
             : highlightCategory === "perfect" 
-            ? `The letter ${word[boxToHighlight]} is in the correct place.`
-                : `The letter ${word[boxToHighlight]} exists in the secret word, but not in that place.`;
+            ? `The letter ${word[boxToHighlight]} is in the right place.`
+                : `The letter ${word[boxToHighlight]} exists in the secret word, but not as the ${ordinalNums[boxToHighlight + 1]} letter.`;
     boardRow.appendChild(exampleDiv);
     return boardRow;
 }
