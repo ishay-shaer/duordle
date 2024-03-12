@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest Guy">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="chart.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <select name="color-scheme" id="color-select">
-        <option id="default-option" value="default">default colors</option>
-        <option id="high-contrast-option" value="high-contrast">high contrast</option>
-    </select>
+    <div id="menu">
+        <button id="menu-btn" type="menu">≡</button>
+        <div id="menu-items-main" class="menu-items"></div>
+    </div>
     <main>
         <h1>Duordle</h1>
-        <div id="grid-container">
+        <div id="boards-container">
             <span class="board" id="board-0"></span>
             <span class="board" id="board-1"></span>
-            <div id="keyboard">
-                <div class="keyboard-row" id="keyboard-row-0"></div>
-                <div class="keyboard-row" id="keyboard-row-1"></div>
-                <div class="keyboard-row" id="keyboard-row-2"></div>
-            </div>
         </div>
     </main>
     <div id="error-box"></div>
@@ -30,10 +26,7 @@
         <button id="close-btn" aria-label="Close message box" type="button">
             <span aria-hidden="true">&#9587;</span>
         </button>
-        <div id="dynamic-message">
-            <div id="message-text"></div>
-            <button id="reload-btn" type="button">Play another game</button>
-        </div>
+        <div id="dynamic-message"></div>
         <footer>
             Copyright &copy; 2024 Ishay Shaer
         </footer>        
