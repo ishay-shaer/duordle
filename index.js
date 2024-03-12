@@ -556,10 +556,8 @@ async function getWordsFromTextFile(filePath) {
 }
 
 async function getPossibleGuesses(wordLength, magicWords) {
-    console.log("getting possible guesses");
     const guessesFilePath = `./words_${wordLength}_letters.txt`;
     let possibleGuesses = await getWordsFromTextFile(guessesFilePath);
-    console.log(possibleGuesses);
     // Adding game words to possibleGuesses in case they are not already included
     // Remove after running a script to add all words from the data into the words list
     // const [word_0, word_1] = magicWords;
