@@ -1,0 +1,4 @@
+Duordle is like Wordle's adventurous cousin.
+Instead of just one word, you're on the hunt for a duo: two words that are connected in meaning.
+With each guess, you'll get hints for both words, leading you closer to cracking the code.
+Once you've nailed both words, victory is yours!
