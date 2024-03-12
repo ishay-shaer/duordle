@@ -1,5 +1,5 @@
 :root {    
-    --excluded-box: #656565;
+    --excluded-box: #757575;
     --invalid-guess: #f00;
     --undefined-key: #d3d3d3;
 }
@@ -43,7 +43,7 @@ body {
     background: linear-gradient(to right, #782dfa, #4700c2 25%, #4700c2 75%, #782dfa 100%);
 }
 
-#grid-container {
+#boards-container {
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
@@ -52,28 +52,42 @@ body {
     width: 60vw;
     justify-content: space-around;
     height: 88svh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5svh;    
 }
 
 h1 {
     text-align: center;
-    height: 9svh;
-    margin: -1svh 0 0 0;
+    text-wrap: nowrap;
+    margin: 0;
     padding: 0;
     font-family: "Luckiest Guy";
     font-size: 7svh;
-    background: linear-gradient(to bottom,
-                                var(--perfect-key),
-                                var(--perfect-key) 50%,
-                                var(--imperfect-key) 50%,
-                                var(--imperfect-key) 100%);
+    background-image: linear-gradient(
+        to bottom,
+        var(--perfect-key),
+        var(--perfect-key) 50%,
+        var(--imperfect-key) 50%,
+        var(--imperfect-key) 100%
+    );
     background-clip: text;
     color: transparent;
     -webkit-text-stroke: 1px black;
 }
 
+p {
+    line-height: 1.5;
+}
+
+.lost-header {
+    all: inherit;
+    font-size: 7svh;
+}
+
 h2 {
     text-align: center;
     font-size: 6svh;
+    margin: 2svh 0;
 }
 
 #keyboard {
@@ -107,12 +121,12 @@ h2 {
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
-#del-key {
+#Del-key {
     width: max(3.5rem, 5vw);
     background-color: var(--undefined-key);
 }
 
-#enter-key {
+#Enter-key {
     width: max(5rem, 7vw);
     background-color: var(--undefined-key);
 }
@@ -128,8 +142,7 @@ h2 {
 
 .board {
     display: grid;
-    gap: .5vw;
-    font-size: 5svh;
+    gap: .5vw;    
 }
 
 #board-1 {
@@ -141,24 +154,16 @@ h2 {
 }
 
 .board-row {
-    display: grid;
-    /* grid-template-columns: repeat(5, auto); */
+    display: flex;
+    flex-wrap: nowrap;
     gap: .5vw;
     color: black;
     transition: background-color 1s ease;
-    /* transition: background-color 1s ease, transform 1s ease; */
 }
 
-.board-row-4-letters {
-    grid-template-columns: repeat(4, auto);
-}
-
-.board-row-5-letters {
-    grid-template-columns: repeat(5, auto);
-}
-
-.board-row-6-letters {
-    grid-template-columns: repeat(6, auto);
+.sample-row {
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .box {
@@ -169,6 +174,7 @@ h2 {
     line-height: 6svh;
     transform: rotate(0);
     transition: inherit;
+    display: inline-block;
 }
 
 .perfect {
@@ -226,12 +232,12 @@ h2 {
     max-width: 95vw;
     width: 600px;
     height: 95svh;
-    background-color: white;
     text-align: center;
     padding: min(5vw, 5svh) min(5vw, 5svh) 1svh min(5vw, 5svh);
     background-color: #bdf;
     color: #222;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4svh;
     border-radius: min(5vw, 5svh);
     box-shadow: 0 0 4svh #444;
     box-sizing: border-box;
@@ -239,12 +245,13 @@ h2 {
 }
 
 #dynamic-message {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#win-header {
+.win-header {
     font-size: 10svh;
-    height: 12.5svh;
 }
 
 #message-text {
@@ -252,13 +259,22 @@ h2 {
     font-size: 5svh;
 }
 
+.align-left {
+    text-align: left;
+}
+
 #stats {
     font-size: 4svh;
 }
 
-#chart-div {
-    width: 100%;
-    height: 40svh;
+#stats-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stats-bit {
+    margin: 15px;
 }
 
 #success-line{
@@ -268,20 +284,85 @@ h2 {
     margin: 2svh 0 0 0;
 }
 
-#reload-btn {
+.slider-isolate {
+    padding: 2svh 3vw;
+    margin: 20px 0;
+    border-radius: 4svh;
+    background: #def;
+}
+
+.slider-button-container {
+    padding: 2svh 0;
+    margin: 20px 0;
+    border-radius: 4svh;
+    background: #def;
+}
+
+.length-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15vw;
+    height: 3svh;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.length-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 3svh;
+    height: 3svh;
+    background: #000;
+    cursor: pointer;
+}
+
+.length-slider::-moz-range-thumb {
+    width: 3svh;
+    height: 3svh;
+    background: #000;
+    cursor: pointer;
+}
+
+#slider-text {
+    font-size: 3svh;
+}
+
+li {
+    list-style: none;
+}
+
+.examples-header {
+    text-align: left;
+}
+
+.examples-container {
+    width: 100%;
+}
+
+.example-container {
+    margin-bottom: 30px;
+}
+
+.example {
+    text-align: left;
+}
+
+.play-btn {
     margin: 3svh;
-    margin-bottom: 10svh;
-    padding: 2svh 8vw;
+    padding: 1.5svh 10vw;
     font-family: inherit;
     font-size: 3.5svh;
     border: none;
     border-radius: 15px;
-    background-color: var(--undefined-key);
+    background-color: #d3d3d3;
     cursor: pointer;
 }
 
-#reload-btn:hover {
-    background-color: #a5a5a5;
+.play-btn:hover {
+    background-color: #bababa;
 }
 
 #close-btn {
@@ -294,7 +375,7 @@ h2 {
     border: none;
     border-radius: 50%;
     font-family: auto;
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 2.5svh);
     color: #555;
     font-weight: bold;
     cursor: pointer;
