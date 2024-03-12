@@ -647,12 +647,14 @@ function renderColorScheme() {
 }
 
 async function playNewGame() {
+    if (game?.state.isActive && game?.wordLength === localStorage.getItem("wordLength")) return;
     clearScreen();
     await main();
 }
 
 async function displayWelcome() {
     renderColorScheme();
+    markColorMenuItem();
     const welcomeHeader = el("h1", {textContent: "Welcome to Duordle"});
     const closeBtnEl = document.querySelector("#close-btn");
     closeBtnEl.onclick = playNewGame;
@@ -837,6 +839,13 @@ function closeMenu() {
     timeouts.graceLeave = setTimeout(() => {
         menuObj.menuBtn.classList.remove("expanded");
     }, 1700);
+}
+
+function markColorMenuItem() {
+    const colorScheme = localStorage.getItem("colorScheme") || "default";
+    const colorItem = document.querySelector(`#menu-item-${colorScheme}`);
+    if (colorItem.lastChild.textContent !== "✓")
+        colorItem.appendChild(el("span", {textContent: "✓"}));
 }
 
 function setColorScheme() {
