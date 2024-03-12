@@ -552,7 +552,7 @@ async function getTextfromFile(filePath) {
 
 async function getWordsFromTextFile(filePath) {
     const text = await getTextfromFile(filePath);
-    return text.split("\n");
+    return text.split("\n").split("\r");
 }
 
 async function getPossibleGuesses(wordLength, magicWords) {
