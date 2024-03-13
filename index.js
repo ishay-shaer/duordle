@@ -304,7 +304,8 @@ class Game {
         this.clearKeyboardStyle();
         this.storeGameResult();
         this.displayEndGameMessage();
-        disableMenuItems(document.querySelector("#menu-item-give-up"));
+        disableMenuItem(document.querySelector("#menu-item-give-up"));
+        const playNewGameItems = document.querySelector("#menu-items-play-a-new-game");
         Array.from(playNewGameItems.children).forEach(option => {
             enableMenuItem(option);
             console.log("Enabled:", option);
