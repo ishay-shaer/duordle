@@ -304,8 +304,10 @@ class Game {
         this.clearKeyboardStyle();
         this.storeGameResult();
         this.displayEndGameMessage();
-        disableMenuItem(document.querySelector("#menu-item-give-up"));
-        enableMenuItem(document.querySelector("#menu-item-play-a-new-game"));        
+        disableMenuItems(document.querySelector("#menu-item-give-up"));
+        Array.from(playNewGameItems.children).forEach(option => {
+            enableMenuItem(option);
+            console.log("Enabled:", option);
     }
 
     removeGameFromLocalStorage() {
