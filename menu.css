@@ -79,7 +79,7 @@
 }
 
 .menu-item-disabled {
-    color: #85a5d5;
+    opacity: .3;
 }
 
 .menu-item:first-child {
