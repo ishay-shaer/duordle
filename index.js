@@ -308,7 +308,7 @@ class Game {
         Array.from(playNewGameItems.children).forEach(option => {
             enableMenuItem(option);
             console.log("Enabled:", option);
-        }
+        });
     }
 
     removeGameFromLocalStorage() {
