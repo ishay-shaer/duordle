@@ -306,10 +306,7 @@ class Game {
         this.displayEndGameMessage();
         disableMenuItem(document.querySelector("#menu-item-give-up"));
         const playNewGameItems = document.querySelector("#menu-items-play-a-new-game");
-        Array.from(playNewGameItems.children).forEach(option => {
-            enableMenuItem(option);
-            console.log("Enabled:", option);
-        });
+        Array.from(playNewGameItems.children).forEach(option => {enableMenuItem(option)});
     }
 
     removeGameFromLocalStorage() {
