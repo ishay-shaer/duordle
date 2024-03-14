@@ -158,6 +158,7 @@ h2 {
     flex-wrap: nowrap;
     gap: .5vw;
     color: black;
+    perspective: 100px;
 }
 
 .sample-row {
@@ -171,23 +172,28 @@ h2 {
     width: max(30px, 3.5vw);
     height: 6svh;
     line-height: 6svh;
-    transform: rotate(0);
-    transition: background-color 1s ease;
+    transform: none;
+    transition: background-color 1s ease, transform .25s;
 }
 
-.perfect {
+.box.typing {
+    transform: translateZ(15px);
+}
+
+.box.perfect {
     background-color: var(--perfect-box);
+}
+
+.box.perfect.win{
     transform: rotate(360deg);
 }
 
-.imperfect {
+.box.imperfect {
     background-color: var(--imperfect-box);
-    transform: rotate(360deg);
 }
 
-.excluded {
+.box.excluded {
     background-color: var(--excluded-box);
-    transform: rotate(360deg);
 }
 
 .invalid-word {
