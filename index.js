@@ -50,7 +50,7 @@ const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const timeouts = {};
 const ERROR_DELAY = 2500;
-const MESSAGE_BOX_DELAY = 2500;
+const MESSAGE_BOX_DELAY = 2000;
 const ordinalNums = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"};
 const MAX_WORD_HOLD = 50;
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
@@ -527,8 +527,12 @@ class Board {
     }
 
     applyWinCssTransition() {
-        const lastRowEl = document.querySelector(`#board-row-${this.side}-${this.charPosRow - 1}`);
-        lastRowEl.style.transition += "background-color 1s ease, transform 1s ease";
+        const [side, row] = [this.side, this.charPosRow - 1];
+        for (let col = 0; col < this.wordLength; col++) {
+            const winBox = document.querySelector(`#box-${side}-${row}-${col}`);
+            winBox.style.transition = `background-color .5s ${col * .25}s ease-in,
+                                       transform .5s ${col * .25}s ease-in`;
+        }
     }
 
     displayStyleByMatch() {
