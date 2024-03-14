@@ -158,7 +158,6 @@ h2 {
     flex-wrap: nowrap;
     gap: .5vw;
     color: black;
-    transition: background-color 1s ease;
 }
 
 .sample-row {
@@ -173,8 +172,7 @@ h2 {
     height: 6svh;
     line-height: 6svh;
     transform: rotate(0);
-    transition: inherit;
-    display: inline-block;
+    transition: background-color 1s ease;
 }
 
 .perfect {
