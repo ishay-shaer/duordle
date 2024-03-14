@@ -655,7 +655,7 @@ function renderColorScheme() {
 }
 
 function playNewGame() {
-    const wordLength = localStorage.getItem("wordLength");
+    const wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
     const currentWordLengthItem = document.querySelector(`#menu-item-${"⬜".repeat(wordLength)}`);
     // if (game?.state.isActive && game?.wordLength === localStorage.getItem("wordLength")) return;
     clearScreen();
