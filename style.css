@@ -173,7 +173,7 @@ h2 {
     height: 6svh;
     line-height: 6svh;
     transform: none;
-    transition: background-color 1s ease, transform .25s;
+    transition: background-color 1s ease, transform .25s ease-in;
 }
 
 .box.typing {
