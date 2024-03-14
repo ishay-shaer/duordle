@@ -26,7 +26,6 @@
 // TODO (DONE) Put all timeouts in a timeouts object
 // TODO (DONE) Store current game in localStorage and load it when page is reloaded
 
-// TODO Focus on play button on welcome screen
 // TODO Create a handler function for menu items
 // TODO Fix CSS for stats in the end-game message
 // TODO Organize files into folders
@@ -51,7 +50,7 @@ const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const timeouts = {};
 const ERROR_DELAY = 2500;
-const MESSAGE_BOX_DELAY = 2000;
+const MESSAGE_BOX_DELAY = 2500;
 const ordinalNums = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"};
 const MAX_WORD_HOLD = 50;
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
@@ -306,8 +305,7 @@ class Game {
         this.storeGameResult();
         this.displayEndGameMessage();
         disableMenuItem(document.querySelector("#menu-item-give-up"));
-        const playNewGameItems = document.querySelector("#menu-items-play-a-new-game");
-        Array.from(playNewGameItems.children).forEach(option => {enableMenuItem(option)});
+        enableMenuItem(document.querySelector("#menu-item-play-a-new-game"));        
     }
 
     removeGameFromLocalStorage() {
@@ -468,10 +466,6 @@ class Board {
         if (!this.state.isActive) return;
         const currentBox = document.querySelector(`#box-${this.side}-${this.charPosRow}-${this.charPosCol}`);
         currentBox.textContent = letter;
-        currentBox.classList.add("typing");
-        setTimeout(() => {
-            currentBox.classList.remove("typing");
-        }, 100);
         this.charPosCol++;
     }
 
@@ -532,24 +526,16 @@ class Board {
     }
 
     applyWinCssTransition() {
-        const [side, row] = [this.side, this.charPosRow - 1];
-        for (let col = 0; col < this.wordLength; col++) {
-            const winBox = document.querySelector(`#box-${side}-${row}-${col}`);
-            setTimeout(() => {
-                winBox.classList.add("win");
-            }, col * 250);
-        }
+        const lastRowEl = document.querySelector(`#board-row-${this.side}-${this.charPosRow - 1}`);
+        lastRowEl.style.transition += "background-color 1s ease, transform 1s ease";
     }
 
     displayStyleByMatch() {
         if (!this.state.isActive) return;
         const currentRowEl = document.querySelector(`#board-row-${this.side}-${this.charPosRow - 1}`);
         const boxesOfCurrentRow = currentRowEl.querySelectorAll("*");
-        const delay = this.state.hasWon ? 250 : 0;
         boxesOfCurrentRow.forEach((box, position) => {
-            setTimeout(() => {
-                box.classList.add(this.lastMatch[position]);               
-            }, delay * position);
+            box.classList.add(this.lastMatch[position]);
         });
     }
 }
@@ -663,7 +649,7 @@ function renderColorScheme() {
 }
 
 function playNewGame() {
-    const wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
+    const wordLength = localStorage.getItem("wordLength");
     const currentWordLengthItem = document.querySelector(`#menu-item-${"⬜".repeat(wordLength)}`);
     // if (game?.state.isActive && game?.wordLength === localStorage.getItem("wordLength")) return;
     clearScreen();
