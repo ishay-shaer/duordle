@@ -468,6 +468,10 @@ class Board {
         if (!this.state.isActive) return;
         const currentBox = document.querySelector(`#box-${this.side}-${this.charPosRow}-${this.charPosCol}`);
         currentBox.textContent = letter;
+        currentBox.classList.add("typing");
+        setTimeout(() => {
+            currentBox.classList.remove("typing");
+        }, 100);
         this.charPosCol++;
     }
 
@@ -531,8 +535,9 @@ class Board {
         const [side, row] = [this.side, this.charPosRow - 1];
         for (let col = 0; col < this.wordLength; col++) {
             const winBox = document.querySelector(`#box-${side}-${row}-${col}`);
-            winBox.style.transition = `background-color .25s ${col * .25 + .25}s ease-in,
-                                       transform .5s ${col * .25}s ease-in`;
+            setTimeout(() => {
+                winBox.classList.add("win");
+            }, col * 250);
         }
     }
 
@@ -540,8 +545,11 @@ class Board {
         if (!this.state.isActive) return;
         const currentRowEl = document.querySelector(`#board-row-${this.side}-${this.charPosRow - 1}`);
         const boxesOfCurrentRow = currentRowEl.querySelectorAll("*");
+        const delay = this.state.hasWon ? 250 : 0;
         boxesOfCurrentRow.forEach((box, position) => {
-            box.classList.add(this.lastMatch[position]);
+            setTimeout(() => {
+                box.classList.add(this.lastMatch[position]);               
+            }, delay * position);
         });
     }
 }
