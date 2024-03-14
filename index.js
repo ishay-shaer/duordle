@@ -26,6 +26,7 @@
 // TODO (DONE) Put all timeouts in a timeouts object
 // TODO (DONE) Store current game in localStorage and load it when page is reloaded
 
+// TODO Focus on play button on welcome screen
 // TODO Create a handler function for menu items
 // TODO Fix CSS for stats in the end-game message
 // TODO Organize files into folders
@@ -530,7 +531,7 @@ class Board {
         const [side, row] = [this.side, this.charPosRow - 1];
         for (let col = 0; col < this.wordLength; col++) {
             const winBox = document.querySelector(`#box-${side}-${row}-${col}`);
-            winBox.style.transition = `background-color .5s ${col * .25}s ease-in,
+            winBox.style.transition = `background-color .25s ${col * .25 + .25}s ease-in,
                                        transform .5s ${col * .25}s ease-in`;
         }
     }
