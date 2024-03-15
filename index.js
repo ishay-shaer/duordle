@@ -26,6 +26,7 @@
 // TODO (DONE) Put all timeouts in a timeouts object
 // TODO (DONE) Store current game in localStorage and load it when page is reloaded
 
+// TODO Focus on play button on welcome screen
 // TODO Create a handler function for menu items
 // TODO Fix CSS for stats in the end-game message
 // TODO Organize files into folders
@@ -50,7 +51,7 @@ const MAX_WORD_LENGTH = 6;
 const DEFAULT_WORD_LENGTH = 5;
 const timeouts = {};
 const ERROR_DELAY = 2500;
-const MESSAGE_BOX_DELAY = 2500;
+const MESSAGE_BOX_DELAY = 2000;
 const ordinalNums = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"};
 const MAX_WORD_HOLD = 50;
 const getMaxGuesses = wordLength => wordLength > 5 ? 8 : 7;
@@ -79,6 +80,8 @@ class Game {
         this.isCurrentGuessValid = false;
         this.guesses = [];
         this.oldGameGuesses = oldGameGuesses;
+        this.isOldRender = Boolean(oldGameGuesses);
+        console.log(`this.isOldRender: ${this.isOldRender}`);
         this.lastGuess = "";
         this.deleteLastLetter = this.deleteLastLetter.bind(this);
         this.addLetter = this.addLetter.bind(this);
@@ -157,9 +160,9 @@ class Game {
 
     keyboardHandler(event) {        
         const pressedKey = event.key;
-        if (pressedKey == "Backspace" || pressedKey == "Delete") {
+        if (pressedKey === "Backspace" || pressedKey === "Delete") {
             this.deleteLastLetter();
-        } else if (pressedKey == "Enter" || pressedKey == "Return") {
+        } else if (pressedKey === "Enter" || pressedKey === "Return") {
             this.enterAndMatchWord();
         } else if (/^[a-zA-Z]$/.test(pressedKey)){
             this.addLetter(pressedKey.toUpperCase());
@@ -199,6 +202,11 @@ class Game {
 
     renderOldGuesses() {
         if (!this.oldGameGuesses) return;
+        this.isOldRender = true;
+        const allBoxes = document.querySelectorAll(".box")
+        allBoxes.forEach(box => {
+            box.classList.add("old-render");
+        });
         this.oldGameGuesses.forEach(guess => {
             for (const letter of guess) {
                 this.addLetter(letter);
@@ -206,6 +214,10 @@ class Game {
             this.enterWord();
             this.matchWord();
         });
+        this.isOldRender = false;
+        allBoxes.forEach(box => {
+            box.classList.remove("old-render");
+        });        
     }
 
     enterAndMatchWord() {
@@ -222,10 +234,12 @@ class Game {
 
     enterWord() {
         if (!this.state.isActive) return;
-        // if (!this.state.isRenderingOldGame) {
         this.guesses = [...this.guesses, this.currentGuess];
-        this.boards[0].guesses = [...this.boards[0].guesses, this.currentGuess];
-        this.boards[1].guesses = [...this.boards[1].guesses, this.currentGuess];
+        this.boards.forEach(board => {
+            board.guesses = [...board.guesses, this.currentGuess];
+        })
+        // this.boards[0].guesses = [...this.boards[0].guesses, this.currentGuess];
+        // this.boards[1].guesses = [...this.boards[1].guesses, this.currentGuess];
         this.lastGuess = this.currentGuess;
         this.currentGuess = "";
         this.charPosRow++;
@@ -272,17 +286,17 @@ class Game {
 
     matchWord() {
         if (!this.state.isActive) return;
-        let renderAllLetters = false;
+        let shouldAllLetters = false;
         this.boards.forEach(board => {
             board.matchWord(this.lastGuess);
             board.displayStyleByMatch();
             if (board.state.hasWon) {
                 board.state.isActive = false;
                 this.unifyKeyboard(board.side);
-                renderAllLetters = true;
+                shouldAllLetters = true;
             }
         });
-        this.renderKeyboardStyle(renderAllLetters);
+        this.renderKeyboardStyle(shouldAllLetters);
         if (this.boards.every(board => board.state.hasWon)) {
             this.state = {...this.state, hasWon: true, isActive: false};
             this.endGame();
@@ -305,7 +319,8 @@ class Game {
         this.storeGameResult();
         this.displayEndGameMessage();
         disableMenuItem(document.querySelector("#menu-item-give-up"));
-        enableMenuItem(document.querySelector("#menu-item-play-a-new-game"));        
+        const playNewGameItems = document.querySelector("#menu-items-play-a-new-game");
+        Array.from(playNewGameItems.children).forEach(option => {enableMenuItem(option)});
     }
 
     removeGameFromLocalStorage() {
@@ -466,6 +481,10 @@ class Board {
         if (!this.state.isActive) return;
         const currentBox = document.querySelector(`#box-${this.side}-${this.charPosRow}-${this.charPosCol}`);
         currentBox.textContent = letter;
+        currentBox.classList.add("typing");
+        setTimeout(() => {
+            currentBox.classList.remove("typing");
+        }, 100);
         this.charPosCol++;
     }
 
@@ -485,7 +504,7 @@ class Board {
             this.state = {...this.state, hasWon: true};
             this.applyWinCssTransition();
             return;
-        }        
+        }
         // If the guess is not identical to the magic word:
         // initialization
         this.lastMatch = Array.from({length: this.wordLength}, () => "excluded");
@@ -496,7 +515,6 @@ class Board {
 
         for (let i = 0; i < this.wordLength; i++) {
             const currentLetter = guess[i];
-
             if (currentLetter === this.magicWord[i]){
                 this.lastMatch[i] = "perfect";                
                 letterCounter[currentLetter] -= 1;                
@@ -526,17 +544,31 @@ class Board {
     }
 
     applyWinCssTransition() {
-        const lastRowEl = document.querySelector(`#board-row-${this.side}-${this.charPosRow - 1}`);
-        lastRowEl.style.transition += "background-color 1s ease, transform 1s ease";
+        const boxDelay = game.isOldRender ? 0 : 250;
+        const [side, row] = [this.side, this.charPosRow - 1];
+        for (let col = 0; col < this.wordLength; col++) {
+            const winBox = document.querySelector(`#box-${side}-${row}-${col}`);
+            setTimeout(() => {
+                winBox.classList.add("win");
+            }, col * boxDelay);
+        }
     }
 
     displayStyleByMatch() {
         if (!this.state.isActive) return;
         const currentRowEl = document.querySelector(`#board-row-${this.side}-${this.charPosRow - 1}`);
-        const boxesOfCurrentRow = currentRowEl.querySelectorAll("*");
-        boxesOfCurrentRow.forEach((box, position) => {
-            box.classList.add(this.lastMatch[position]);
-        });
+        const boxesOfCurrentRow = currentRowEl.childNodes;
+        if (this.state.hasWon && !game.isOldRender) {
+            boxesOfCurrentRow.forEach((box, position) => {
+                setTimeout(() => {
+                    box.classList.add(this.lastMatch[position]);
+                }, 250 * position);
+            });
+        } else {
+            boxesOfCurrentRow.forEach((box, position) => {                
+                box.classList.add(this.lastMatch[position]);
+            });
+        }
     }
 }
 
@@ -649,7 +681,10 @@ function renderColorScheme() {
 }
 
 function playNewGame() {
-    const wordLength = localStorage.getItem("wordLength");
+    document.querySelectorAll(".box").forEach(box => {
+        box.className = "box";
+    })
+    const wordLength = localStorage.getItem("wordLength") || DEFAULT_WORD_LENGTH;
     const currentWordLengthItem = document.querySelector(`#menu-item-${"⬜".repeat(wordLength)}`);
     // if (game?.state.isActive && game?.wordLength === localStorage.getItem("wordLength")) return;
     clearScreen();
@@ -685,12 +720,14 @@ async function displayWelcome() {
             oldExamples.replaceWith(newExamples);
         });
     }
+    const isolatePlayBtn = getPlayButton(!game?.state.isActive);
     dynamicMessage.append(
         await getExamples(wordLength),
-        getPlayButton(!game?.state.isActive)
+        isolatePlayBtn
     );
     const messageBox = document.querySelector("#message-box");
     messageBox.style.display = "block";
+    isolatePlayBtn.focus();
     messageBox.scrollTo(0, 0);
 }
 
