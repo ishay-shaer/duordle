@@ -484,7 +484,7 @@ class Board {
         currentBox.classList.add("typing");
         setTimeout(() => {
             currentBox.classList.remove("typing");
-        }, 100);
+        }, 200);
         this.charPosCol++;
     }
 
