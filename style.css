@@ -186,7 +186,8 @@ h2 {
     height: 6svh;
     line-height: 6svh;
     transform: none;
-    transition: background-color 1s ease, transform .25s ease-in;
+    transition: background-color 1s ease, border 1s ease, transform .25s ease-in;
+    /* box-sizing: border-box; */
 }
 
 .box.old-render {
@@ -199,6 +200,7 @@ h2 {
 
 .box.perfect {
     background-color: var(--perfect-box);
+    border: 2px solid var(--perfect-box);
 }
 
 .box.perfect.win{
@@ -207,10 +209,12 @@ h2 {
 
 .box.imperfect {
     background-color: var(--imperfect-box);
+    border: 2px solid var(--imperfect-box);
 }
 
 .box.excluded {
     background-color: var(--excluded-box);
+    border: 2px solid var(--excluded-box);
 }
 
 .invalid-word {
