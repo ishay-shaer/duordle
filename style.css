@@ -167,13 +167,18 @@ h2 {
 }
 
 .box {
+    display: inline-block;
     background-color: white;
     border: 2px solid black;
     width: max(30px, 3.5vw);
     height: 6svh;
     line-height: 6svh;
     transform: none;
-    transition: background-color 1s ease, transform .25s ease-in;
+    transition: background-color 1s ease, transform .25s;
+}
+
+.box.old-render {
+    transition: background-color 1s ease;
 }
 
 .box.typing {
