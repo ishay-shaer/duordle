@@ -25,10 +25,11 @@
 // TODO (DONE) Add a menu with help (welcome), give up, see stats
 // TODO (DONE) Put all timeouts in a timeouts object
 // TODO (DONE) Store current game in localStorage and load it when page is reloaded
+// TODO (DONE) Focus on play button on welcome screen
 
-// TODO Focus on play button on welcome screen
+// TODO Make it fully responsive for mobile
 // TODO Create a handler function for menu items
-// TODO Fix CSS for stats in the end-game message
+// TODO Fix HTML for stats in the end-game message: get rid of redundant containers
 // TODO Organize files into folders
 // TODO Correct alphaSimilarity in 4-letter words to be of max 2 ?
 // TODO Put menuItem() and its associated stuff in a seperate module
@@ -81,7 +82,6 @@ class Game {
         this.guesses = [];
         this.oldGameGuesses = oldGameGuesses;
         this.isOldRender = Boolean(oldGameGuesses);
-        console.log(`this.isOldRender: ${this.isOldRender}`);
         this.lastGuess = "";
         this.deleteLastLetter = this.deleteLastLetter.bind(this);
         this.addLetter = this.addLetter.bind(this);
