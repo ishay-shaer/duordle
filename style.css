@@ -166,6 +166,18 @@ h2 {
     font-family: 'Times New Roman', Times, serif;
 }
 
+@keyframes zoom-in-out {
+    0% {
+        transform: translateZ(0);
+    }
+    50% {
+        transform: translateZ(12px);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
+
 .box {
     display: inline-block;
     background-color: white;
@@ -174,7 +186,7 @@ h2 {
     height: 6svh;
     line-height: 6svh;
     transform: none;
-    transition: background-color 1s ease, transform .25s;
+    transition: background-color 1s ease, transform .25s ease-in;
 }
 
 .box.old-render {
@@ -182,7 +194,7 @@ h2 {
 }
 
 .box.typing {
-    transform: translateZ(15px);
+    animation: zoom-in-out .2s linear;
 }
 
 .box.perfect {
